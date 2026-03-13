@@ -1,7 +1,7 @@
 import express from 'express';
 import path from 'path';
 import { fileURLToPath } from 'url';
-import triggerCall from './src/api/trigger-call.js';
+import testCallHomepage from './src/api/test-call-homepage.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const app = express();
@@ -10,7 +10,7 @@ const PORT = process.env.PORT || 3000;
 app.use(express.json());
 
 // API routes
-app.post('/api/trigger-call', triggerCall);
+app.post('/api/test-call-homepage', testCallHomepage);
 
 // Serve static Astro build
 app.use(express.static(path.join(__dirname, 'dist')));

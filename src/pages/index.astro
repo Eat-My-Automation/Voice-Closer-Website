@@ -505,7 +505,7 @@ import Layout from '../layouts/Layout.astro';
         input.disabled = true;
 
         try {
-          const res = await fetch('/api/trigger-call', {
+          const res = await fetch('/api/test-call-homepage', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ phone, agent: 'voicecloser_demo' }),

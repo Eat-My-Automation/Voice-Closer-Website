@@ -1,4 +1,4 @@
-// POST /api/trigger-call
+// POST /api/test-call-homepage
 // Body: { name: "Ken", phone: "+12155551234", agent: "voicecloser_demo" }
 //
 // Maps `agent` to AGENT_* env var, calls Retell createPhoneCall API.
@@ -11,11 +11,15 @@ const AGENT_MAP = {
   limitless_storage:         'AGENT_LIMITLESS_STORAGE',
 };
 
-export default async function triggerCall(req, res) {
+export default async function testCallHomepage(req, res) {
+  const ts = new Date().toISOString();
+  console.log(`[${ts}] POST /api/test-call-homepage — body:`, JSON.stringify(req.body));
+
   try {
     const { name, phone, agent } = req.body;
 
     if (!phone) {
+      console.log(`[${ts}] REJECTED: no phone number provided`);
       return res.status(400).json({ error: 'Phone number is required.' });
     }
 
@@ -24,59 +28,68 @@ export default async function triggerCall(req, res) {
     const envVar = AGENT_MAP[agentKey];
 
     if (!envVar) {
+      console.log(`[${ts}] REJECTED: unknown agent key "${agentKey}"`);
       return res.status(400).json({ error: `Unknown agent: ${agentKey}` });
     }
 
     const agentId = process.env[envVar];
     if (!agentId) {
+      console.error(`[${ts}] CONFIG ERROR: env var ${envVar} is not set`);
       return res.status(500).json({ error: `Agent secret ${envVar} is not configured.` });
     }
 
     const retellApiKey = process.env.RETELL_API_KEY;
     if (!retellApiKey) {
+      console.error(`[${ts}] CONFIG ERROR: RETELL_API_KEY is not set`);
       return res.status(500).json({ error: 'RETELL_API_KEY is not configured.' });
     }
 
     const fromNumber = process.env.RETELL_FROM_NUMBER;
     if (!fromNumber) {
+      console.error(`[${ts}] CONFIG ERROR: RETELL_FROM_NUMBER is not set`);
       return res.status(500).json({ error: 'RETELL_FROM_NUMBER is not configured.' });
     }
 
     // Normalize phone to E.164 if needed
     const toNumber = normalizePhone(phone);
     if (!toNumber) {
+      console.log(`[${ts}] REJECTED: invalid phone "${phone}"`);
       return res.status(400).json({ error: 'Invalid phone number. Please use a US or Canada number.' });
     }
 
-    // Call Retell API
+    const retellPayload = {
+      from_number: fromNumber,
+      to_number: toNumber,
+      override_agent_id: agentId,
+      retell_llm_dynamic_variables: {
+        customer_name: name || 'there',
+      },
+    };
+
+    console.log(`[${ts}] Calling Retell API — agent: ${agentKey} (${agentId}), to: ${toNumber}, from: ${fromNumber}`);
+
     const retellRes = await fetch('https://api.retellai.com/v2/create-phone-call', {
       method: 'POST',
       headers: {
         'Authorization': `Bearer ${retellApiKey}`,
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({
-        from_number: fromNumber,
-        to_number: toNumber,
-        override_agent_id: agentId,
-        retell_llm_dynamic_variables: {
-          customer_name: name || 'there',
-        },
-      }),
+      body: JSON.stringify(retellPayload),
     });
 
+    const retellBody = await retellRes.text();
+
     if (!retellRes.ok) {
-      const errBody = await retellRes.text();
-      console.error('Retell API error:', retellRes.status, errBody);
+      console.error(`[${ts}] RETELL ERROR ${retellRes.status}: ${retellBody}`);
       return res.status(502).json({ error: 'Failed to initiate call. Please try again.' });
     }
 
-    const data = await retellRes.json();
-    console.log('Call initiated:', data.call_id);
+    const data = JSON.parse(retellBody);
+    console.log(`[${ts}] SUCCESS — call_id: ${data.call_id}`);
 
     return res.json({ success: true, callId: data.call_id });
   } catch (err) {
-    console.error('trigger-call error:', err);
+    console.error(`[${ts}] UNHANDLED ERROR:`, err.message, err.stack);
     return res.status(500).json({ error: 'Internal server error.' });
   }
 }
