@@ -1,0 +1,489 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+<Layout title="Home">
+
+  <!-- ===== 1. HERO — DEMO FIRST ===== -->
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="hero-text">
+        <h1>Never Lose Another Lead To A Missed Call Or Dead CRM.</h1>
+        <p class="hero-sub">
+          VoiceCloser is a 24/7 voice agent that answers your calls and calls through
+          your existing, opted-in leads so more conversations turn into booked jobs.
+        </p>
+
+        <div class="demo-cta">
+          <div class="demo-cta-eyecatch">
+            <div class="phone-pulse">
+              <div class="phone-pulse-icon">&#128222;</div>
+            </div>
+            <div class="demo-cta-eyecatch-text">
+              Test it yourself
+              <span>Get a live demo call in under 60 seconds</span>
+            </div>
+          </div>
+          <form class="demo-cta-row" action="#" method="POST" id="heroDemoForm">
+            <input type="tel" name="phone" placeholder="Enter your mobile number" required />
+            <button type="submit" class="btn btn-gold">Get A Free Test Call</button>
+          </form>
+          <p class="demo-cta-helper">
+            1 demo call. No spam. US &amp; Canada only. Works for inbound and outbound follow-up.
+          </p>
+          <!-- <p class="demo-cta-secondary">
+            <a href="#demo">Prefer to listen instead? Hear a sample call.</a>
+          </p> -->
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="phone-mockup">
+          <div class="phone-mockup-header">
+            <div class="caller-name">Incoming Call</div>
+            <div class="caller-status">VoiceCloser Answering...</div>
+          </div>
+          <div class="chat-bubble agent">
+            Hi, thanks for calling! This is Sarah with ABC Services. How can I help you today?
+          </div>
+          <div class="chat-bubble caller">
+            Hey, I need a quote for a roof repair.
+          </div>
+          <div class="chat-bubble agent">
+            Absolutely! I can get that set up. What's a good time for our team to come take a look?
+          </div>
+          <div class="chat-bubble caller">
+            Tomorrow afternoon works.
+          </div>
+          <div class="chat-bubble agent">
+            Perfect — I've got you booked for tomorrow at 2 PM. You'll get a confirmation text shortly.
+          </div>
+        </div>
+
+        <div class="hero-badge badge-top-right">
+          <span class="badge-dot green"></span> 24/7 Coverage
+        </div>
+        <div class="hero-badge badge-mid-left">
+          <span class="badge-dot gold"></span> Missed Calls: 0
+        </div>
+        <div class="hero-badge badge-bottom-right">
+          <span class="badge-dot blue"></span> Reactivations This Week: 37
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 2. PROBLEM SECTION ===== -->
+  <section class="problem-section">
+    <div class="problem-inner container">
+      <div class="problem-text">
+        <h2>Every Missed Call And Ignored Lead Costs You Money.</h2>
+        <p>
+          Your phone rings while you're on a job. A lead fills out a form at 9 PM.
+          An old prospect in your CRM hasn't heard from you in months. Every one of
+          those is revenue walking out the door.
+        </p>
+        <ul class="problem-list">
+          <li>
+            <span class="icon">&#10007;</span>
+            <span>New leads hit voicemail and move on to the next business.</span>
+          </li>
+          <li>
+            <span class="icon">&#10007;</span>
+            <span>Existing customers feel ignored when no one picks up.</span>
+          </li>
+          <li>
+            <span class="icon">&#10007;</span>
+            <span>Your old lead list just sits in your CRM, doing nothing.</span>
+          </li>
+        </ul>
+        <a href="#how-it-works" class="btn btn-outline btn-sm">See How VoiceCloser Fixes This</a>
+      </div>
+
+      <div class="comparison-card">
+        <div class="comparison-side current">
+          <div class="comparison-label">Current Reality</div>
+          <div class="comparison-stat">
+            <span class="stat-icon">&#128222;</span>
+            <span class="stat-text">12 missed calls today<br/>0 follow-ups on old leads</span>
+          </div>
+        </div>
+        <div class="comparison-side better">
+          <div class="comparison-label">With VoiceCloser</div>
+          <div class="comparison-stat">
+            <span class="stat-icon">&#9989;</span>
+            <span class="stat-text">12 answered, 7 booked<br/>3 callbacks scheduled</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 3. THREE PILLARS ===== -->
+  <section class="pillars-section">
+    <div class="container text-center">
+      <h2 class="section-title">One Voice Agent. Three Jobs You Hate Doing.</h2>
+      <span class="gold-line"></span>
+    </div>
+
+    <div class="pillars-grid container">
+      <div class="pillar-card">
+        <div class="pillar-icon">&#128222;</div>
+        <h3>Answer Every Call Live</h3>
+        <p>
+          Instantly answers every call with a professional, branded greeting so real
+          people talk to a real-sounding agent instead of voicemail.
+        </p>
+      </div>
+      <div class="pillar-card">
+        <div class="pillar-icon">&#128269;</div>
+        <h3>Qualify &amp; Route Serious Leads</h3>
+        <p>
+          Asks the right questions, filters tire-kickers, and emails you a summary
+          of every serious lead or routes them to the right person.
+        </p>
+      </div>
+      <div class="pillar-card">
+        <div class="pillar-icon">&#128202;</div>
+        <h3>Call Through Your Existing Database</h3>
+        <p>
+          Systematically calls your existing, opted-in leads to revive old conversations
+          and turn past inquiries into fresh appointments.
+        </p>
+      </div>
+    </div>
+
+    <div class="container text-center mt-2">
+      <a href="#" class="btn btn-outline">Watch A 60-Second Overview</a>
+    </div>
+  </section>
+
+  <!-- ===== 4. HOW IT WORKS — 3 STEPS ===== -->
+  <section class="steps-section" id="how-it-works">
+    <div class="container text-center">
+      <h2 class="section-title">Here's How VoiceCloser Goes Live In Days, Not Months.</h2>
+      <span class="gold-line"></span>
+    </div>
+
+    <div class="steps-grid container">
+      <div class="step-card">
+        <div class="step-number">1</div>
+        <h3>Quick Setup Call</h3>
+        <p>
+          We learn how your business works, what to say, and who counts as a qualified lead.
+        </p>
+      </div>
+      <div class="step-card">
+        <div class="step-number">2</div>
+        <h3>We Train Your Voice Agent</h3>
+        <p>
+          We configure scripts, booking rules, and test calls until you're happy with every word.
+        </p>
+      </div>
+      <div class="step-card">
+        <div class="step-number">3</div>
+        <h3>Forward Your Phones &amp; Plug In Your Leads</h3>
+        <p>
+          We start answering inbound calls and calling through your existing database. You focus on closing.
+        </p>
+      </div>
+    </div>
+
+    <div class="steps-flow container">
+      <div class="flow-box">Caller / Lead List</div>
+      <span class="flow-arrow">&#8594;</span>
+      <div class="flow-box" style="border-color: var(--gold);">VoiceCloser</div>
+      <span class="flow-arrow">&#8594;</span>
+      <div class="flow-box">Calendar / Inbox / CRM</div>
+    </div>
+
+    <div class="container text-center mt-2">
+      <button class="btn btn-gold btn-lg open-strategy-modal">Book A 15-Minute Strategy Call</button>
+    </div>
+  </section>
+
+  <!-- ===== 5. TRY IT YOURSELF (DEMO BAND) ===== -->
+  <section class="demo-band" id="demo">
+    <h2>See Exactly How Your Customers Will Be Greeted.</h2>
+    <p class="demo-band-sub">
+      Enter your number and VoiceCloser will call you in under a minute.
+    </p>
+    <div class="demo-cta">
+      <div class="demo-cta-eyecatch" style="justify-content: center;">
+        <div class="phone-pulse">
+          <div class="phone-pulse-icon">&#128222;</div>
+        </div>
+        <div class="demo-cta-eyecatch-text">
+          Try it live
+          <span>Your phone will ring in under 60 seconds</span>
+        </div>
+      </div>
+      <form class="demo-cta-row" action="#" method="POST" id="demoBandForm">
+        <input type="tel" name="phone" placeholder="Enter your mobile number" required />
+        <button type="submit" class="btn btn-gold">Get A Free Test Call</button>
+      </form>
+      <p class="demo-cta-helper">
+        1 demo call. No spam. US &amp; Canada only.
+      </p>
+    </div>
+  </section>
+
+  <!-- ===== 6. WHO IT'S FOR ===== -->
+  <section class="audience-section" id="who-its-for">
+    <div class="audience-inner container">
+      <div class="audience-text">
+        <h2>Built For Call-Heavy Businesses.</h2>
+        <p>
+          If your business lives or dies by phone conversations — whether that's
+          booking appointments, qualifying leads, or following up on estimates —
+          VoiceCloser was built for you.
+        </p>
+      </div>
+
+      <ul class="audience-list">
+        <li class="audience-pill">
+          <span class="check">&#10003;</span>
+          <span>Agencies &amp; marketing firms</span>
+        </li>
+        <li class="audience-pill">
+          <span class="check">&#10003;</span>
+          <span>Home services &amp; contractors</span>
+        </li>
+        <li class="audience-pill">
+          <span class="check">&#10003;</span>
+          <span>Real estate teams</span>
+        </li>
+        <li class="audience-pill">
+          <span class="check">&#10003;</span>
+          <span>Clinics &amp; appointment-based businesses</span>
+        </li>
+        <li class="audience-pill">
+          <span class="check">&#10003;</span>
+          <span>Any business that misses calls or sits on a big lead list</span>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ===== 7. SOCIAL PROOF ===== -->
+  <section class="proof-section">
+    <div class="proof-inner container">
+      <div class="proof-card">
+        <div class="quote-icon">&ldquo;</div>
+        <p class="quote-text">
+          As soon as we turned it on, we stopped missing calls and started seeing
+          more booked jobs from leads we'd forgotten about. It paid for itself in
+          the first week.
+        </p>
+        <p class="quote-author">
+          <strong>— Client Name</strong>, Company (Placeholder)
+        </p>
+      </div>
+
+      <div class="proof-card metrics-card">
+        <h3>What clients see after turning on VoiceCloser</h3>
+        <div class="metric-row">
+          <span class="metric-number">0</span>
+          <span class="metric-label">Missed calls during business hours</span>
+        </div>
+        <div class="metric-row">
+          <span class="metric-number">2-5x</span>
+          <span class="metric-label">More touchpoints on existing leads</span>
+        </div>
+        <div class="metric-row">
+          <span class="metric-number">&lt;60s</span>
+          <span class="metric-label">Typical response time</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 8. CTA — BOOK A STRATEGY CALL ===== -->
+  <section class="cta-band" id="book">
+    <h2>Want To See What VoiceCloser Could Do With Your Calls And Lead List?</h2>
+    <p class="cta-band-sub">
+      On a short call, we'll map your current missed calls and database, then show
+      you how a voice agent could plug in.
+    </p>
+    <button class="btn btn-gold btn-lg open-strategy-modal">Book Your 15-Minute Strategy Call</button>
+    <p class="cta-band-secondary">
+      <a href="#demo">Not ready to talk? Get a free test call instead.</a>
+    </p>
+  </section>
+
+  <!-- ===== 9. FAQ ===== -->
+  <section class="faq-section" id="faq">
+    <div class="container text-center">
+      <h2 class="section-title">Frequently Asked Questions</h2>
+      <span class="gold-line"></span>
+    </div>
+
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          <span>Can it handle both inbound and outbound calls?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            Yes. VoiceCloser answers inbound calls live — no voicemail, no hold music.
+            It also proactively calls through your existing, opted-in lead list to
+            re-engage old prospects and book appointments. Both run 24/7.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          <span>Do I have to switch phone numbers?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            No. You keep your existing business number. We set up simple call forwarding
+            so VoiceCloser answers when you can't. Your customers never notice a difference.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          <span>How long does setup take?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            Most businesses are live within 3-5 business days. We handle the heavy
+            lifting — scripting, testing, and configuration. All we need from you
+            is one setup call and access to your lead list or CRM.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          <span>What CRMs and calendars can you work with?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            VoiceCloser integrates with most major CRMs (GoHighLevel, Follow Up Boss,
+            HubSpot, Salesforce, and more) and calendar tools (Google Calendar, Calendly,
+            Cal.com). If you use it, we can probably connect to it.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          <span>What if the agent says something wrong?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            Every agent is custom-trained on your business, services, and tone before
+            going live. We test extensively and you approve the scripts. After launch,
+            every call is logged and reviewed so we can continuously improve accuracy.
+            You can update scripts or escalation rules at any time.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          <span>How much does it cost?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            Pricing is customized based on your call volume, complexity, and whether
+            you need inbound, outbound, or both. Book a strategy call and we'll give
+            you a clear quote based on your specific situation — no surprises.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== STRATEGY CALL MODAL ===== -->
+  <div class="modal-backdrop" id="strategyModal">
+    <div class="modal modal-tidycal">
+      <button class="modal-close" id="modalClose" aria-label="Close">&times;</button>
+      <div id="tidycalContainer"></div>
+    </div>
+  </div>
+
+</Layout>
+
+<script is:inline>
+  // FAQ accordion
+  document.querySelectorAll('.faq-question').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const item = btn.parentElement;
+      const answer = item.querySelector('.faq-answer');
+      const isOpen = item.classList.contains('open');
+
+      document.querySelectorAll('.faq-item').forEach(i => {
+        i.classList.remove('open');
+        i.querySelector('.faq-answer').style.maxHeight = null;
+        i.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+      });
+
+      if (!isOpen) {
+        item.classList.add('open');
+        answer.style.maxHeight = answer.scrollHeight + 'px';
+        btn.setAttribute('aria-expanded', 'true');
+      }
+    });
+  });
+
+  // Strategy call modal with TidyCal
+  (function() {
+    const modal = document.getElementById('strategyModal');
+    const closeBtn = document.getElementById('modalClose');
+    const container = document.getElementById('tidycalContainer');
+    let tidycalLoaded = false;
+
+    function loadTidyCal() {
+      if (tidycalLoaded) return;
+      tidycalLoaded = true;
+
+      // Insert the TidyCal embed div
+      const embedDiv = document.createElement('div');
+      embedDiv.className = 'tidycal-embed';
+      embedDiv.setAttribute('data-path', 'rxross/voicecloser-strategy-call');
+      container.appendChild(embedDiv);
+
+      // Load the TidyCal script
+      const script = document.createElement('script');
+      script.src = 'https://asset-tidycal.b-cdn.net/js/embed.js';
+      script.async = true;
+      container.appendChild(script);
+    }
+
+    // Open modal
+    document.querySelectorAll('.open-strategy-modal').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        modal.classList.add('open');
+        document.body.style.overflow = 'hidden';
+        loadTidyCal();
+      });
+    });
+
+    // Close modal
+    function closeModal() {
+      modal.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    closeBtn.addEventListener('click', closeModal);
+
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) closeModal();
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && modal.classList.contains('open')) closeModal();
+    });
+  })();
+</script>
