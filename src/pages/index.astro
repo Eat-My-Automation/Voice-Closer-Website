@@ -486,4 +486,62 @@ import Layout from '../layouts/Layout.astro';
       if (e.key === 'Escape' && modal.classList.contains('open')) closeModal();
     });
   })();
+
+  // Demo call forms
+  (function() {
+    document.querySelectorAll('#heroDemoForm, #demoBandForm').forEach(form => {
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const btn = form.querySelector('button[type="submit"]');
+        const input = form.querySelector('input[name="phone"]');
+        const phone = input.value.trim();
+
+        if (!phone) return;
+
+        // Disable while calling
+        const originalText = btn.textContent;
+        btn.textContent = 'Calling you now...';
+        btn.disabled = true;
+        input.disabled = true;
+
+        try {
+          const res = await fetch('/api/trigger-call', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ phone, agent: 'voicecloser_demo' }),
+          });
+
+          const data = await res.json();
+
+          if (data.success) {
+            btn.textContent = 'Call incoming! Pick up your phone.';
+            btn.style.background = '#34d399';
+            btn.style.borderColor = '#34d399';
+          } else {
+            btn.textContent = data.error || 'Something went wrong. Try again.';
+            btn.style.background = '#ef4444';
+            btn.style.borderColor = '#ef4444';
+            setTimeout(() => {
+              btn.textContent = originalText;
+              btn.style.background = '';
+              btn.style.borderColor = '';
+              btn.disabled = false;
+              input.disabled = false;
+            }, 3000);
+          }
+        } catch (err) {
+          btn.textContent = 'Connection error. Try again.';
+          btn.style.background = '#ef4444';
+          btn.style.borderColor = '#ef4444';
+          setTimeout(() => {
+            btn.textContent = originalText;
+            btn.style.background = '';
+            btn.style.borderColor = '';
+            btn.disabled = false;
+            input.disabled = false;
+          }, 3000);
+        }
+      });
+    });
+  })();
 </script>
