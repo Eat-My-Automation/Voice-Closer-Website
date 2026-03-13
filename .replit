@@ -24,13 +24,13 @@ author = "agent"
 [[workflows.workflow.tasks]]
 task = "shell.exec"
 args = "npm run build && node server.js"
-waitForPort = 3000
+waitForPort = 5000
 
 [workflows.workflow.metadata]
 outputType = "webview"
 
 [[ports]]
-localPort = 3000
+localPort = 5000
 externalPort = 80
 
 [deployment]
