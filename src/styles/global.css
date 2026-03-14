@@ -33,7 +33,7 @@
 
   --font-body: 'Inter', sans-serif;
   --font-heading: 'Playfair Display', serif;
-  --max-width: 1200px;
+  --max-width: 1400px;
   --section-pad: clamp(4rem, 8vw, 7rem) 1.5rem;
 }
 
