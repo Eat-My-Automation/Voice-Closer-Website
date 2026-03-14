@@ -23,9 +23,12 @@ import Layout from '../layouts/Layout.astro';
               <span>Get a live demo call in under 60 seconds</span>
             </div>
           </div>
-          <form class="demo-cta-row" action="#" method="POST" id="heroDemoForm">
-            <input type="tel" name="phone" placeholder="Enter your mobile number" required />
-            <button type="submit" class="btn btn-gold">Get A Free Test Call</button>
+          <form action="#" method="POST" id="heroDemoForm" class="demo-form">
+            <div class="demo-cta-row">
+              <input type="tel" name="phone" placeholder="Enter your mobile number" required />
+              <button type="submit" class="btn btn-gold">Get A Free Test Call</button>
+            </div>
+            <input type="text" name="name" class="demo-name-field" placeholder="Your first name" autocomplete="given-name" />
           </form>
           <p class="demo-cta-helper">
             1 demo call. No spam. US &amp; Canada only. Works for inbound and outbound follow-up.
@@ -217,9 +220,12 @@ import Layout from '../layouts/Layout.astro';
           <span>Your phone will ring in under 60 seconds</span>
         </div>
       </div>
-      <form class="demo-cta-row" action="#" method="POST" id="demoBandForm">
-        <input type="tel" name="phone" placeholder="Enter your mobile number" required />
-        <button type="submit" class="btn btn-gold">Get A Free Test Call</button>
+      <form action="#" method="POST" id="demoBandForm" class="demo-form">
+        <div class="demo-cta-row">
+          <input type="tel" name="phone" placeholder="Enter your mobile number" required />
+          <button type="submit" class="btn btn-gold">Get A Free Test Call</button>
+        </div>
+        <input type="text" name="name" class="demo-name-field" placeholder="Your first name" autocomplete="given-name" />
       </form>
       <p class="demo-cta-helper">
         1 demo call. No spam. US &amp; Canada only.
@@ -487,28 +493,72 @@ import Layout from '../layouts/Layout.astro';
     });
   })();
 
+  // Phone number auto-formatting: (267) 625-7559
+  function formatPhone(value) {
+    const digits = value.replace(/\D/g, '').slice(0, 10);
+    if (digits.length === 0) return '';
+    if (digits.length <= 3) return `(${digits}`;
+    if (digits.length <= 6) return `(${digits.slice(0,3)}) ${digits.slice(3)}`;
+    return `(${digits.slice(0,3)}) ${digits.slice(3,6)}-${digits.slice(6)}`;
+  }
+
+  // Strip formatting for API submission
+  function stripPhone(value) {
+    return value.replace(/\D/g, '');
+  }
+
   // Demo call forms
   (function() {
-    document.querySelectorAll('#heroDemoForm, #demoBandForm').forEach(form => {
+    document.querySelectorAll('.demo-form').forEach(form => {
+      const phoneInput = form.querySelector('input[name="phone"]');
+      const nameField = form.querySelector('.demo-name-field');
+      const btn = form.querySelector('button[type="submit"]');
+
+      // Auto-format phone as user types
+      phoneInput.addEventListener('input', () => {
+        const cursor = phoneInput.selectionStart;
+        const oldLen = phoneInput.value.length;
+        phoneInput.value = formatPhone(phoneInput.value);
+        const newLen = phoneInput.value.length;
+        // Keep cursor in a reasonable spot
+        phoneInput.setSelectionRange(cursor + (newLen - oldLen), cursor + (newLen - oldLen));
+
+        // Reveal name field once they start typing
+        if (stripPhone(phoneInput.value).length > 0) {
+          nameField.classList.add('visible');
+        } else {
+          nameField.classList.remove('visible');
+        }
+      });
+
+      // Reset form to initial state
+      function resetForm(originalText) {
+        btn.textContent = originalText;
+        btn.style.background = '';
+        btn.style.borderColor = '';
+        btn.disabled = false;
+        phoneInput.disabled = false;
+        nameField.disabled = false;
+      }
+
       form.addEventListener('submit', async (e) => {
         e.preventDefault();
-        const btn = form.querySelector('button[type="submit"]');
-        const input = form.querySelector('input[name="phone"]');
-        const phone = input.value.trim();
+        const phone = stripPhone(phoneInput.value);
+        const name = (form.querySelector('input[name="name"]').value || '').trim();
 
-        if (!phone) return;
+        if (!phone || phone.length < 10) return;
 
-        // Disable while calling
         const originalText = btn.textContent;
         btn.textContent = 'Calling you now...';
         btn.disabled = true;
-        input.disabled = true;
+        phoneInput.disabled = true;
+        nameField.disabled = true;
 
         try {
           const res = await fetch('/api/test-call-homepage', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ phone, agent: 'voicecloser_demo' }),
+            body: JSON.stringify({ phone, name, agent: 'voicecloser_demo' }),
           });
 
           const data = await res.json();
@@ -517,29 +567,19 @@ import Layout from '../layouts/Layout.astro';
             btn.textContent = 'Call incoming! Pick up your phone.';
             btn.style.background = '#34d399';
             btn.style.borderColor = '#34d399';
+            // Reset after 15 seconds
+            setTimeout(() => resetForm(originalText), 15000);
           } else {
             btn.textContent = data.error || 'Something went wrong. Try again.';
             btn.style.background = '#ef4444';
             btn.style.borderColor = '#ef4444';
-            setTimeout(() => {
-              btn.textContent = originalText;
-              btn.style.background = '';
-              btn.style.borderColor = '';
-              btn.disabled = false;
-              input.disabled = false;
-            }, 3000);
+            setTimeout(() => resetForm(originalText), 3000);
           }
         } catch (err) {
           btn.textContent = 'Connection error. Try again.';
           btn.style.background = '#ef4444';
           btn.style.borderColor = '#ef4444';
-          setTimeout(() => {
-            btn.textContent = originalText;
-            btn.style.background = '';
-            btn.style.borderColor = '';
-            btn.disabled = false;
-            input.disabled = false;
-          }, 3000);
+          setTimeout(() => resetForm(originalText), 3000);
         }
       });
     });
