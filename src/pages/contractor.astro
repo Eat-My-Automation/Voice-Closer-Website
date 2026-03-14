@@ -1,16 +1,16 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from '../layouts/LandingLayout.astro';
 ---
-<Layout title="Home">
+<Layout title="Contractor">
 
-  <!-- ===== 1. HERO — DEMO FIRST ===== -->
+  <!-- ===== 1. HERO - DEMO FIRST ===== -->
   <section class="hero">
     <div class="hero-inner">
       <div class="hero-text">
-        <h1>Never Lose Another Lead To A Missed Call Or Dead CRM.</h1>
+        <h1>Stop Losing Jobs To Missed Calls.</h1>
         <p class="hero-sub">
-          Your own AI phone agent that answers every call, follows up with old leads,
-          and books appointments - professionally, consistently, 24/7. Less drama, more profit.
+          Your own AI phone agent that answers every call, follows up with old estimates,
+          and books consultations - professionally, consistently, 24/7. Less drama, more jobs on the books.
         </p>
 
         <div class="demo-cta">
@@ -23,7 +23,7 @@ import Layout from '../layouts/Layout.astro';
               <span>Don't take our word for it - hear it live</span>
             </div>
           </div>
-          <form action="#" method="POST" id="heroDemoForm" class="demo-form">
+          <form action="#" method="POST" id="heroContractorForm" class="demo-form">
             <div class="demo-cta-row">
               <input type="tel" name="phone" placeholder="Enter your mobile number" required />
               <button type="submit" class="btn btn-gold">Get A Free Test Call</button>
@@ -33,9 +33,6 @@ import Layout from '../layouts/Layout.astro';
           <p class="demo-cta-helper">
             1 demo call. No spam. US &amp; Canada only. Works for inbound and outbound follow-up.
           </p>
-          <!-- <p class="demo-cta-secondary">
-            <a href="#demo">Prefer to listen instead? Hear a sample call.</a>
-          </p> -->
         </div>
       </div>
 
@@ -46,19 +43,25 @@ import Layout from '../layouts/Layout.astro';
             <div class="caller-status">VoiceCloser Answering...</div>
           </div>
           <div class="chat-bubble agent">
-            Hi, thanks for calling! This is Sarah with ABC Services. How can I help you?
+            Hi, thanks for calling! How can I help you?
           </div>
           <div class="chat-bubble caller">
-            Hi, I'm looking to get my bathroom remodeled.
+            Hey, I need to get my kitchen cabinets replaced.
           </div>
           <div class="chat-bubble agent">
-            We'd love to help! Is it your master bath or a secondary bathroom?
+            Sure thing! Are you looking to keep the same layout, or are you thinking about changing the design too?
           </div>
           <div class="chat-bubble caller">
-            It's the master. It's pretty outdated.
+            Probably the same layout, just newer cabinets.
           </div>
           <div class="chat-bubble agent">
-            Got it. Could you snap a few photos and text them to us? I'll set up a time for our estimator to come take a look. Does Wednesday afternoon work?
+            Got it. Do you know what material you're leaning toward - wood, laminate, something else?
+          </div>
+          <div class="chat-bubble caller">
+            Not sure yet honestly.
+          </div>
+          <div class="chat-bubble agent">
+            No worries. I'll set up a time for our estimator to come measure and walk you through the options. Does this week work for you?
           </div>
         </div>
 
@@ -69,7 +72,7 @@ import Layout from '../layouts/Layout.astro';
           <span class="badge-dot gold"></span> Missed Calls: 0
         </div>
         <div class="hero-badge badge-bottom-right">
-          <span class="badge-dot blue"></span> Reactivations This Week: 37
+          <span class="badge-dot blue"></span> Consultations Booked This Week: 11
         </div>
       </div>
     </div>
@@ -79,24 +82,23 @@ import Layout from '../layouts/Layout.astro';
   <section class="problem-section">
     <div class="problem-inner container">
       <div class="problem-text">
-        <h2>Every Missed Call And Ignored Lead Costs You Money.</h2>
+        <h2>Homeowners Don't Leave Voicemails. They Call The Next Contractor.</h2>
         <p>
-          Your phone rings while you're on a job. A lead fills out a form at 9 PM.
-          An old prospect in your CRM hasn't heard from you in months. Every one of
-          those is revenue walking out the door.
+          A homeowner is ready to start a project. They Google contractors and call the top three.
+          Whoever answers first gets the walkthrough. The other two never hear from them again.
         </p>
         <ul class="problem-list">
           <li>
             <span class="icon">&#10007;</span>
-            <span>New leads hit voicemail and move on to the next business.</span>
+            <span>Calls come in while you're on a job site all day.</span>
           </li>
           <li>
             <span class="icon">&#10007;</span>
-            <span>Existing customers feel ignored when no one picks up.</span>
+            <span>Estimate requests from last month are sitting in your inbox.</span>
           </li>
           <li>
             <span class="icon">&#10007;</span>
-            <span>Your old lead list just sits in your CRM, doing nothing.</span>
+            <span>Past customers who'd hire you again don't know you're available.</span>
           </li>
         </ul>
         <a href="#how-it-works" class="btn btn-outline btn-sm">See How VoiceCloser Fixes This</a>
@@ -107,14 +109,14 @@ import Layout from '../layouts/Layout.astro';
           <div class="comparison-label">Current Reality</div>
           <div class="comparison-stat">
             <span class="stat-icon">&#128222;</span>
-            <span class="stat-text">12 missed calls today<br/>0 follow-ups on old leads</span>
+            <span class="stat-text">11 missed calls this week<br/>0 old estimates followed up</span>
           </div>
         </div>
         <div class="comparison-side better">
           <div class="comparison-label">With VoiceCloser</div>
           <div class="comparison-stat">
             <span class="stat-icon">&#9989;</span>
-            <span class="stat-text">12 answered, 7 booked<br/>3 callbacks scheduled</span>
+            <span class="stat-text">11 answered, 8 consultations booked<br/>4 past customers re-engaged</span>
           </div>
         </div>
       </div>
@@ -160,7 +162,7 @@ import Layout from '../layouts/Layout.astro';
     </div>
   </section>
 
-  <!-- ===== 4. HOW IT WORKS — 3 STEPS ===== -->
+  <!-- ===== 4. HOW IT WORKS - 3 STEPS ===== -->
   <section class="steps-section" id="how-it-works">
     <div class="container text-center">
       <h2 class="section-title">Here's How VoiceCloser Goes Live In Days, Not Months.</h2>
@@ -206,7 +208,7 @@ import Layout from '../layouts/Layout.astro';
 
   <!-- ===== 5. TRY IT YOURSELF (DEMO BAND) ===== -->
   <section class="demo-band" id="demo">
-    <h2>See Exactly How Your Customers Will Be Greeted.</h2>
+    <h2>Hear How VoiceCloser Handles A Contractor Inquiry.</h2>
     <p class="demo-band-sub">
       Enter your number and VoiceCloser will call you in under a minute.
     </p>
@@ -220,7 +222,7 @@ import Layout from '../layouts/Layout.astro';
           <span>Don't take our word for it - hear it live</span>
         </div>
       </div>
-      <form action="#" method="POST" id="demoBandForm" class="demo-form">
+      <form action="#" method="POST" id="demoContractorForm" class="demo-form">
         <div class="demo-cta-row">
           <input type="tel" name="phone" placeholder="Enter your mobile number" required />
           <button type="submit" class="btn btn-gold">Get A Free Test Call</button>
@@ -233,38 +235,37 @@ import Layout from '../layouts/Layout.astro';
     </div>
   </section>
 
-  <!-- ===== 6. WHO IT'S FOR ===== -->
+  <!-- ===== 6. CALLS WE HANDLE ===== -->
   <section class="audience-section" id="who-its-for">
     <div class="audience-inner container">
       <div class="audience-text">
-        <h2>Built For Call-Heavy Businesses.</h2>
+        <h2>Calls We Handle For Contractors.</h2>
         <p>
-          If your business lives or dies by phone conversations, whether that's
-          booking appointments, qualifying leads, or following up on estimates,
-          VoiceCloser was built for you.
+          From renovation inquiries to old estimate follow-ups, VoiceCloser handles
+          the calls that keep your schedule full.
         </p>
       </div>
 
       <ul class="audience-list">
         <li class="audience-pill">
           <span class="check">&#10003;</span>
-          <span>Agencies &amp; marketing firms</span>
+          <span>Estimate and consultation requests</span>
         </li>
         <li class="audience-pill">
           <span class="check">&#10003;</span>
-          <span>Home services &amp; contractors</span>
+          <span>Kitchen, bath, and renovation inquiries</span>
         </li>
         <li class="audience-pill">
           <span class="check">&#10003;</span>
-          <span>Real estate teams</span>
+          <span>Follow-ups on quotes that went cold</span>
         </li>
         <li class="audience-pill">
           <span class="check">&#10003;</span>
-          <span>Clinics &amp; appointment-based businesses</span>
+          <span>Scheduling and rescheduling</span>
         </li>
         <li class="audience-pill">
           <span class="check">&#10003;</span>
-          <span>Any business that misses calls or sits on a big lead list</span>
+          <span>Warranty and punch list questions</span>
         </li>
       </ul>
     </div>
@@ -303,9 +304,9 @@ import Layout from '../layouts/Layout.astro';
     </div>
   </section>
 
-  <!-- ===== 8. CTA — BOOK A STRATEGY CALL ===== -->
+  <!-- ===== 8. CTA - BOOK A STRATEGY CALL ===== -->
   <section class="cta-band" id="book">
-    <h2>Want To See What VoiceCloser Could Do With Your Calls And Lead List?</h2>
+    <h2>Want To See How Many Jobs You're Losing To Voicemail?</h2>
     <p class="cta-band-sub">
       On a short call, we'll map your current missed calls and database, then show
       you how a voice agent could plug in.
@@ -326,14 +327,14 @@ import Layout from '../layouts/Layout.astro';
     <div class="faq-list">
       <div class="faq-item">
         <button class="faq-question" aria-expanded="false">
-          <span>Can it handle both inbound and outbound calls?</span>
+          <span>Can it handle different types of projects?</span>
           <span class="faq-icon">+</span>
         </button>
         <div class="faq-answer">
           <div class="faq-answer-inner">
-            Yes. VoiceCloser answers inbound calls live. No voicemail, no hold music.
-            It also proactively calls through your existing, opted-in lead list to
-            re-engage old prospects and book appointments. Both run 24/7.
+            Yes. VoiceCloser learns your services, your service area, and what questions
+            to ask for each type of job. Whether it's a kitchen remodel or a deck repair,
+            the agent asks the right questions and books the right appointment.
           </div>
         </div>
       </div>
