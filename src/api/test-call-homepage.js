@@ -6,6 +6,12 @@
 
 const AGENT_MAP = {
   voicecloser_demo:          'AGENT_VOICECLOSER_DEMO',
+  voicecloser_homepage:      'AGENT_VOICECLOSER_HOMEPAGE',
+  voicecloser_roofing:       'AGENT_VOICECLOSER_ROOFING',
+  voicecloser_plumbing:      'AGENT_VOICECLOSER_PLUMBING',
+  voicecloser_hvac:          'AGENT_VOICECLOSER_HVAC',
+  voicecloser_gym:           'AGENT_VOICECLOSER_GYM',
+  voicecloser_contractor:    'AGENT_VOICECLOSER_CONTRACTOR',
   city_fitness_reactivation: 'AGENT_CITY_FITNESS_REACTIVATION',
   cre_cold_caller:           'AGENT_CRE_COLD_CALLER',
   limitless_storage:         'AGENT_LIMITLESS_STORAGE',
