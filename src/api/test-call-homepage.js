@@ -62,7 +62,7 @@ export default async function testCallHomepage(req, res) {
       to_number: toNumber,
       override_agent_id: agentId,
       retell_llm_dynamic_variables: {
-        customer_name: name || 'there',
+        first_name: name || 'there',
       },
     };
 
