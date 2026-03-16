@@ -412,9 +412,15 @@ import Layout from '../layouts/Layout.astro';
 
   <!-- ===== STRATEGY CALL MODAL ===== -->
   <div class="modal-backdrop" id="strategyModal">
-    <div class="modal modal-tidycal">
+    <div class="modal modal-booking">
       <button class="modal-close" id="modalClose" aria-label="Close">&times;</button>
-      <div id="tidycalContainer"></div>
+      <iframe
+        id="bookingFrame"
+        src=""
+        data-src="https://api.leadconnectorhq.com/widget/bookings/voicecloser-demo"
+        style="width:100%;height:100%;border:none;"
+        loading="lazy"
+      ></iframe>
     </div>
   </div>
 
@@ -442,37 +448,21 @@ import Layout from '../layouts/Layout.astro';
     });
   });
 
-  // Strategy call modal with TidyCal
+  // Strategy call modal with LeadConnector booking
   (function() {
     const modal = document.getElementById('strategyModal');
     const closeBtn = document.getElementById('modalClose');
-    const container = document.getElementById('tidycalContainer');
-    let tidycalLoaded = false;
-
-    function loadTidyCal() {
-      if (tidycalLoaded) return;
-      tidycalLoaded = true;
-
-      // Insert the TidyCal embed div
-      const embedDiv = document.createElement('div');
-      embedDiv.className = 'tidycal-embed';
-      embedDiv.setAttribute('data-path', 'rxross/voicecloser-strategy-call');
-      container.appendChild(embedDiv);
-
-      // Load the TidyCal script
-      const script = document.createElement('script');
-      script.src = 'https://asset-tidycal.b-cdn.net/js/embed.js';
-      script.async = true;
-      container.appendChild(script);
-    }
+    const iframe = document.getElementById('bookingFrame');
 
     // Open modal
     document.querySelectorAll('.open-strategy-modal').forEach(btn => {
       btn.addEventListener('click', (e) => {
         e.preventDefault();
+        if (!iframe.src || iframe.src === window.location.href) {
+          iframe.src = iframe.dataset.src;
+        }
         modal.classList.add('open');
         document.body.style.overflow = 'hidden';
-        loadTidyCal();
       });
     });
 
