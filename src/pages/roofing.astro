@@ -202,7 +202,7 @@ import Layout from '../layouts/LandingLayout.astro';
     </div>
 
     <div class="container text-center mt-2">
-      <button class="btn btn-gold btn-lg open-strategy-modal">Book A 15-Minute Strategy Call</button>
+      <a href="/book" class="btn btn-gold btn-lg">Book A 15-Minute Strategy Call</a>
     </div>
   </section>
 
@@ -311,7 +311,7 @@ import Layout from '../layouts/LandingLayout.astro';
       On a short call, we'll map your current missed calls and database, then show
       you how a voice agent could plug in.
     </p>
-    <button class="btn btn-gold btn-lg open-strategy-modal">Book Your 15-Minute Strategy Call</button>
+    <a href="/book" class="btn btn-gold btn-lg">Book Your 15-Minute Strategy Call</a>
     <p class="cta-band-secondary">
       <a href="#demo">Not ready to talk? Get a free test call instead.</a>
     </p>
@@ -411,20 +411,6 @@ import Layout from '../layouts/LandingLayout.astro';
     </div>
   </section>
 
-  <!-- ===== STRATEGY CALL MODAL ===== -->
-  <div class="modal-backdrop" id="strategyModal">
-    <div class="modal modal-booking">
-      <button class="modal-close" id="modalClose" aria-label="Close">&times;</button>
-      <iframe
-        id="bookingFrame"
-        src=""
-        data-src="https://api.leadconnectorhq.com/widget/bookings/voicecloser-demo"
-        style="width:100%;height:100%;border:none;"
-        loading="lazy"
-      ></iframe>
-    </div>
-  </div>
-
 </Layout>
 
 <script is:inline>
@@ -448,41 +434,6 @@ import Layout from '../layouts/LandingLayout.astro';
       }
     });
   });
-
-  // Strategy call modal with LeadConnector booking
-  (function() {
-    const modal = document.getElementById('strategyModal');
-    const closeBtn = document.getElementById('modalClose');
-    const iframe = document.getElementById('bookingFrame');
-
-    // Open modal
-    document.querySelectorAll('.open-strategy-modal').forEach(btn => {
-      btn.addEventListener('click', (e) => {
-        e.preventDefault();
-        if (!iframe.src || iframe.src === window.location.href) {
-          iframe.src = iframe.dataset.src;
-        }
-        modal.classList.add('open');
-        document.body.style.overflow = 'hidden';
-      });
-    });
-
-    // Close modal
-    function closeModal() {
-      modal.classList.remove('open');
-      document.body.style.overflow = '';
-    }
-
-    closeBtn.addEventListener('click', closeModal);
-
-    modal.addEventListener('click', (e) => {
-      if (e.target === modal) closeModal();
-    });
-
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape' && modal.classList.contains('open')) closeModal();
-    });
-  })();
 
   // Phone number auto-formatting: (267) 625-7559
   function formatPhone(value) {
