@@ -1,0 +1,342 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Build Your Custom AI Agent">
+  <section class="build-page">
+    <div class="build-header">
+      <h1>Build Your <span class="gold">Custom AI Agent</span></h1>
+      <p>Fill out the form below and we'll build a custom voice AI agent for your business. Once it's ready, you'll schedule a quick call to see it in action.</p>
+    </div>
+
+    <form id="buildForm" class="build-form">
+      <div class="form-section">
+        <h2>Your Information</h2>
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="first_name">First Name <span class="req">*</span></label>
+            <input type="text" id="first_name" name="first_name" required placeholder="First Name" />
+          </div>
+          <div class="form-group">
+            <label for="last_name">Last Name <span class="req">*</span></label>
+            <input type="text" id="last_name" name="last_name" required placeholder="Last Name" />
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone <span class="req">*</span></label>
+            <input type="tel" id="phone" name="phone" required placeholder="(555) 555-5555" />
+          </div>
+          <div class="form-group">
+            <label for="email">Email <span class="req">*</span></label>
+            <input type="email" id="email" name="email" required placeholder="you@company.com" />
+          </div>
+        </div>
+      </div>
+
+      <div class="form-section">
+        <h2>Your Business</h2>
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="business_name">Business Name <span class="req">*</span></label>
+            <input type="text" id="business_name" name="business_name" required />
+          </div>
+          <div class="form-group">
+            <label for="business_address">Business Address <span class="req">*</span></label>
+            <input type="text" id="business_address" name="business_address" required />
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="services">Services You Offer <span class="req">*</span></label>
+          <textarea id="services" name="services" required rows="3" placeholder="List your main services"></textarea>
+        </div>
+      </div>
+
+      <div class="form-section">
+        <h2>About Your Calls</h2>
+        <div class="form-group">
+          <label for="end_of_call_action">What should happen at the end of the call? (AFTER you receive their information + call summary) <span class="req">*</span></label>
+          <select id="end_of_call_action" name="end_of_call_action" required>
+            <option value="" disabled selected>Select an option</option>
+            <option value="book_appointment">Book an appointment</option>
+            <option value="send_text">Send a text with more info</option>
+            <option value="transfer_live">Transfer to a live person</option>
+            <option value="take_message">Take a message and promise a callback</option>
+            <option value="collect_info">Just collect their info</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="qualifying_questions">Give me 2-3 questions that you ask to know if someone's a good fit: <span class="req">*</span></label>
+          <textarea id="qualifying_questions" name="qualifying_questions" required rows="3"></textarea>
+        </div>
+        <div class="form-group">
+          <label for="disqualifying_criteria">How do you know if someone is NOT a good fit? <span class="req">*</span></label>
+          <input type="text" id="disqualifying_criteria" name="disqualifying_criteria" required placeholder="List the main ones (not an exhaustive list)" />
+        </div>
+        <div class="form-group">
+          <label for="common_objections">What's the most common objection(s) you hear? <span class="req">*</span></label>
+          <input type="text" id="common_objections" name="common_objections" required />
+        </div>
+        <div class="form-group">
+          <label for="why_customers_choose">Why do your best customers choose you? <span class="req">*</span></label>
+          <textarea id="why_customers_choose" name="why_customers_choose" required rows="3"></textarea>
+        </div>
+      </div>
+
+      <div class="form-section">
+        <label class="checkbox-label">
+          <input type="checkbox" name="consent_reminders" />
+          <div>
+            <strong>Appointment reminders & follow-ups</strong>
+            <p class="checkbox-detail">By checking this box, I agree to receive email and SMS reminders and follow-up messages from RECO QA LLC about my VoiceCloser appointment. Message frequency varies. Message & data rates may apply. Reply STOP to stop, HELP for help.</p>
+          </div>
+        </label>
+        <label class="checkbox-label">
+          <input type="checkbox" name="consent_marketing" />
+          <div>
+            <strong>Product tips, updates & offers</strong>
+            <p class="checkbox-detail">I'd like to receive occasional VoiceCloser tips, workflow ideas, feature announcements, and exclusive offers by email or SMS. Message frequency varies. Message & data rates may apply. Reply STOP to stop, HELP for help.</p>
+            <p class="checkbox-note">We hate spam too. We typically send 1-2 helpful messages per month.</p>
+          </div>
+        </label>
+      </div>
+
+      <div id="formError" class="form-error" style="display:none;"></div>
+
+      <button type="submit" class="build-submit" id="submitBtn">
+        Submit
+      </button>
+
+      <div class="form-footer">
+        <a href="/privacy">Privacy Policy</a> | <a href="/terms">Terms of Service</a>
+      </div>
+    </form>
+  </section>
+</Layout>
+
+<style>
+  .build-page {
+    padding: 2rem 1rem;
+    max-width: 720px;
+    margin: 0 auto;
+    min-height: 80vh;
+  }
+
+  .build-header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+  }
+
+  .build-header h1 {
+    font-family: var(--font-heading);
+    font-size: clamp(1.8rem, 4vw, 2.4rem);
+    margin-bottom: 0.75rem;
+  }
+
+  .build-header p {
+    color: var(--text-secondary);
+    font-size: 1.05rem;
+    max-width: 560px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+
+  .gold { color: var(--gold); }
+  .req { color: var(--gold); }
+
+  .build-form {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .form-section {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .form-section h2 {
+    font-family: var(--font-heading);
+    font-size: 1.2rem;
+    color: var(--gold);
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 0.5rem;
+  }
+
+  .form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+
+  @media (max-width: 600px) {
+    .form-grid { grid-template-columns: 1fr; }
+  }
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+  }
+
+  .form-group label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+  }
+
+  .form-group input,
+  .form-group textarea,
+  .form-group select {
+    background: var(--input-bg);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 0.65rem 0.85rem;
+    font-size: 0.95rem;
+    color: var(--text-primary);
+    font-family: var(--font-body);
+    transition: border-color 0.2s;
+  }
+
+  .form-group input:focus,
+  .form-group textarea:focus,
+  .form-group select:focus {
+    outline: none;
+    border-color: var(--gold);
+  }
+
+  .form-group select {
+    cursor: pointer;
+    appearance: auto;
+  }
+
+  .form-group textarea {
+    resize: vertical;
+    min-height: 70px;
+  }
+
+  .checkbox-label {
+    display: flex;
+    gap: 0.75rem;
+    align-items: flex-start;
+    cursor: pointer;
+    font-size: 0.9rem;
+  }
+
+  .checkbox-label input[type="checkbox"] {
+    margin-top: 0.25rem;
+    accent-color: var(--gold);
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+  }
+
+  .checkbox-label strong {
+    color: var(--text-primary);
+    font-size: 0.9rem;
+  }
+
+  .checkbox-detail {
+    color: var(--text-muted);
+    font-size: 0.8rem;
+    line-height: 1.5;
+    margin-top: 0.25rem;
+  }
+
+  .checkbox-note {
+    color: var(--text-muted);
+    font-size: 0.8rem;
+    font-style: italic;
+    margin-top: 0.35rem;
+  }
+
+  .form-error {
+    background: rgba(220, 38, 38, 0.1);
+    border: 1px solid rgba(220, 38, 38, 0.3);
+    color: #ef4444;
+    padding: 0.75rem 1rem;
+    border-radius: 6px;
+    font-size: 0.9rem;
+  }
+
+  .build-submit {
+    background: var(--gold);
+    color: #0a0f1e;
+    border: none;
+    border-radius: 8px;
+    padding: 0.85rem;
+    font-size: 1.05rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.1s;
+    font-family: var(--font-body);
+  }
+
+  .build-submit:hover {
+    background: var(--gold-light);
+  }
+
+  .build-submit:active {
+    transform: scale(0.98);
+  }
+
+  .build-submit:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+
+  .form-footer {
+    text-align: center;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+  }
+</style>
+
+<script>
+  const form = document.getElementById('buildForm');
+  const submitBtn = document.getElementById('submitBtn');
+  const errorEl = document.getElementById('formError');
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    errorEl.style.display = 'none';
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Submitting...';
+
+    const data = Object.fromEntries(new FormData(form));
+    // Convert checkboxes to booleans
+    data.consent_reminders = data.consent_reminders === 'on';
+    data.consent_marketing = data.consent_marketing === 'on';
+    data.source = 'website_form';
+
+    try {
+      const res = await fetch('/api/build-intake', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data),
+      });
+
+      const result = await res.json();
+
+      if (res.ok) {
+        // Redirect to calendar with pre-filled fields
+        const params = new URLSearchParams({
+          first_name: data.first_name || '',
+          last_name: data.last_name || '',
+          email: data.email || '',
+          phone: data.phone || '',
+        });
+        window.location.href = `/buildreview?${params.toString()}`;
+      } else {
+        errorEl.textContent = result.error || 'Something went wrong. Please try again.';
+        errorEl.style.display = 'block';
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Submit';
+      }
+    } catch (err) {
+      errorEl.textContent = 'Network error. Please check your connection and try again.';
+      errorEl.style.display = 'block';
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'Submit';
+    }
+  });
+</script>

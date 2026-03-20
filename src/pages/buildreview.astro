@@ -1,0 +1,56 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Schedule Your Bot Review">
+  <section style="padding: 2rem 1rem; max-width: 800px; margin: 0 auto; min-height: 80vh;">
+    <div style="text-align: center; margin-bottom: 1.5rem;">
+      <h1 style="font-family: var(--font-heading); font-size: clamp(1.6rem, 3.5vw, 2rem); margin-bottom: 0.5rem;">
+        You're all set — <span style="color: var(--gold);">your bot is being built now.</span>
+      </h1>
+      <p style="color: var(--text-secondary); font-size: 1rem; max-width: 520px; margin: 0 auto;">
+        Schedule a quick call below and we'll walk you through your custom AI agent live.
+      </p>
+    </div>
+    <div id="calendarContainer">
+      <p style="text-align: center; color: var(--text-muted);">Loading calendar...</p>
+    </div>
+  </section>
+</Layout>
+
+<script>
+  // Fetch calendar URL from server, then build iframe with pre-filled contact fields
+  (async () => {
+    const container = document.getElementById('calendarContainer');
+    try {
+      const res = await fetch('/api/build-review-calendar');
+      const data = await res.json();
+
+      if (!data.url) {
+        container.innerHTML = '<p style="text-align:center;color:var(--text-muted);">Calendar not configured. Please contact us to schedule your review.</p>';
+        return;
+      }
+
+      // Pre-fill contact fields from query params
+      const params = new URLSearchParams(window.location.search);
+      const calParams = new URLSearchParams();
+      ['first_name', 'last_name', 'email', 'phone'].forEach(key => {
+        const val = params.get(key);
+        if (val) calParams.set(key, val);
+      });
+
+      const iframeSrc = calParams.toString()
+        ? `${data.url}?${calParams.toString()}`
+        : data.url;
+
+      container.innerHTML = '';
+      const iframe = document.createElement('iframe');
+      iframe.src = iframeSrc;
+      iframe.style.cssText = 'width:100%;height:calc(100vh - 220px);border:none;border-radius:8px;';
+      iframe.loading = 'lazy';
+      container.appendChild(iframe);
+    } catch {
+      container.innerHTML = '<p style="text-align:center;color:var(--text-muted);">Failed to load calendar. Please try refreshing the page.</p>';
+    }
+  })();
+</script>
