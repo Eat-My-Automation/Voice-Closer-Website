@@ -19,8 +19,11 @@ app.get('/api/build-review-calendar', buildReviewCalendar);
 // Serve static Astro build
 app.use(express.static(path.join(__dirname, 'dist')));
 
-// SPA fallback — serve index.html for any unmatched route
+// Fallback — serve index.html only for routes without file extensions
 app.get('/{*splat}', (req, res) => {
+  if (path.extname(req.path)) {
+    return res.status(404).end();
+  }
   res.sendFile(path.join(__dirname, 'dist', 'index.html'));
 });
 
