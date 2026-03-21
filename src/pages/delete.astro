@@ -1,0 +1,63 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+<Layout title="Delete Account" description="Request deletion of your VoiceCloser account and all associated data.">
+  <div class="legal-page">
+    <h1>Account Deletion Request</h1>
+    <p class="legal-updated">Your data, your choice.</p>
+
+    <div class="legal-card">
+      <p>To request deletion of your VoiceCloser account and all associated data, please email us:</p>
+
+      <p style="margin-top: 1.5rem;">
+        <strong style="color: var(--text-muted); font-size: 0.875rem;">Email:</strong><br/>
+        <span style="font-size: 1.15rem; font-weight: 600; color: var(--text-primary);">support@voicecloser.io</span>
+      </p>
+      <p>
+        <strong style="color: var(--text-muted); font-size: 0.875rem;">Subject:</strong><br/>
+        <span style="font-size: 1.15rem; font-weight: 600; color: var(--text-primary);">Account Deletion Request</span>
+      </p>
+
+      <p style="margin-top: 1.5rem;">
+        <a href="mailto:support@voicecloser.io?subject=Account%20Deletion%20Request" class="btn btn-gold" style="display: inline-block; text-align: center; width: 100%;">
+          Email Deletion Request
+        </a>
+      </p>
+    </div>
+
+    <div class="legal-warning">
+      <h3>Security Requirement</h3>
+      <ul>
+        <li>You must email from your registered email address</li>
+        <li>Include your full name in the email</li>
+        <li>We will verify your identity before processing</li>
+      </ul>
+      <p style="margin-top: 0.75rem;">Requests from a different email address will require additional verification for your security.</p>
+    </div>
+
+    <div class="legal-card">
+      <h2 style="margin-top: 0;">What Data Will Be Deleted</h2>
+      <ul>
+        <li>Your account and profile information</li>
+        <li>Organization and team data</li>
+        <li>Call recordings and transcripts</li>
+        <li>Agent configurations</li>
+        <li>Billing and subscription information</li>
+      </ul>
+    </div>
+
+    <div class="legal-card">
+      <h2 style="margin-top: 0;">Processing Time</h2>
+      <p>We will verify your identity and process deletion requests within 30 days. You will receive a confirmation email once your data has been removed.</p>
+    </div>
+
+    <div class="legal-danger">
+      <h3>Warning</h3>
+      <p style="margin-bottom: 0;">Account deletion is permanent and cannot be undone. All data will be irreversibly removed.</p>
+    </div>
+
+    <p style="margin-top: 2rem;">
+      <a href="/" style="color: var(--text-muted);">&larr; Back to Home</a>
+    </p>
+  </div>
+</Layout>
