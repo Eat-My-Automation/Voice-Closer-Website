@@ -1,0 +1,3474 @@
+[
+  {
+    "slug": "hvac",
+    "agentKey": "voicecloser_hvac",
+    "pageTitle": "HVAC",
+    "hero": {
+      "headline": "Stop Losing HVAC Jobs To Missed Calls.",
+      "subheadline": "Your own AI phone agent that answers every call, follows up on old service quotes, and books appointments - professionally, consistently, 24/7. Less drama, more jobs on the books."
+    },
+    "conversation": [
+      {
+        "speaker": "agent",
+        "line": "Hi, thanks for calling! How can I help you?"
+      },
+      {
+        "speaker": "caller",
+        "line": "My AC stopped blowing cold air about an hour ago."
+      },
+      {
+        "speaker": "agent",
+        "line": "That's no fun in this heat. Quick question - is the outdoor unit running, or is it completely silent outside?"
+      },
+      {
+        "speaker": "caller",
+        "line": "Actually I think it's running but the air inside is just warm."
+      },
+      {
+        "speaker": "agent",
+        "line": "Okay, that's helpful. It could be a refrigerant issue or a compressor problem. I have an opening this afternoon at 2 PM. Want me to send a tech out?"
+      },
+      {
+        "speaker": "caller",
+        "line": "Yeah, please."
+      },
+      {
+        "speaker": "agent",
+        "line": "Done. Tech will be there at 2. If you can, keep the thermostat set and don't keep turning it off and on before they arrive."
+      }
+    ],
+    "badges": {
+      "blue": "Service Calls Booked This Week: 18"
+    },
+    "problem": {
+      "headline": "When The AC Goes Out, They Call Everyone. Who Answers First Wins.",
+      "description": "Summer heat doesn't wait. When a homeowner's AC dies, they're calling every HVAC company they can find. The one who picks up first gets the job. Everyone else gets forgotten.",
+      "problems": [
+        "Peak season calls go to voicemail while your techs are in attics.",
+        "Maintenance agreement renewals expire with no follow-up.",
+        "Last year's estimate requests are collecting dust."
+      ]
+    },
+    "comparison": {
+      "currentReality": "18 missed calls during a heat wave<br/>0 maintenance renewals followed up",
+      "withVoiceCloser": "18 answered, 11 service calls booked<br/>7 renewals re-engaged"
+    },
+    "demoBand": {
+      "headline": "Hear How VoiceCloser Handles An HVAC Service Call."
+    },
+    "callsWeHandle": {
+      "headline": "Calls We Handle For HVAC Companies.",
+      "description": "From emergency breakdowns to seasonal tune-ups, VoiceCloser handles the calls that keep your techs busy year-round.",
+      "types": [
+        "Emergency AC and heating breakdown calls",
+        "Seasonal maintenance and tune-up scheduling",
+        "Estimate and quote follow-ups",
+        "Maintenance agreement renewals",
+        "After-hours emergency dispatch"
+      ]
+    },
+    "cta": {
+      "headline": "Want To See How Many HVAC Leads Slipped Through This Season?"
+    },
+    "faq1": {
+      "question": "Can it handle seasonal call spikes?",
+      "answer": "Yes. VoiceCloser handles unlimited calls at the same time. During a heat wave or cold snap when your phone is ringing off the hook, every single call gets answered and scheduled. No overwhelmed front desk."
+    }
+  },
+  {
+    "slug": "gym",
+    "agentKey": "voicecloser_gym",
+    "pageTitle": "Gym",
+    "hero": {
+      "headline": "Stop Losing Members To Missed Calls And No Follow-Up.",
+      "subheadline": "Your own AI phone agent that answers every call, follows up with trial visitors, and books tours - professionally, consistently, 24/7. Less drama, more memberships."
+    },
+    "conversation": [
+      {
+        "speaker": "agent",
+        "line": "Hey, thanks for calling! What can I help you with?"
+      },
+      {
+        "speaker": "caller",
+        "line": "Hi, I'm thinking about signing up. What do you guys offer?"
+      },
+      {
+        "speaker": "agent",
+        "line": "Hey! What are you mainly looking to do - weights, cardio, classes, or a mix of everything?"
+      },
+      {
+        "speaker": "caller",
+        "line": "Mostly weights and maybe some classes."
+      },
+      {
+        "speaker": "agent",
+        "line": "We've got a full free weight area plus group classes like HIIT and spin included with every membership. The best way to check it out is a free tour. Are mornings or afternoons better for you?"
+      },
+      {
+        "speaker": "caller",
+        "line": "Afternoons, maybe this weekend?"
+      },
+      {
+        "speaker": "agent",
+        "line": "I've got Saturday at 1 PM open. I'll put you down and send a text with the address and what to bring. Sound good?"
+      }
+    ],
+    "badges": {
+      "blue": "Tours Booked This Week: 12"
+    },
+    "problem": {
+      "headline": "Every Missed Inquiry Is A Membership That Went Somewhere Else.",
+      "description": "Someone sees your ad, gets motivated, and calls. If nobody picks up, that motivation disappears. They sign up at the gym down the road that answered on the first ring.",
+      "problems": [
+        "New member inquiries go to voicemail during peak hours.",
+        "Trial visitors who never came back? Nobody followed up.",
+        "Cancellation saves need to happen in the moment, not two days later."
+      ]
+    },
+    "comparison": {
+      "currentReality": "10 missed inquiry calls this month<br/>23 trial visitors never followed up",
+      "withVoiceCloser": "10 answered, 7 tours booked<br/>23 trial visitors re-engaged, 9 signed up"
+    },
+    "demoBand": {
+      "headline": "Hear How VoiceCloser Handles A Membership Inquiry."
+    },
+    "callsWeHandle": {
+      "headline": "Calls We Handle For Gyms.",
+      "description": "From new member inquiries to cancellation saves, VoiceCloser handles the calls that grow and protect your membership base.",
+      "types": [
+        "New member inquiries and pricing questions",
+        "Tour and trial class scheduling",
+        "Follow-ups with trial visitors who didn't sign up",
+        "Cancellation save calls",
+        "Class schedule and hours questions"
+      ]
+    },
+    "cta": {
+      "headline": "Want To See How Many Potential Members You're Losing To Voicemail?"
+    },
+    "faq1": {
+      "question": "Can it handle cancellation calls?",
+      "answer": "Yes. VoiceCloser can be trained with your save offers and scripts. When a member calls to cancel, the agent follows your playbook to understand why and make a retention offer before the member is lost."
+    }
+  },
+  {
+    "slug": "plumbing",
+    "agentKey": "voicecloser_plumbing",
+    "pageTitle": "Plumbing",
+    "hero": {
+      "headline": "Stop Losing Plumbing Jobs To Missed Calls.",
+      "subheadline": "Your own AI phone agent that answers every call, follows up with past customers, and books service appointments - professionally, consistently, 24/7. Less drama, more jobs on the books."
+    },
+    "conversation": [
+      {
+        "speaker": "agent",
+        "line": "Hi, thanks for calling! How can I help you?"
+      },
+      {
+        "speaker": "caller",
+        "line": "I've got water coming up through my basement floor drain."
+      },
+      {
+        "speaker": "agent",
+        "line": "That sounds urgent. Is it clean water or does it smell like sewage? And is it actively rising right now?"
+      },
+      {
+        "speaker": "caller",
+        "line": "It smells terrible and it's still coming up slowly."
+      },
+      {
+        "speaker": "agent",
+        "line": "Okay, that sounds like a sewer backup. Don't run any water or flush anything in the house. I'm flagging this as an emergency and our on-call tech will call you back within 15 minutes. What's the best number to reach you?"
+      }
+    ],
+    "badges": {
+      "blue": "Service Calls Booked This Week: 11"
+    },
+    "problem": {
+      "headline": "A Burst Pipe Won't Wait For You To Call Back.",
+      "description": "Plumbing emergencies happen at the worst times. Nights, weekends, holidays. When a homeowner has water pouring into their basement, they're calling every plumber in their phone until someone picks up.",
+      "problems": [
+        "Emergency calls go to voicemail while you're under a sink.",
+        "Repeat customers can't get through when they need you most.",
+        "That list of past service calls? Nobody's following up."
+      ]
+    },
+    "comparison": {
+      "currentReality": "8 missed calls this week<br/>3 went to competitors",
+      "withVoiceCloser": "8 answered, 6 service calls booked<br/>2 past customers re-engaged"
+    },
+    "demoBand": {
+      "headline": "Hear How VoiceCloser Handles A Plumbing Emergency Call."
+    },
+    "callsWeHandle": {
+      "headline": "Calls We Handle For Plumbers.",
+      "description": "From burst pipe emergencies to routine maintenance scheduling, VoiceCloser handles the calls that keep your trucks rolling.",
+      "types": [
+        "Emergency and after-hours calls",
+        "Service appointment requests",
+        "Estimate follow-ups",
+        "Drain cleaning and maintenance scheduling",
+        "Warranty and callback questions"
+      ]
+    },
+    "cta": {
+      "headline": "Want To See How Many Service Calls You're Losing To Voicemail?"
+    },
+    "faq1": {
+      "question": "Can it handle emergency calls differently?",
+      "answer": "Yes. VoiceCloser can be trained to flag emergencies, collect key details like the address and problem, and immediately notify your on-call tech via text or email while the call is still happening."
+    }
+  },
+  {
+    "slug": "roofing",
+    "agentKey": "voicecloser_roofing",
+    "pageTitle": "Roofing",
+    "hero": {
+      "headline": "Stop Losing Roofing Jobs To Missed Calls.",
+      "subheadline": "Your own AI phone agent that answers every call, follows up with old estimates, and books inspections - professionally, consistently, 24/7. Less drama, more jobs on the books."
+    },
+    "conversation": [
+      {
+        "speaker": "agent",
+        "line": "Hi, thanks for calling! How can I help you?"
+      },
+      {
+        "speaker": "caller",
+        "line": "Hey, I've got water coming into my ceiling after the rain last night."
+      },
+      {
+        "speaker": "agent",
+        "line": "Sorry to hear that. Is the water coming through in one spot or multiple areas? And do you know if you have shingles or a flat roof?"
+      },
+      {
+        "speaker": "caller",
+        "line": "Just one spot in the upstairs bedroom, and yeah, it's shingles."
+      },
+      {
+        "speaker": "agent",
+        "line": "That helps. How big is the water spot - like dinner plate size or bigger?"
+      },
+      {
+        "speaker": "caller",
+        "line": "Maybe a little bigger than a dinner plate."
+      },
+      {
+        "speaker": "agent",
+        "line": "Got it. I can get an inspector out tomorrow morning at 8 AM before it spreads. Want me to lock that in?"
+      }
+    ],
+    "badges": {
+      "blue": "Inspections Booked This Week: 14"
+    },
+    "problem": {
+      "headline": "Every Storm Brings Calls. Are You Catching Them All?",
+      "description": "A homeowner notices a leak at 7 PM. They call three roofers. The first one who answers gets the job. If that's not you, it's your competitor down the street.",
+      "problems": [
+        "Homeowners call after storms and give up after one ring.",
+        "Old estimate requests from last season are just sitting there.",
+        "Your crew is on a roof all day. Nobody's answering the phone."
+      ]
+    },
+    "comparison": {
+      "currentReality": "14 missed calls this week<br/>0 old estimates followed up",
+      "withVoiceCloser": "14 answered, 9 inspections booked<br/>5 old estimates re-engaged"
+    },
+    "demoBand": {
+      "headline": "Hear How VoiceCloser Handles A Roofing Call."
+    },
+    "callsWeHandle": {
+      "headline": "Calls We Handle For Roofers.",
+      "description": "From storm damage emergencies to old estimate follow-ups, VoiceCloser handles the calls that keep your crew booked.",
+      "types": [
+        "Emergency leak and storm damage calls",
+        "Estimate and inspection requests",
+        "Follow-ups on old quotes that never closed",
+        "Insurance claim questions",
+        "Scheduling and rescheduling"
+      ]
+    },
+    "cta": {
+      "headline": "Want To See How Many Roofing Leads You're Losing Right Now?"
+    },
+    "faq1": {
+      "question": "Can it handle storm surge call volume?",
+      "answer": "Yes. VoiceCloser handles unlimited simultaneous calls. When a storm hits and your phone blows up, every single call gets answered. No busy signals, no voicemail."
+    }
+  },
+  {
+    "slug": "auto-dealership",
+    "agentKey": "voicecloser_auto_dealership",
+    "pageTitle": "Auto Dealership",
+    "hero": {
+      "headline": "Stop Letting Hot Car Buyers Go To Voicemail.",
+      "subheadline": "Your own AI phone agent that answers every sales and service call, follows up with internet leads, and books test drives and appointments - professionally, consistently, 24/7. Less chaos, more cars off the lot."
+    },
+    "conversation": [
+      {
+        "speaker": "agent",
+        "line": "Hi, thanks for calling [Dealership Name]. This is Alex. Are you looking at sales or service today?"
+      },
+      {
+        "speaker": "caller",
+        "line": "Sales. I saw a 2021 RAV4 on your website and had a few questions."
+      },
+      {
+        "speaker": "agent",
+        "line": "Great choice. Are you planning to trade in your current vehicle or just buying outright?"
+      },
+      {
+        "speaker": "caller",
+        "line": "I'll probably trade in my Civic."
+      },
+      {
+        "speaker": "agent",
+        "line": "Perfect. The best way to get exact numbers is a quick test drive and appraisal. Are weekdays after work or Saturdays better for you?"
+      },
+      {
+        "speaker": "caller",
+        "line": "Saturday morning works."
+      },
+      {
+        "speaker": "agent",
+        "line": "I've got an opening this Saturday at 10:30 AM. I'll reserve a RAV4 for you to drive and note your trade-in. What's the best number to text your confirmation to?"
+      }
+    ],
+    "badges": {
+      "blue": "Test Drives Booked This Week: 19"
+    },
+    "problem": {
+      "headline": "When Buyers Are Shopping, They Call Everyone. The Store That Answers First Wins.",
+      "description": "A shopper is on their couch scrolling inventory. They call with a question about a specific vehicle. If nobody answers, they don't wait - they hit the next dealership on Google and buy there instead.",
+      "problems": [
+        "Sales calls hit voicemail while your team is with customers on the lot.",
+        "Internet leads and third-party form fills get slow or no follow-up.",
+        "Service calls jam your main line, and nobody has time to screen or route them."
+      ]
+    },
+    "comparison": {
+      "currentReality": "23 missed sales calls this week<br/>0 follow-ups on aged internet leads",
+      "withVoiceCloser": "23 answered, 14 test drives booked<br/>37 old leads re-engaged"
+    },
+    "demoBand": {
+      "headline": "Hear How VoiceCloser Handles A New Car Sales Call."
+    },
+    "callsWeHandle": {
+      "headline": "Calls We Handle For Auto Dealerships.",
+      "description": "From fresh sales inquiries to service scheduling, VoiceCloser handles the calls that move units and keep your bays full.",
+      "types": [
+        "New and used vehicle sales inquiries",
+        "Test drive and appointment booking",
+        "Internet lead and third-party form follow-ups",
+        "Service and maintenance scheduling",
+        "Hours, directions, and basic financing questions"
+      ]
+    },
+    "cta": {
+      "headline": "Want To See How Many Deals You're Losing To Missed Calls?"
+    },
+    "faq1": {
+      "question": "Can it separate sales and service calls?",
+      "answer": "Yes. VoiceCloser can be trained to ask a quick routing question upfront, tag the call as sales or service, and then follow your playbook for each. Sales calls can be focused on test drives and appointments, while service calls can be scheduled or escalated to your service desk when needed."
+    }
+  },
+  {
+    "slug": "auto-detailing",
+    "agentKey": "voicecloser_auto_detailing",
+    "pageTitle": "Auto Detailing",
+    "hero": {
+      "headline": "Stop Losing Details To Missed Calls And DMs.",
+      "subheadline": "Your own AI phone agent that answers every call, follows up with past customers, and books details and coatings - professionally, consistently, 24/7. Less back-and-forth, more cars on the schedule."
+    },
+    "conversation": [
+      {
+        "speaker": "agent",
+        "line": "Hi, thanks for calling [Shop Name]. This is Taylor. What are you looking to get done on your vehicle?"
+      },
+      {
+        "speaker": "caller",
+        "line": "I need a full interior detail. My kids trashed the back seat."
+      },
+      {
+        "speaker": "agent",
+        "line": "Got it. Is it a car, SUV, or truck? And about how dirty are we talking - just crumbs and spills, or stains in the seats too?"
+      },
+      {
+        "speaker": "caller",
+        "line": "SUV, and there are definitely some stains."
+      },
+      {
+        "speaker": "agent",
+        "line": "No problem. Our full interior package is perfect for that. Are weekdays or weekends better for you to drop it off?"
+      },
+      {
+        "speaker": "caller",
+        "line": "Weekends."
+      },
+      {
+        "speaker": "agent",
+        "line": "I can get you in this Saturday at 9 AM. I'll lock that in and text you the drop-off instructions. What's the best number to send that to?"
+      }
+    ],
+    "badges": {
+      "blue": "Details Booked This Week: 17"
+    },
+    "problem": {
+      "headline": "People Call When Their Car Is Dirty Now. If You Don't Answer, They Move On.",
+      "description": "Someone finally decides to clean their car. They call the first few detailers they find. If you don't answer, they book with whoever does - even if you do better work.",
+      "problems": [
+        "Weekend and after-work calls go straight to voicemail.",
+        "Mobile jobs are hard to coordinate when you're already on-site.",
+        "Past customers who loved you never get a reminder to come back."
+      ]
+    },
+    "comparison": {
+      "currentReality": "14 missed calls this week<br/>0 reactivation of old customers",
+      "withVoiceCloser": "14 answered, 9 details booked<br/>22 past customers re-engaged"
+    },
+    "demoBand": {
+      "headline": "Hear How VoiceCloser Handles An Auto Detailing Inquiry."
+    },
+    "callsWeHandle": {
+      "headline": "Calls We Handle For Detailing Shops.",
+      "description": "From first-time cleanups to ceramic coating consults, VoiceCloser handles the calls that keep your bays and mobile routes full.",
+      "types": [
+        "Full detail and wash package inquiries",
+        "Mobile detailing scheduling and coordination",
+        "Ceramic coating, paint correction, and premium service questions",
+        "Appointment confirmations, reschedules, and cancellations",
+        "Reactivations for past customers and seasonal reminders"
+      ]
+    },
+    "cta": {
+      "headline": "Want To See How Many Details You're Losing To Voicemail?"
+    },
+    "faq1": {
+      "question": "Can it handle mobile and in-shop jobs differently?",
+      "answer": "Yes. VoiceCloser can ask whether the customer wants mobile or in-shop service, then collect the right details - address and access for mobile, or drop-off time for in-shop - and book the correct type of appointment on your calendar."
+    }
+  },
+  {
+    "slug": "towing",
+    "agentKey": "voicecloser_towing",
+    "pageTitle": "Towing",
+    "hero": {
+      "headline": "Stop Losing Tow Jobs To Busy Signals And Missed Calls.",
+      "subheadline": "Your own AI phone agent that answers every call, gathers location and vehicle info, and alerts your on-call driver - professionally, consistently, 24/7. Less chaos, more trucks rolling."
+    },
+    "conversation": [
+      {
+        "speaker": "agent",
+        "line": "Towing dispatch, this is Jordan. Are you in a safe spot right now?"
+      },
+      {
+        "speaker": "caller",
+        "line": "I'm on the shoulder of I-95. My car just died."
+      },
+      {
+        "speaker": "agent",
+        "line": "Okay, thanks for letting me know. What kind of vehicle are you in, and do you know the nearest exit or mile marker?"
+      },
+      {
+        "speaker": "caller",
+        "line": "2015 Camry, just past exit 42."
+      },
+      {
+        "speaker": "agent",
+        "line": "Got it. Is the car completely dead or will it start at all?"
+      },
+      {
+        "speaker": "caller",
+        "line": "Completely dead."
+      },
+      {
+        "speaker": "agent",
+        "line": "Understood. I'm flagging this as a priority tow and sending your info to our on-call driver right now. What's the best number for updates, and where do you want the vehicle taken?"
+      }
+    ],
+    "badges": {
+      "blue": "Tow Jobs Dispatched This Week: 26"
+    },
+    "problem": {
+      "headline": "Breakdowns Don't Wait. Drivers Call Until Someone Picks Up.",
+      "description": "When a driver is stranded on the side of the road, they're not waiting for a callback. They're calling company after company until someone answers and gives them an ETA.",
+      "problems": [
+        "Night and weekend calls roll to voicemail while you're on another job.",
+        "Missed calls turn into bad reviews and \"no one answered\" complaints.",
+        "Your drivers can't answer the phone while loading vehicles."
+      ]
+    },
+    "comparison": {
+      "currentReality": "16 missed calls during nights and weekends<br/>4 one-star reviews about \"no answer\"",
+      "withVoiceCloser": "16 answered, 11 tow jobs dispatched<br/>0 new \"no answer\" complaints"
+    },
+    "demoBand": {
+      "headline": "Hear How VoiceCloser Handles A Roadside Breakdown Call."
+    },
+    "callsWeHandle": {
+      "headline": "Calls We Handle For Towing Companies.",
+      "description": "From emergency breakdowns to yard release questions, VoiceCloser handles the calls that keep your trucks moving and customers calm.",
+      "types": [
+        "Emergency roadside tow requests",
+        "Accident and police rotation calls from the public",
+        "ETA updates and status checks",
+        "Storage, release, and impound questions",
+        "Light roadside assistance inquiries (jump starts, lockouts, tire changes)"
+      ]
+    },
+    "cta": {
+      "headline": "Want To See How Many Tow Jobs You're Losing When You Don't Pick Up?"
+    },
+    "faq1": {
+      "question": "Can it handle urgent emergency calls the right way?",
+      "answer": "Yes. VoiceCloser can be trained to quickly confirm safety, collect exact location and vehicle details, and immediately notify your on-call driver or dispatch line via text or email while the caller is still on the phone."
+    }
+  },
+  {
+    "slug": "music-school",
+    "agentKey": "voicecloser_music_school",
+    "pageTitle": "Music School",
+    "hero": {
+      "headline": "Stop Losing New Students To Missed Calls And Messy Schedules.",
+      "subheadline": "Your own AI phone agent that answers every call, follows up with inquiries, and books trial lessons - professionally, consistently, 24/7. Less phone tag, more students enrolled."
+    },
+    "conversation": [
+      {
+        "speaker": "agent",
+        "line": "Hi, thanks for calling [School Name]. This is Emma. Are you calling about lessons for yourself or for a child?"
+      },
+      {
+        "speaker": "caller",
+        "line": "For my daughter. She's 8 and wants to try piano."
+      },
+      {
+        "speaker": "agent",
+        "line": "That's great. Has she taken any lessons before, or would this be her first time?"
+      },
+      {
+        "speaker": "caller",
+        "line": "First time."
+      },
+      {
+        "speaker": "agent",
+        "line": "Perfect. We usually start with a short trial lesson so she can meet a teacher and see how she likes it. Are after-school times or Saturdays better for you?"
+      },
+      {
+        "speaker": "caller",
+        "line": "After school."
+      },
+      {
+        "speaker": "agent",
+        "line": "I have a 4:30 PM opening this Thursday with one of our piano teachers. I'll reserve that for her and text you the details. What's the best number to send the confirmation to?"
+      }
+    ],
+    "badges": {
+      "blue": "Trial Lessons Booked This Week: 15"
+    },
+    "problem": {
+      "headline": "Parents Call When They're Motivated. If You Miss It, They Enroll Somewhere Else.",
+      "description": "A parent finally decides to get their child into lessons. They call a few schools between work and dinner. The one that answers first and makes scheduling easy usually wins the student.",
+      "problems": [
+        "Calls during after-school rush go to voicemail.",
+        "Web form inquiries sit in the inbox with no quick follow-up.",
+        "Trial lessons aren't confirmed, rescheduled, or followed up on consistently."
+      ]
+    },
+    "comparison": {
+      "currentReality": "12 missed inquiries this month<br/>0 follow-up on no-show trials",
+      "withVoiceCloser": "12 answered, 9 trial lessons booked<br/>7 no-shows re-engaged"
+    },
+    "demoBand": {
+      "headline": "Hear How VoiceCloser Handles A New Student Inquiry."
+    },
+    "callsWeHandle": {
+      "headline": "Calls We Handle For Music Schools.",
+      "description": "From brand-new student inquiries to scheduling and make-ups, VoiceCloser handles the calls that fill your teachers' schedules.",
+      "types": [
+        "New student and parent inquiries",
+        "Trial lesson and placement scheduling",
+        "Reschedules, make-ups, and cancellations",
+        "Program, pricing, and schedule questions",
+        "Follow-ups with no-shows and past students"
+      ]
+    },
+    "cta": {
+      "headline": "Want To See How Many Students You're Losing To Voicemail?"
+    },
+    "faq1": {
+      "question": "Can it handle different instruments and teachers?",
+      "answer": "Yes. VoiceCloser can learn which teachers teach which instruments, what ages they work with, and when they're available. The agent can ask a few simple questions, match the student to the right teacher or program, and book the appropriate trial slot."
+    }
+  },
+  {
+    "slug": "tutoring",
+    "agentKey": "voicecloser_tutoring",
+    "pageTitle": "Tutoring",
+    "hero": {
+      "headline": "Stop Losing Students To Missed Calls And Slow Follow-Up.",
+      "subheadline": "Your own AI phone agent that answers every call, follows up with inquiries, and books tutoring sessions - professionally, consistently, 24/7. Less phone tag, more students getting help."
+    },
+    "conversation": [
+      {
+        "speaker": "agent",
+        "line": "Hi, thanks for calling [Center Name]. This is Lisa. Are you calling about tutoring for yourself or for a student?"
+      },
+      {
+        "speaker": "caller",
+        "line": "For my son. He's struggling with algebra."
+      },
+      {
+        "speaker": "agent",
+        "line": "Got it. What grade is he in, and is this mainly homework help or test prep?"
+      },
+      {
+        "speaker": "caller",
+        "line": "He's in 9th grade, mostly homework and getting his grades up."
+      },
+      {
+        "speaker": "agent",
+        "line": "Perfect. We can help with that. We usually start with a short assessment and a session with one of our math tutors. Are weekdays after school or weekends better for you?"
+      },
+      {
+        "speaker": "caller",
+        "line": "After school."
+      },
+      {
+        "speaker": "agent",
+        "line": "I have a 5 PM opening this Wednesday. I'll reserve that for him and text you the details and intake form. What's the best number to send that to?"
+      }
+    ],
+    "badges": {
+      "blue": "New Students Booked This Week: 13"
+    },
+    "problem": {
+      "headline": "Parents Reach Out When Grades Dip. If You Miss The Call, They Call Someone Else.",
+      "description": "When a parent finally decides to get help, they don't want to wait. They call the first few tutoring centers they find. The one that answers quickly and makes scheduling easy usually wins the student.",
+      "problems": [
+        "Calls during after-school and evening hours go to voicemail.",
+        "Web form and email inquiries sit without same-day follow-up.",
+        "No-shows and expired packages aren't consistently re-engaged."
+      ]
+    },
+    "comparison": {
+      "currentReality": "15 missed inquiries this month<br/>0 follow-up on no-show assessments",
+      "withVoiceCloser": "15 answered, 10 assessments booked<br/>9 no-shows re-engaged"
+    },
+    "demoBand": {
+      "headline": "Hear How VoiceCloser Handles A New Tutoring Inquiry."
+    },
+    "callsWeHandle": {
+      "headline": "Calls We Handle For Tutoring Centers.",
+      "description": "From first-time parent inquiries to reschedules and renewals, VoiceCloser handles the calls that keep your tutors' calendars full.",
+      "types": [
+        "New student and parent inquiries",
+        "Assessments and first-session scheduling",
+        "Subject, grade level, and test prep questions",
+        "Cancellations, reschedules, and make-ups",
+        "Follow-ups on no-shows and expiring packages"
+      ]
+    },
+    "cta": {
+      "headline": "Want To See How Many Tutoring Clients You're Losing To Voicemail?"
+    },
+    "faq1": {
+      "question": "Can it match students to the right tutor or subject?",
+      "answer": "Yes. VoiceCloser can learn which tutors handle which subjects and grade levels, plus when they're available. The agent asks a few simple questions, then books the student into the appropriate time slot or flags them for your team to review."
+    }
+  },
+  {
+    "slug": "vocational-school",
+    "agentKey": "voicecloser_vocational_school",
+    "pageTitle": "Vocational School",
+    "hero": {
+      "headline": "Stop Letting Prospective Students Slip Away After One Missed Call.",
+      "subheadline": "Your own AI phone agent that answers every inquiry, follows up with prospects, and books campus tours and enrollment calls - professionally, consistently, 24/7. Less chasing, more seats filled."
+    },
+    "conversation": [
+      {
+        "speaker": "agent",
+        "line": "Thank you for calling [School Name]. This is Morgan. Are you interested in one of our programs today?"
+      },
+      {
+        "speaker": "caller",
+        "line": "Yeah, I wanted to ask about your HVAC program."
+      },
+      {
+        "speaker": "agent",
+        "line": "Absolutely. Are you looking to start a new career, or already working in the field and want additional training?"
+      },
+      {
+        "speaker": "caller",
+        "line": "New career. I'm working retail right now."
+      },
+      {
+        "speaker": "agent",
+        "line": "Understood. The best next step is a quick call with our admissions team to go over the program, schedule, and start dates. Are mornings, afternoons, or evenings better for you?"
+      },
+      {
+        "speaker": "caller",
+        "line": "Evenings."
+      },
+      {
+        "speaker": "agent",
+        "line": "I can book you for a 6 PM admissions call this Thursday or a campus visit on Saturday morning. Which works better?"
+      }
+    ],
+    "badges": {
+      "blue": "Enrollment Calls Booked This Week: 21"
+    },
+    "problem": {
+      "headline": "Adult Learners Have Questions. If Nobody Answers, They Don't Apply.",
+      "description": "Prospective students are juggling jobs, families, and bills. They call with questions about programs, schedules, and start dates. If they can't reach anyone, they move on or put school off \"for later.\"",
+      "problems": [
+        "After-work and weekend calls hit voicemail.",
+        "Leads from ads and landing pages aren't contacted fast enough.",
+        "Interested prospects never get nudged to schedule a tour or enrollment call."
+      ]
+    },
+    "comparison": {
+      "currentReality": "32 unanswered program inquiries<br/>0 systematic follow-up on aged leads",
+      "withVoiceCloser": "32 answered, 18 enrollment calls booked<br/>41 old leads re-engaged"
+    },
+    "demoBand": {
+      "headline": "Hear How VoiceCloser Handles A Program Inquiry Call."
+    },
+    "callsWeHandle": {
+      "headline": "Calls We Handle For Vocational Schools.",
+      "description": "From first questions to tour and enrollment scheduling, VoiceCloser handles the calls that turn inquiries into enrolled students.",
+      "types": [
+        "New program and admissions inquiries",
+        "Campus tour and enrollment call scheduling",
+        "Start date, schedule, and basic financial aid questions",
+        "Follow-ups on leads from ads, fairs, and info sessions",
+        "Reminders and reschedules for appointments and tours"
+      ]
+    },
+    "cta": {
+      "headline": "Want To See How Many Enrollments You're Losing To Missed Calls?"
+    },
+    "faq1": {
+      "question": "Does it give program or career advice?",
+      "answer": "No. VoiceCloser does not provide career or education advice. It answers basic questions you approve, collects contact and interest details, and books prospects with your admissions team so they can have the real conversation."
+    }
+  },
+  {
+    "slug": "accounting",
+    "agentKey": "voicecloser_accounting",
+    "pageTitle": "Accounting",
+    "hero": {
+      "headline": "Stop Letting New Clients And Referrals Die In Voicemail.",
+      "subheadline": "Your own AI phone agent that answers every call, screens new clients, and books consultations – professionally, consistently, 24/7. Less interruption, more billable work."
+    },
+    "conversation": [
+      {
+        "speaker": "agent",
+        "line": "Thank you for calling [Firm Name]. This is Jordan. Are you an existing client or calling about new services today?"
+      },
+      {
+        "speaker": "caller",
+        "line": "New. I need help with my business taxes."
+      },
+      {
+        "speaker": "agent",
+        "line": "Great. Are you a sole proprietor, LLC, or corporation?"
+      },
+      {
+        "speaker": "caller",
+        "line": "LLC."
+      },
+      {
+        "speaker": "agent",
+        "line": "Understood. We start with a brief consultation to review your situation and explain how we work. Are mornings or afternoons better for a call with one of our accountants?"
+      },
+      {
+        "speaker": "caller",
+        "line": "Mornings."
+      },
+      {
+        "speaker": "agent",
+        "line": "I can offer a 10 AM consultation this Thursday or Friday. Which do you prefer? I'll also send a short intake form so we're prepared for your call."
+      }
+    ],
+    "badges": {
+      "blue": "New Client Consults Booked This Week: 9"
+    },
+    "problem": {
+      "headline": "Tax Season Is Busy Enough. Missed Calls Shouldn't Cost You Good Clients.",
+      "description": "Prospects call when a tax notice shows up, books fall behind, or their current accountant drops the ball. If no one answers, they don't wait around – they call the next firm.",
+      "problems": [
+        "Peak season calls go to voicemail while you're in client meetings.",
+        "Referral calls and website inquiries don't get same-day follow-up.",
+        "You're constantly interrupted by basic questions that could be screened."
+      ]
+    },
+    "comparison": {
+      "currentReality": "19 missed calls this week<br/>0 structured screening for new clients",
+      "withVoiceCloser": "19 answered, 11 consults booked<br/>unqualified calls filtered before they reach you"
+    },
+    "demoBand": {
+      "headline": "Hear How VoiceCloser Handles A New Accounting Client Call."
+    },
+    "callsWeHandle": {
+      "headline": "Calls We Handle For Accounting Firms.",
+      "description": "From new client inquiries to scheduling and reminders, VoiceCloser handles the calls that keep your calendar full without drowning your team.",
+      "types": [
+        "New client and referral inquiries",
+        "Consultation and review meeting scheduling",
+        "Basic questions about services, hours, and required documents",
+        "Appointment confirmations, reschedules, and reminders",
+        "Follow-ups on dormant leads and past-year inquiries"
+      ]
+    },
+    "cta": {
+      "headline": "Want To See How Many Good Clients You're Losing To Missed Calls?"
+    },
+    "faq1": {
+      "question": "Does it give tax or accounting advice?",
+      "answer": "No. VoiceCloser does not provide tax, legal, or financial advice. It follows your approved intake questions, answers basic logistical questions, and books or routes callers to the right person on your team."
+    }
+  },
+  {
+    "slug": "financial-advisor",
+    "agentKey": "voicecloser_financial_advisor",
+    "pageTitle": "Financial Advisor",
+    "hero": {
+      "headline": "Stop Missing Calls From People Finally Ready To Talk About Their Money.",
+      "subheadline": "Your own AI phone agent that answers every inquiry, follows up with leads, and books introductory meetings – professionally, consistently, 24/7. Less voicemail, more first appointments."
+    },
+    "conversation": [
+      {
+        "speaker": "agent",
+        "line": "Thank you for calling [Firm Name]. This is Alex. Are you an existing client or calling to learn about working with an advisor?"
+      },
+      {
+        "speaker": "caller",
+        "line": "New. I wanted to talk to someone about retirement planning."
+      },
+      {
+        "speaker": "agent",
+        "line": "Absolutely. Are you mainly looking for help with investments, overall retirement planning, or both?"
+      },
+      {
+        "speaker": "caller",
+        "line": "Mostly retirement planning."
+      },
+      {
+        "speaker": "agent",
+        "line": "Understood. Our advisors start with an introductory meeting to learn about your situation and explain how the process works. Do mornings, afternoons, or early evenings work best for you?"
+      },
+      {
+        "speaker": "caller",
+        "line": "Early evenings."
+      },
+      {
+        "speaker": "agent",
+        "line": "I can schedule a 5:30 PM introductory call this Tuesday or Thursday with one of our advisors. Which day works better? I'll also send a brief questionnaire so they're prepared."
+      }
+    ],
+    "badges": {
+      "blue": "Intro Meetings Booked This Week: 7"
+    },
+    "problem": {
+      "headline": "When Someone Finally Reaches Out About Their Finances, You Can't Afford To Miss The Call.",
+      "description": "Prospects don't casually pick up the phone to talk about money. When they do, hitting voicemail or waiting days for a call back sends them to another advisor or back into procrastination.",
+      "problems": [
+        "New prospect calls go unanswered while you're in meetings.",
+        "Workshop, webinar, and referral leads don't all get fast follow-up.",
+        "Your team spends time on screening and scheduling instead of client work."
+      ]
+    },
+    "comparison": {
+      "currentReality": "11 missed prospect calls this month<br/>0 structured follow-up on event leads",
+      "withVoiceCloser": "11 answered, 8 intro meetings booked<br/>consistent touchpoints with event and referral leads"
+    },
+    "demoBand": {
+      "headline": "Hear How VoiceCloser Handles A New Prospect Call."
+    },
+    "callsWeHandle": {
+      "headline": "Calls We Handle For Financial Advisors.",
+      "description": "From first touch to scheduling and reminders, VoiceCloser handles the calls that turn interest into booked meetings.",
+      "types": [
+        "New prospect and referral inquiries",
+        "Introductory and review meeting scheduling",
+        "Follow-ups on workshop, webinar, and online leads",
+        "Appointment confirmations, reschedules, and reminders",
+        "Basic questions about your process, services, and next steps"
+      ]
+    },
+    "cta": {
+      "headline": "Want To See How Many Prospect Meetings You're Losing To Voicemail?"
+    },
+    "faq1": {
+      "question": "Does it give financial or investment advice?",
+      "answer": "No. VoiceCloser does not provide financial, investment, or legal advice. It follows your compliance-approved scripts to qualify callers, answer basic process questions, and book or route them to the appropriate advisor on your team."
+    }
+  },
+  {
+    "slug": "mortgage",
+    "agentKey": "voicecloser_mortgage",
+    "pageTitle": "Mortgage",
+    "hero": {
+      "headline": "Stop Missing Calls From Borrowers Ready To Talk Numbers.",
+      "subheadline": "Your own AI phone agent that answers every inquiry, follows up with leads, and books mortgage consultations professionally, consistently, 24/7. Less voicemail, more applications in the pipeline."
+    },
+    "conversation": [
+      {
+        "speaker": "agent",
+        "line": "Thank you for calling [Company Name]. This is Taylor. Are you calling about a new loan, a refinance, or an existing application?"
+      },
+      {
+        "speaker": "caller",
+        "line": "A new loan. We're looking to buy our first home."
+      },
+      {
+        "speaker": "agent",
+        "line": "Congratulations. Have you already spoken with a lender or gotten pre-approved, or is this your first step?"
+      },
+      {
+        "speaker": "caller",
+        "line": "First step."
+      },
+      {
+        "speaker": "agent",
+        "line": "Perfect. Our loan officers start with a short call to understand your situation and explain your options. Do mornings, afternoons, or evenings work better for you?"
+      },
+      {
+        "speaker": "caller",
+        "line": "Evenings."
+      },
+      {
+        "speaker": "agent",
+        "line": "I can schedule a 6 PM consultation this Wednesday or Thursday with a loan officer. Which day works better? I will also send a quick questionnaire so they are prepared for your call."
+      }
+    ],
+    "badges": {
+      "blue": "New Consults Booked This Week: 14"
+    },
+    "problem": {
+      "headline": "When Buyers Are Ready To Act, One Missed Call Sends Them To Another Lender.",
+      "description": "Borrowers call when they are serious about buying or refinancing. If they hit voicemail or wait days for a response, they either call another lender or lose momentum and delay the process.",
+      "problems": [
+        "New purchase and refi inquiries go unanswered while you are in appointments.",
+        "Online leads from agents and ads are not contacted fast enough.",
+        "Your team spends too much time on screening and scheduling instead of structuring loans."
+      ]
+    },
+    "comparison": {
+      "currentReality": "22 missed mortgage inquiries this month<br/>0 structured follow up on cold leads",
+      "withVoiceCloser": "22 answered, 15 consults booked<br/>38 old leads re-engaged"
+    },
+    "demoBand": {
+      "headline": "Hear How VoiceCloser Handles A New Mortgage Inquiry."
+    },
+    "callsWeHandle": {
+      "headline": "Calls We Handle For Mortgage Teams.",
+      "description": "From first time buyer questions to follow ups on online applications, VoiceCloser handles the calls that keep your pipeline moving.",
+      "types": [
+        "New purchase and refinance inquiries",
+        "Consultation and pre qualification call scheduling",
+        "Follow ups on web forms, agent referrals, and online leads",
+        "Appointment confirmations, reschedules, and reminders",
+        "Basic questions about process, timelines, and required documents"
+      ]
+    },
+    "cta": {
+      "headline": "Want To See How Many Funded Loans You Are Losing To Missed Calls?"
+    },
+    "faq1": {
+      "question": "Does it give mortgage or rate advice?",
+      "answer": "No. VoiceCloser does not provide mortgage, rate, or financial advice. It follows your compliance approved scripts, answers basic logistical questions, and books or routes callers to a licensed loan officer on your team."
+    }
+  },
+  {
+    "slug": "insurance",
+    "agentKey": "voicecloser_insurance",
+    "pageTitle": "Insurance",
+    "hero": {
+      "headline": "Stop Losing Policies Because Prospects Hit Voicemail.",
+      "subheadline": "Your own AI phone agent that answers every call, follows up with leads, and books policy reviews and quotes professionally, consistently, 24/7. Fewer missed opportunities, more active policies."
+    },
+    "conversation": [
+      {
+        "speaker": "agent",
+        "line": "Thank you for calling [Agency Name]. This is Morgan. Are you an existing client or calling for a new quote today?"
+      },
+      {
+        "speaker": "caller",
+        "line": "New. I want to compare auto and home insurance."
+      },
+      {
+        "speaker": "agent",
+        "line": "Absolutely. Are you mainly looking to save on price, improve coverage, or both?"
+      },
+      {
+        "speaker": "caller",
+        "line": "Mostly save on price."
+      },
+      {
+        "speaker": "agent",
+        "line": "Understood. The next step is a brief quote review call so an agent can gather details and compare options. Do mornings, afternoons, or evenings usually work best for you?"
+      },
+      {
+        "speaker": "caller",
+        "line": "Afternoons."
+      },
+      {
+        "speaker": "agent",
+        "line": "I can book a 2 PM quote review this Tuesday or Wednesday with one of our agents. Which day do you prefer? I will also text you a short info form so we are ready."
+      }
+    ],
+    "badges": {
+      "blue": "Quote Appointments Booked This Week: 16"
+    },
+    "problem": {
+      "headline": "People Call When Something Changes. If You Miss It, Another Agent Gets The Policy.",
+      "description": "Prospects and clients reach out when they buy a car, purchase a home, or get a renewal increase. If no one answers, they call another agency or stay unhappy with their current carrier.",
+      "problems": [
+        "New quote calls hit voicemail while your producers are in meetings.",
+        "Web and referral leads are not contacted quickly or consistently.",
+        "Existing clients do not get timely outreach for renewals and reviews."
+      ]
+    },
+    "comparison": {
+      "currentReality": "18 missed quote calls this week<br/>0 systematic renewal outreach",
+      "withVoiceCloser": "18 answered, 12 quote appointments booked<br/>renewals and reviews scheduled consistently"
+    },
+    "demoBand": {
+      "headline": "Hear How VoiceCloser Handles A New Insurance Quote Call."
+    },
+    "callsWeHandle": {
+      "headline": "Calls We Handle For Insurance Agencies.",
+      "description": "From fresh quote requests to renewals and reviews, VoiceCloser handles the calls that grow and protect your book of business.",
+      "types": [
+        "New quote and coverage inquiries",
+        "Policy review and renewal call scheduling",
+        "Follow ups on web, referral, and marketing leads",
+        "Appointment confirmations, reschedules, and reminders",
+        "Basic questions about process, documents, and next steps"
+      ]
+    },
+    "cta": {
+      "headline": "Want To See How Many Policies You Are Losing To Missed Calls?"
+    },
+    "faq1": {
+      "question": "Does it discuss coverage or recommend policies?",
+      "answer": "No. VoiceCloser does not provide coverage recommendations or insurance advice. It asks your approved intake questions, answers simple process questions, and books or routes callers to a licensed agent on your team."
+    }
+  },
+  {
+    "slug": "dance-studio",
+    "agentKey": "voicecloser_dance_studio",
+    "pageTitle": "Dance Studio",
+    "hero": {
+      "headline": "Stop Losing New Dancers To Missed Calls And Confusing Schedules.",
+      "subheadline": "Your own AI phone agent that answers every call, follows up with inquiries, and books trials and enrollments professionally, consistently, 24/7. Less chaos at the front desk, more kids in class."
+    },
+    "conversation": [
+      {
+        "speaker": "agent",
+        "line": "Hi, thanks for calling [Studio Name]. This is Emma. Are you calling about classes for yourself or for a child?"
+      },
+      {
+        "speaker": "caller",
+        "line": "For my daughter. She's 6 and wants to do ballet."
+      },
+      {
+        "speaker": "agent",
+        "line": "Very fun. Has she taken any classes before, or would this be her first time?"
+      },
+      {
+        "speaker": "caller",
+        "line": "First time."
+      },
+      {
+        "speaker": "agent",
+        "line": "Perfect. We usually start with a trial class so she can meet the teacher and see how she likes it. Are weekday afternoons or Saturdays better for you?"
+      },
+      {
+        "speaker": "caller",
+        "line": "Saturdays."
+      },
+      {
+        "speaker": "agent",
+        "line": "I have a beginner ballet trial spot this Saturday at 10 AM. I will reserve that for her and text you the details and what to bring. What is the best number to send that to?"
+      }
+    ],
+    "badges": {
+      "blue": "Trial Classes Booked This Week: 18"
+    },
+    "problem": {
+      "headline": "Parents Decide Fast. If You Do Not Answer, They Enroll At The Studio Down The Street.",
+      "description": "A parent finally decides to sign their child up for dance. They call a few studios between work and dinner. The one that answers, explains clearly, and gets them on the schedule wins.",
+      "problems": [
+        "Calls during peak class times go to voicemail.",
+        "Schedule and level questions overwhelm the front desk.",
+        "Trial dancers who loved class never get a follow up to enroll."
+      ]
+    },
+    "comparison": {
+      "currentReality": "14 missed inquiries this month<br/>0 systematic follow up on trial classes",
+      "withVoiceCloser": "14 answered, 11 trials booked<br/>9 trial dancers re-engaged and invited to enroll"
+    },
+    "demoBand": {
+      "headline": "Hear How VoiceCloser Handles A New Dance Class Inquiry."
+    },
+    "callsWeHandle": {
+      "headline": "Calls We Handle For Dance Studios.",
+      "description": "From first time parent questions to reschedules and recital season chaos, VoiceCloser handles the calls that keep your classes full.",
+      "types": [
+        "New student and parent inquiries",
+        "Trial class and evaluation scheduling",
+        "Class level, schedule, and pricing questions",
+        "Cancellations, make ups, and reschedules",
+        "Follow ups with trial students and past dancers"
+      ]
+    },
+    "cta": {
+      "headline": "Want To See How Many Dancers You Are Losing To Voicemail?"
+    },
+    "faq1": {
+      "question": "Can it handle different ages and class levels?",
+      "answer": "Yes. VoiceCloser can learn your programs, age ranges, and levels, then ask a few simple questions to recommend the right class and book a trial or enrollment based on your rules."
+    }
+  },
+  {
+    "slug": "martial-arts",
+    "agentKey": "voicecloser_martial_arts",
+    "pageTitle": "Martial Arts",
+    "hero": {
+      "headline": "Stop Losing Students To Missed Calls And No Follow Up.",
+      "subheadline": "Your own AI phone agent that answers every call, follows up with leads, and books intro lessons professionally, consistently, 24/7. Less front desk stress, more students on the mats."
+    },
+    "conversation": [
+      {
+        "speaker": "agent",
+        "line": "Hey, thanks for calling [Academy Name]. This is Chris. Are you looking for classes for yourself or for a child?"
+      },
+      {
+        "speaker": "caller",
+        "line": "For my son. He's 9 and we want him in something for confidence and discipline."
+      },
+      {
+        "speaker": "agent",
+        "line": "Great age to start. Are you thinking more traditional martial arts like karate or taekwondo, or more jiu jitsu style grappling?"
+      },
+      {
+        "speaker": "caller",
+        "line": "Probably karate or taekwondo."
+      },
+      {
+        "speaker": "agent",
+        "line": "Perfect. We usually start with a free intro lesson so he can meet the coach and try a class. Are after school times or Saturdays better for you?"
+      },
+      {
+        "speaker": "caller",
+        "line": "After school."
+      },
+      {
+        "speaker": "agent",
+        "line": "I have an intro slot this Wednesday at 5 PM with our beginners group. I will reserve that and text you what to bring and when to arrive. What is the best number to send that to?"
+      }
+    ],
+    "badges": {
+      "blue": "Intro Lessons Booked This Week: 20"
+    },
+    "problem": {
+      "headline": "Parents Reach Out When They Are Ready For A Change. If You Miss It, They Sign Up Somewhere Else.",
+      "description": "Parents call when they are finally serious about discipline, confidence, or bullying. If nobody answers, they assume you are too busy or not interested and enroll at the next school that picks up.",
+      "problems": [
+        "Calls during class times go to voicemail.",
+        "Trial and intro lessons are not consistently confirmed or followed up.",
+        "Leads from ads and referrals slip through the cracks with no second touch."
+      ]
+    },
+    "comparison": {
+      "currentReality": "17 missed inquiries this month<br/>0 structured follow up on intros",
+      "withVoiceCloser": "17 answered, 13 intros booked<br/>10 intro students re-engaged and invited to enroll"
+    },
+    "demoBand": {
+      "headline": "Hear How VoiceCloser Handles A New Martial Arts Inquiry."
+    },
+    "callsWeHandle": {
+      "headline": "Calls We Handle For Martial Arts Schools.",
+      "description": "From new student inquiries to intro lessons and renewals, VoiceCloser handles the calls that grow and stabilize your student base.",
+      "types": [
+        "New student and parent inquiries",
+        "Intro lesson and trial class scheduling",
+        "Program, schedule, and pricing questions",
+        "Cancellations, holds, and reschedules",
+        "Follow ups on intros, trials, and frozen members"
+      ]
+    },
+    "cta": {
+      "headline": "Want To See How Many Students You Are Losing To Voicemail?"
+    },
+    "faq1": {
+      "question": "Can it handle kids and adult programs differently?",
+      "answer": "Yes. VoiceCloser can learn your kids, teens, and adult programs separately, then ask a few quick questions to route callers to the right program and book the correct intro or trial session."
+    }
+  },
+  {
+    "slug": "personal-training",
+    "agentKey": "voicecloser_personal_training",
+    "pageTitle": "Personal Training",
+    "hero": {
+      "headline": "Stop Losing High-Intent Clients To Missed Calls And Slow Replies.",
+      "subheadline": "Your own AI phone agent that answers every call, follows up with inquiries, and books consults and sessions – professionally, consistently, 24/7. Less back-and-forth, more clients on the calendar."
+    },
+    "conversation": [
+      {
+        "speaker": "agent",
+        "line": "Hey, thanks for calling [Studio Name]. This is Jamie. Are you looking for training for yourself or for someone else?"
+      },
+      {
+        "speaker": "caller",
+        "line": "For me. I want to get in shape but I'm not sure where to start."
+      },
+      {
+        "speaker": "agent",
+        "line": "Got it. Are you mainly looking to lose weight, get stronger, or a bit of both?"
+      },
+      {
+        "speaker": "caller",
+        "line": "Mostly lose weight and feel better."
+      },
+      {
+        "speaker": "agent",
+        "line": "Perfect. We usually start with a short consultation so a trainer can learn about your goals and schedule. Are mornings, afternoons, or evenings better for you?"
+      },
+      {
+        "speaker": "caller",
+        "line": "Evenings."
+      },
+      {
+        "speaker": "agent",
+        "line": "I have a consult available this Tuesday at 6 PM or Thursday at 7 PM. Which works better? I'll text you the details and what to bring. What's the best number to send it to?"
+      }
+    ],
+    "badges": {
+      "blue": "Consults Booked This Week: 14"
+    },
+    "problem": {
+      "headline": "People Reach Out When They're Finally Ready. If You Miss It, They Stay Stuck Or Hire Someone Else.",
+      "description": "When someone finally decides to invest in training, they don't want to wait for a callback. If nobody answers, they assume you're full or not serious and go with the next trainer who picks up.",
+      "problems": [
+        "Inquiry calls during sessions go straight to voicemail.",
+        "DM and web form leads don't all get same-day follow-up.",
+        "Old inquiries and past clients never get reactivated."
+      ]
+    },
+    "comparison": {
+      "currentReality": "13 missed inquiries this month<br/>0 follow-up on cold leads",
+      "withVoiceCloser": "13 answered, 10 consults booked<br/>19 old leads re-engaged"
+    },
+    "demoBand": {
+      "headline": "Hear How VoiceCloser Handles A New Training Inquiry."
+    },
+    "callsWeHandle": {
+      "headline": "Calls We Handle For Personal Trainers And Studios.",
+      "description": "From first-time inquiries to reschedules and renewals, VoiceCloser handles the calls that keep your schedule full.",
+      "types": [
+        "New client inquiries and goal discussions",
+        "Consult, assessment, and first-session scheduling",
+        "Package, pricing, and schedule questions",
+        "Cancellations, reschedules, and waitlist management",
+        "Reactivations for past clients and expired packages"
+      ]
+    },
+    "cta": {
+      "headline": "Want To See How Many Clients You're Losing To Voicemail?"
+    },
+    "faq1": {
+      "question": "Can it handle different trainers and session types?",
+      "answer": "Yes. VoiceCloser can learn your trainers, services, and time blocks, then ask a few quick questions and book clients into the right consult or session based on your rules."
+    }
+  },
+  {
+    "slug": "yoga-studio",
+    "agentKey": "voicecloser_yoga_studio",
+    "pageTitle": "Yoga Studio",
+    "hero": {
+      "headline": "Stop Letting New Students Slip Away Because No One Answered The Phone.",
+      "subheadline": "Your own AI phone agent that answers every call, explains your offerings, and books intro passes and memberships – professionally, consistently, 24/7. Less desk stress, more mats filled."
+    },
+    "conversation": [
+      {
+        "speaker": "agent",
+        "line": "Hi, thanks for calling [Studio Name]. This is Maya. Are you new to yoga or already practicing?"
+      },
+      {
+        "speaker": "caller",
+        "line": "Pretty new. I've only tried a couple of classes before."
+      },
+      {
+        "speaker": "agent",
+        "line": "Welcome. Are you mainly looking for gentle classes to de-stress, something more athletic, or a mix?"
+      },
+      {
+        "speaker": "caller",
+        "line": "Mostly to de-stress and improve flexibility."
+      },
+      {
+        "speaker": "agent",
+        "line": "Perfect. We usually start new students with an intro pass so you can try a few classes and teachers. Are weekdays after work or weekends better for your first visit?"
+      },
+      {
+        "speaker": "caller",
+        "line": "Weekends."
+      },
+      {
+        "speaker": "agent",
+        "line": "I can book your first class this Saturday at 10 AM in our beginner-friendly flow. I'll text you what to bring and when to arrive. What's the best number to send it to?"
+      }
+    ],
+    "badges": {
+      "blue": "First Visits Booked This Week: 16"
+    },
+    "problem": {
+      "headline": "People Finally Make Time For Themselves. If You Miss Their Call, They Don't Always Try Again.",
+      "description": "New students often feel nervous reaching out. If they hit voicemail, they may assume you're full, closed, or not beginner-friendly – and never come in.",
+      "problems": [
+        "Calls during class times and evenings go unanswered.",
+        "Schedule, class type, and pricing questions clog up the front desk.",
+        "Intro offers and lapsed members don't get consistent follow-up."
+      ]
+    },
+    "comparison": {
+      "currentReality": "11 missed inquiries this month<br/>0 follow-up on expired intro passes",
+      "withVoiceCloser": "11 answered, 8 first visits booked<br/>15 expired intros re-engaged"
+    },
+    "demoBand": {
+      "headline": "Hear How VoiceCloser Handles A New Yoga Student Inquiry."
+    },
+    "callsWeHandle": {
+      "headline": "Calls We Handle For Yoga Studios.",
+      "description": "From first-time callers to membership questions, VoiceCloser handles the calls that grow your community.",
+      "types": [
+        "New student and intro pass inquiries",
+        "Class recommendation and schedule questions",
+        "Membership, pack, and pricing questions",
+        "Cancellations, waitlists, and reschedules",
+        "Follow-ups on intro offers, lapsed members, and special events"
+      ]
+    },
+    "cta": {
+      "headline": "Want To See How Many Students You're Losing To Voicemail?"
+    },
+    "faq1": {
+      "question": "Can it help recommend the right class for beginners?",
+      "answer": "Yes. VoiceCloser can learn your class types, levels, and house rules, then ask a few questions and suggest beginner-friendly options while booking their first visit."
+    }
+  },
+  {
+    "slug": "weight-loss",
+    "agentKey": "voicecloser_weight_loss",
+    "pageTitle": "Weight Loss",
+    "hero": {
+      "headline": "Stop Missing Calls From People Finally Ready To Commit.",
+      "subheadline": "Your own AI phone agent that answers every call, follows up with leads, and books consultations – professionally, consistently, 24/7. Less chasing, more consultations on the books."
+    },
+    "conversation": [
+      {
+        "speaker": "agent",
+        "line": "Thank you for calling [Clinic/Program Name]. This is Sarah. Are you calling to learn about our weight loss program for yourself?"
+      },
+      {
+        "speaker": "caller",
+        "line": "Yeah, for me. I've tried a few things and nothing's stuck."
+      },
+      {
+        "speaker": "agent",
+        "line": "Understood. Are you mainly looking for coaching and accountability, a structured program, or to learn what options you have?"
+      },
+      {
+        "speaker": "caller",
+        "line": "I just want to talk through options."
+      },
+      {
+        "speaker": "agent",
+        "line": "Perfect. We start with a consultation so a specialist can learn about your situation and explain how the program works. Do mornings, afternoons, or evenings usually work better for you?"
+      },
+      {
+        "speaker": "caller",
+        "line": "Evenings."
+      },
+      {
+        "speaker": "agent",
+        "line": "I can schedule a consult this Tuesday at 6 PM or Thursday at 7 PM. Which do you prefer? I'll text you the details and a short intake form. What's the best number to send that to?"
+      }
+    ],
+    "badges": {
+      "blue": "Consultations Booked This Week: 12"
+    },
+    "problem": {
+      "headline": "When Someone Finally Reaches Out For Help, Hitting Voicemail Sends Them Back To \"I'll Start Later.\"",
+      "description": "Prospects are often nervous and frustrated when they call. If no one answers or it takes days to respond, they either go with a different program or fall back into procrastination.",
+      "problems": [
+        "Evening and weekend calls go unanswered while staff is busy.",
+        "Leads from ads and landing pages don't all get quick follow-up.",
+        "No-shows and drop-offs aren't consistently re-engaged."
+      ]
+    },
+    "comparison": {
+      "currentReality": "15 missed inquiries this month<br/>0 follow-up on no-show consultations",
+      "withVoiceCloser": "15 answered, 11 consults booked<br/>9 no-shows re-engaged"
+    },
+    "demoBand": {
+      "headline": "Hear How VoiceCloser Handles A New Weight Loss Inquiry."
+    },
+    "callsWeHandle": {
+      "headline": "Calls We Handle For Weight Loss Clinics And Programs.",
+      "description": "From first contact to reminders and follow-up, VoiceCloser handles the calls that keep your consult calendar full.",
+      "types": [
+        "New prospect inquiries and questions about the program",
+        "Consultation and orientation scheduling",
+        "Appointment confirmations, reschedules, and reminders",
+        "Basic questions about process, visits, and what to expect",
+        "Follow-ups on no-shows, drop-offs, and past participants"
+      ]
+    },
+    "cta": {
+      "headline": "Want To See How Many Consults You're Losing To Missed Calls?"
+    },
+    "faq1": {
+      "question": "Does it give medical or weight loss advice?",
+      "answer": "No. VoiceCloser does not provide medical advice or make promises about results. It explains your process at a high level, collects contact and intake details, and books or routes callers to your team."
+    }
+  },
+  {
+    "slug": "catering",
+    "agentKey": "voicecloser_catering",
+    "pageTitle": "Catering",
+    "hero": {
+      "headline": "Stop Losing Events Because No One Picked Up The Phone.",
+      "subheadline": "Your own AI phone agent that answers every call, gathers event details, and books tastings and quotes – professionally, consistently, 24/7. Less chaos, more dates locked in."
+    },
+    "conversation": [
+      {
+        "speaker": "agent",
+        "line": "Hi, thanks for calling [Catering Company]. This is Olivia. Are you planning a wedding, corporate event, or something else?"
+      },
+      {
+        "speaker": "caller",
+        "line": "A wedding next spring."
+      },
+      {
+        "speaker": "agent",
+        "line": "Congratulations. Do you already have a date and venue, or are those still flexible?"
+      },
+      {
+        "speaker": "caller",
+        "line": "Date is May 18th, venue is booked."
+      },
+      {
+        "speaker": "agent",
+        "line": "Perfect. About how many guests are you expecting?"
+      },
+      {
+        "speaker": "caller",
+        "line": "Around 120."
+      },
+      {
+        "speaker": "agent",
+        "line": "Great. The next step is a quote and, if you'd like, a tasting. I can schedule a call with our event coordinator this week. Are days or evenings better for you?"
+      }
+    ],
+    "badges": {
+      "blue": "Events & Tastings Booked This Week: 10"
+    },
+    "problem": {
+      "headline": "When Someone Is Ready To Book Catering, They Call Down The List Until Someone Answers.",
+      "description": "Brides, planners, and office managers are juggling a lot. If they hit voicemail, they don't wait – they move on to the next caterer, even if you would have been a better fit.",
+      "problems": [
+        "Midday and evening inquiry calls go to voicemail.",
+        "Event details get lost in emails and sticky notes.",
+        "Past clients and leads never get re-engaged for new events."
+      ]
+    },
+    "comparison": {
+      "currentReality": "9 missed event inquiries this week<br/>0 follow-up on past event contacts",
+      "withVoiceCloser": "9 answered, 6 quotes or tastings booked<br/>18 past clients re-engaged"
+    },
+    "demoBand": {
+      "headline": "Hear How VoiceCloser Handles A New Catering Inquiry."
+    },
+    "callsWeHandle": {
+      "headline": "Calls We Handle For Caterers.",
+      "description": "From first inquiry to date confirmations, VoiceCloser handles the calls that keep your calendar full of events.",
+      "types": [
+        "New event and date availability inquiries",
+        "Quote, menu, and tasting scheduling",
+        "Headcount, dietary, and timing questions",
+        "Confirmations, updates, and last-minute changes",
+        "Follow-ups with past clients, venues, and planners"
+      ]
+    },
+    "cta": {
+      "headline": "Want To See How Many Events You're Losing To Voicemail?"
+    },
+    "faq1": {
+      "question": "Can it collect all the basic event details for us?",
+      "answer": "Yes. VoiceCloser can be trained to ask your standard event intake questions like date, guest count, venue, event type, and budget range, then log and send everything to your team before you follow up."
+    }
+  },
+  {
+    "slug": "restaurant",
+    "agentKey": "voicecloser_restaurant",
+    "pageTitle": "Restaurant",
+    "hero": {
+      "headline": "Stop Losing Reservations And Large Parties To Busy Signals.",
+      "subheadline": "Your own AI phone agent that answers every call, takes reservations, and handles common questions – professionally, consistently, 24/7. Less ringing phones, more filled tables."
+    },
+    "conversation": [
+      {
+        "speaker": "agent",
+        "line": "Hi, thanks for calling [Restaurant Name]. This is Alex. Are you calling to make a reservation, place an order, or ask about something else?"
+      },
+      {
+        "speaker": "caller",
+        "line": "Reservation. We're a group of six this Friday."
+      },
+      {
+        "speaker": "agent",
+        "line": "Perfect. Do you prefer indoor or patio seating, and around what time?"
+      },
+      {
+        "speaker": "caller",
+        "line": "Indoors, around 7 PM."
+      },
+      {
+        "speaker": "agent",
+        "line": "Great. I see openings at 6:45 PM and 7:15 PM for six guests. Which do you prefer?"
+      },
+      {
+        "speaker": "caller",
+        "line": "7:15 works."
+      },
+      {
+        "speaker": "agent",
+        "line": "You're all set for six guests this Friday at 7:15 PM. I'll text you the confirmation and address. What's the best number to send it to?"
+      }
+    ],
+    "badges": {
+      "blue": "Reservations Booked This Week: 42"
+    },
+    "problem": {
+      "headline": "Peak Hours Are Chaos. If You Miss The Call, Guests Book Somewhere Else.",
+      "description": "People call right before lunch and dinner to book a table, ask about waits, or place a takeout order. If they hit voicemail or get put on endless hold, they hang up and call the next place.",
+      "problems": [
+        "Phones ring off the hook during rush, but staff can't always pick up.",
+        "Large party and event inquiries don't all get captured or called back.",
+        "Simple questions about hours, menu, and wait times waste staff attention."
+      ]
+    },
+    "comparison": {
+      "currentReality": "37 missed calls during peak hours this week<br/>0 tracking on lost large-party inquiries",
+      "withVoiceCloser": "37 answered, 24 reservations booked<br/>every party inquiry captured and followed up"
+    },
+    "demoBand": {
+      "headline": "Hear How VoiceCloser Handles A Restaurant Reservation Call."
+    },
+    "callsWeHandle": {
+      "headline": "Calls We Handle For Restaurants.",
+      "description": "From everyday reservations to large parties and FAQs, VoiceCloser handles the calls that keep your dining room and books full.",
+      "types": [
+        "Reservations and waitlist inquiries",
+        "Large party and private event inquiries",
+        "Hours, location, parking, and basic menu questions",
+        "Order status checks and simple takeout info",
+        "Follow-ups and confirmations for special events and holidays"
+      ]
+    },
+    "cta": {
+      "headline": "Want To See How Many Guests You're Losing To Missed Calls?"
+    },
+    "faq1": {
+      "question": "Can it actually book and modify reservations?",
+      "answer": "Yes. VoiceCloser can be trained on your reservation rules, party size limits, and time blocks. It can book, confirm, and modify reservations within your system or capture the details and send them to your team to finalize."
+    }
+  },
+  {
+    "slug": "chiropractic",
+    "agentKey": "voicecloser_chiropractic",
+    "pageTitle": "Chiropractic",
+    "hero": {
+      "headline": "Stop Letting New Patients Slip Away After One Missed Call.",
+      "subheadline": "Your own AI phone agent that answers every call, captures new patient details, and books appointments – professionally, consistently, 24/7. Less phone tag, more visits on the schedule."
+    },
+    "conversation": [
+      {
+        "speaker": "agent",
+        "line": "Thank you for calling [Clinic Name]. This is Jordan. Are you a new patient or an existing patient calling to schedule?"
+      },
+      {
+        "speaker": "caller",
+        "line": "New. I've had some lower back pain and wanted to get it checked."
+      },
+      {
+        "speaker": "agent",
+        "line": "Understood. How long have you been dealing with the pain – days, weeks, or longer?"
+      },
+      {
+        "speaker": "caller",
+        "line": "A few weeks."
+      },
+      {
+        "speaker": "agent",
+        "line": "Thank you. We'll have the doctor review everything with you in person. I can schedule a new patient appointment. Do mornings, afternoons, or evenings usually work better?"
+      },
+      {
+        "speaker": "caller",
+        "line": "Mornings."
+      },
+      {
+        "speaker": "agent",
+        "line": "I can offer 9:30 AM this Wednesday or Friday. Which do you prefer? I'll also text you the intake form and our address. What's the best number to send it to?"
+      }
+    ],
+    "badges": {
+      "blue": "New Patient Appointments Booked This Week: 18"
+    },
+    "problem": {
+      "headline": "People Call When They're In Pain. If You Don't Answer, They Call Another Clinic.",
+      "description": "When someone's back or neck flares up, they're not waiting days for someone to pick up. They call down the list until they find a clinic that answers and gets them on the schedule.",
+      "problems": [
+        "Calls during treatment hours go straight to voicemail.",
+        "Web and ad leads don't all get fast, consistent follow-up.",
+        "No-shows and inactive patients rarely get reactivated."
+      ]
+    },
+    "comparison": {
+      "currentReality": "16 missed new patient calls this month<br/>0 systematic follow-up on inactive patients",
+      "withVoiceCloser": "16 answered, 11 new patients booked<br/>23 inactive patients re-engaged"
+    },
+    "demoBand": {
+      "headline": "Hear How VoiceCloser Handles A New Chiropractic Patient Call."
+    },
+    "callsWeHandle": {
+      "headline": "Calls We Handle For Chiropractic Clinics.",
+      "description": "From first-time callers to existing patients, VoiceCloser handles the calls that keep your adjusting tables busy.",
+      "types": [
+        "New patient inquiries and appointment scheduling",
+        "Existing patient reschedules and follow-ups",
+        "Basic questions about services, hours, and insurance you accept",
+        "Appointment confirmations, reminders, and cancellations",
+        "Reactivation outreach for no-shows and inactive patients"
+      ]
+    },
+    "cta": {
+      "headline": "Want To See How Many Patient Visits You're Losing To Voicemail?"
+    },
+    "faq1": {
+      "question": "Does it give medical advice or discuss treatment plans?",
+      "answer": "No. VoiceCloser does not provide medical advice or discuss specific treatments. It follows your approved scripts to answer basic logistical questions, collect new patient information, and book or route callers to your staff."
+    }
+  },
+  {
+    "slug": "dermatology",
+    "agentKey": "voicecloser_dermatology",
+    "pageTitle": "Dermatology",
+    "hero": {
+      "headline": "Stop Missing Calls From Patients Who Finally Decided To See A Specialist.",
+      "subheadline": "Your own AI phone agent that answers every call, captures patient details, and books dermatology appointments – professionally, consistently, 24/7. Less backlog, more booked consults."
+    },
+    "conversation": [
+      {
+        "speaker": "agent",
+        "line": "Thank you for calling [Dermatology Clinic]. This is Emily. Are you a new or existing patient?"
+      },
+      {
+        "speaker": "caller",
+        "line": "New. I wanted to see someone about my acne."
+      },
+      {
+        "speaker": "agent",
+        "line": "Of course. Is this mainly for your face, back, or both?"
+      },
+      {
+        "speaker": "caller",
+        "line": "Mostly my face."
+      },
+      {
+        "speaker": "agent",
+        "line": "Thank you. The doctor will review everything in your visit. I can schedule a new patient appointment. Do mornings, afternoons, or late afternoons usually work best?"
+      },
+      {
+        "speaker": "caller",
+        "line": "Late afternoons."
+      },
+      {
+        "speaker": "agent",
+        "line": "I have a 4 PM new patient slot next Monday or Wednesday. Which works better? I'll send you the intake form and our address by text. What's the best number to use?"
+      }
+    ],
+    "badges": {
+      "blue": "New Patient Consults Booked This Week: 13"
+    },
+    "problem": {
+      "headline": "Patients Wait Months To Reach Out. One Missed Call Sends Them Back To Waiting.",
+      "description": "Whether it's acne, rashes, or skin checks, people often delay seeing a dermatologist. When they finally do call, hitting voicemail or waiting days for a response pushes them to another clinic or back into avoidance.",
+      "problems": [
+        "High-volume call times overwhelm your front desk.",
+        "Referral and online requests aren't followed up the same day.",
+        "Cosmetic inquiries and skin check leads don't all get converted into booked consults."
+      ]
+    },
+    "comparison": {
+      "currentReality": "21 missed new patient and cosmetic calls this month<br/>0 structured follow-up on cosmetic inquiries",
+      "withVoiceCloser": "21 answered, 14 consults booked<br/>consistent follow-up on cosmetic and skin check leads"
+    },
+    "demoBand": {
+      "headline": "Hear How VoiceCloser Handles A New Dermatology Inquiry."
+    },
+    "callsWeHandle": {
+      "headline": "Calls We Handle For Dermatology Clinics.",
+      "description": "From medical to cosmetic inquiries, VoiceCloser handles the calls that keep your providers' calendars full.",
+      "types": [
+        "New medical patient inquiries and appointment scheduling",
+        "Cosmetic consult and treatment inquiry calls",
+        "Basic questions about services, locations, and insurance you accept",
+        "Appointment confirmations, reschedules, and reminders",
+        "Follow-ups on web forms, referrals, and cosmetic leads"
+      ]
+    },
+    "cta": {
+      "headline": "Want To See How Many Dermatology Patients You're Losing To Missed Calls?"
+    },
+    "faq1": {
+      "question": "Does it discuss diagnoses, medications, or specific treatments?",
+      "answer": "No. VoiceCloser does not diagnose conditions or discuss medications. It collects caller information, explains your process at a high level, and books or routes them to your clinical team for medical questions."
+    }
+  },
+  {
+    "slug": "med-spa",
+    "agentKey": "voicecloser_med_spa",
+    "pageTitle": "Med Spa",
+    "hero": {
+      "headline": "Stop Losing High-Value Clients Because No One Picked Up The Phone.",
+      "subheadline": "Your own AI phone agent that answers every call, follows up with leads, and books med spa consults and appointments – professionally, consistently, 24/7. Fewer missed opportunities, more treatments booked."
+    },
+    "conversation": [
+      {
+        "speaker": "agent",
+        "line": "Thank you for calling [Med Spa Name]. This is Lauren. Are you calling about injectables, skin treatments, or something else today?"
+      },
+      {
+        "speaker": "caller",
+        "line": "Injectables. I was thinking about Botox for my forehead lines."
+      },
+      {
+        "speaker": "agent",
+        "line": "Got it. Is this your first time getting injectables, or have you had treatments before?"
+      },
+      {
+        "speaker": "caller",
+        "line": "First time."
+      },
+      {
+        "speaker": "agent",
+        "line": "Perfect. We usually start with a consultation so the provider can review your goals and explain options. Do weekdays, evenings, or Saturdays work better for you?"
+      },
+      {
+        "speaker": "caller",
+        "line": "Evenings."
+      },
+      {
+        "speaker": "agent",
+        "line": "I can schedule a consult this Thursday at 6 PM or next Monday at 5:30 PM. Which do you prefer? I'll text you the details and our policies. What's the best number to send it to?"
+      }
+    ],
+    "badges": {
+      "blue": "Consults & Treatments Booked This Week: 22"
+    },
+    "problem": {
+      "headline": "When Someone Is Ready To Invest In Their Appearance, They Won't Wait On Voicemail.",
+      "description": "Med spa clients are often comparing you with several options. If they can't reach anyone quickly, they book a consult with a competitor or delay the decision entirely.",
+      "problems": [
+        "Phones blow up during busy treatment blocks and nobody can answer.",
+        "Leads from ads, Instagram, and landing pages don't all get fast follow-up.",
+        "No-shows, consults that never booked treatment, and past clients aren't consistently reactivated."
+      ]
+    },
+    "comparison": {
+      "currentReality": "19 missed med spa inquiries this month<br/>0 structured follow-up on past consults",
+      "withVoiceCloser": "19 answered, 13 consults booked<br/>21 past consults re-engaged"
+    },
+    "demoBand": {
+      "headline": "Hear How VoiceCloser Handles A New Med Spa Inquiry."
+    },
+    "callsWeHandle": {
+      "headline": "Calls We Handle For Med Spas.",
+      "description": "From first-time callers to VIPs, VoiceCloser handles the calls that keep your providers booked out.",
+      "types": [
+        "New injectable, facial, and laser treatment inquiries",
+        "Consultation and treatment appointment scheduling",
+        "Basic questions about services, pricing ranges, and policies",
+        "Confirmations, reschedules, and cancellation management",
+        "Follow-ups on leads, no-shows, and inactive clients"
+      ]
+    },
+    "cta": {
+      "headline": "Want To See How Many High-Ticket Treatments You're Losing To Missed Calls?"
+    },
+    "faq1": {
+      "question": "Does it recommend specific med spa treatments or give medical advice?",
+      "answer": "No. VoiceCloser does not recommend treatments or provide medical advice. It follows your approved scripts to explain your process, collect contact and interest details, and book or route callers to your licensed providers or coordinators."
+    }
+  },
+  {
+    "slug": "mental-health",
+    "agentKey": "voicecloser_mental_health",
+    "pageTitle": "Mental Health",
+    "hero": {
+      "headline": "Stop Letting New Client Inquiries Sit In Voicemail Or Get Lost In Email.",
+      "subheadline": "Your own AI phone agent that answers every call, gathers basic intake details, and books consultations – professionally, calmly, 24/7. Less administrative strain, more clients receiving care."
+    },
+    "conversation": [
+      {
+        "speaker": "agent",
+        "line": "Thank you for calling [Practice Name]. This is Taylor. Are you a new client or an existing client calling about an appointment?"
+      },
+      {
+        "speaker": "caller",
+        "line": "New. I'm looking to start therapy."
+      },
+      {
+        "speaker": "agent",
+        "line": "Thank you for reaching out. Are you mainly looking for individual therapy, couples, or something else?"
+      },
+      {
+        "speaker": "caller",
+        "line": "Individual."
+      },
+      {
+        "speaker": "agent",
+        "line": "Got it. Without going into detail over the phone, are you seeking support mainly for anxiety, mood, relationships, or something else?"
+      },
+      {
+        "speaker": "caller",
+        "line": "Mostly anxiety."
+      },
+      {
+        "speaker": "agent",
+        "line": "Thank you. I can schedule an initial appointment with one of our therapists who works with anxiety. Do weekdays during the day or evenings usually work better for you?"
+      }
+    ],
+    "badges": {
+      "blue": "New Client Intakes Booked This Week: 11"
+    },
+    "problem": {
+      "headline": "When Someone Finally Reaches Out For Help, Not Hearing Back Can Feel Like Rejection.",
+      "description": "Many people take weeks or months to build up the courage to call. If they hit voicemail, get no response, or an overwhelmed front desk, they may never try again or they move to another practice.",
+      "problems": [
+        "High-emotion intake calls arrive when clinicians and staff are in session.",
+        "Voicemails, emails, and web forms pile up and are hard to manage.",
+        "Simple reschedules and logistics consume staff time that could support clinical work."
+      ]
+    },
+    "comparison": {
+      "currentReality": "14 missed or delayed new patient calls this month<br/>inbox full of unanswered intake requests",
+      "withVoiceCloser": "14 answered, 9 intakes scheduled<br/>inquiries captured and organized for your team"
+    },
+    "demoBand": {
+      "headline": "Hear How VoiceCloser Handles A New Therapy Inquiry Call."
+    },
+    "callsWeHandle": {
+      "headline": "Calls We Handle For Mental Health Practices.",
+      "description": "From first contact to scheduling and reminders, VoiceCloser handles the administrative calls so your clinicians can focus on care.",
+      "types": [
+        "New client inquiries and intake pre-screen questions",
+        "Initial consultation and ongoing appointment scheduling",
+        "Basic questions about services, hours, and insurance you accept",
+        "Confirmations, reschedules, and cancellations",
+        "Follow-ups on web forms and referral inquiries"
+      ]
+    },
+    "cta": {
+      "headline": "Want To See How Many Potential Clients You're Losing To Missed Calls?"
+    },
+    "faq1": {
+      "question": "Can it handle crisis situations or provide mental health advice?",
+      "answer": "No. VoiceCloser is not a crisis line and does not provide clinical advice. It follows your approved scripts to route emergencies to the proper numbers you provide, share crisis resources you approve, and handle only non-emergency scheduling and general information."
+    }
+  },
+  {
+    "slug": "optometry",
+    "agentKey": "voicecloser_optometry",
+    "pageTitle": "Optometry",
+    "hero": {
+      "headline": "Stop Missing Eye Exam Appointments Because The Front Desk Can't Get To The Phone.",
+      "subheadline": "Your own AI phone agent that answers every call, books exams, and handles common questions – professionally, consistently, 24/7. Less ringing phones, more patients on the schedule."
+    },
+    "conversation": [
+      {
+        "speaker": "agent",
+        "line": "Thank you for calling [Optometry Practice]. This is Alex. Are you a new or existing patient?"
+      },
+      {
+        "speaker": "caller",
+        "line": "Existing. I'm due for my yearly eye exam."
+      },
+      {
+        "speaker": "agent",
+        "line": "Great. Do you prefer mornings, afternoons, or early evenings?"
+      },
+      {
+        "speaker": "caller",
+        "line": "Afternoons."
+      },
+      {
+        "speaker": "agent",
+        "line": "I see openings at 2 PM and 3:30 PM next Tuesday. Which works better for you?"
+      },
+      {
+        "speaker": "caller",
+        "line": "3:30."
+      },
+      {
+        "speaker": "agent",
+        "line": "Perfect. You're scheduled for a comprehensive eye exam next Tuesday at 3:30 PM. I'll text you the confirmation and location. What's the best number to send it to?"
+      }
+    ],
+    "badges": {
+      "blue": "Eye Exams Booked This Week: 27"
+    },
+    "problem": {
+      "headline": "Patients Call When They Notice A Problem Or A Reminder. If You Miss It, They Put It Off Or Go Elsewhere.",
+      "description": "Whether it's a broken pair of glasses, blurry vision, or an insurance reminder card, patients call when vision is top of mind. If they can't reach you, they push it off or book with another practice.",
+      "problems": [
+        "Phones spike during mornings and lunch, overwhelming your front desk.",
+        "Recall and insurance reminder responses don't all get scheduled.",
+        "Simple questions about benefits, hours, and prescriptions eat up staff time."
+      ]
+    },
+    "comparison": {
+      "currentReality": "22 missed calls this week<br/>inconsistent scheduling from recall reminders",
+      "withVoiceCloser": "22 answered, 15 exams booked<br/>recall responses captured and scheduled"
+    },
+    "demoBand": {
+      "headline": "Hear How VoiceCloser Handles An Eye Exam Scheduling Call."
+    },
+    "callsWeHandle": {
+      "headline": "Calls We Handle For Optometry Practices.",
+      "description": "From annual exams to urgent appointment requests, VoiceCloser handles the calls that keep your lanes full.",
+      "types": [
+        "New and existing patient eye exam scheduling",
+        "Contact lens and glasses follow-up appointments",
+        "Basic questions about services, hours, and insurance you accept",
+        "Confirmations, reschedules, and cancellations",
+        "Responses to recall campaigns and reminders"
+      ]
+    },
+    "cta": {
+      "headline": "Want To See How Many Exams You're Losing To Voicemail?"
+    },
+    "faq1": {
+      "question": "Does it triage urgent eye issues or give medical advice?",
+      "answer": "No. VoiceCloser does not provide medical advice or triage symptoms. It follows your protocols to flag potential urgent issues, share your approved instructions, and book or route callers appropriately."
+    }
+  },
+  {
+    "slug": "physical-therapy",
+    "agentKey": "voicecloser_physical_therapy",
+    "pageTitle": "Physical Therapy",
+    "hero": {
+      "headline": "Stop Letting Referrals And Self-Referrals Die In Voicemail.",
+      "subheadline": "Your own AI phone agent that answers every call, gathers basic intake info, and books PT evaluations – professionally, consistently, 24/7. Less admin bottleneck, more patients starting care."
+    },
+    "conversation": [
+      {
+        "speaker": "agent",
+        "line": "Thank you for calling [Clinic Name]. This is Morgan. Are you a new patient or returning for additional visits?"
+      },
+      {
+        "speaker": "caller",
+        "line": "New. My doctor referred me for my shoulder."
+      },
+      {
+        "speaker": "agent",
+        "line": "Thank you. Without going into detail, was this from an injury, surgery, or something that came on over time?"
+      },
+      {
+        "speaker": "caller",
+        "line": "Surgery a few weeks ago."
+      },
+      {
+        "speaker": "agent",
+        "line": "Understood. I can schedule your initial PT evaluation. Do mornings, afternoons, or evenings usually work better for you?"
+      },
+      {
+        "speaker": "caller",
+        "line": "Afternoons."
+      },
+      {
+        "speaker": "agent",
+        "line": "I can offer a first appointment next Monday at 2 PM or Wednesday at 3 PM. Which do you prefer? I'll text you the intake forms and directions. What's the best number to send them to?"
+      }
+    ],
+    "badges": {
+      "blue": "New Evaluations Booked This Week: 16"
+    },
+    "problem": {
+      "headline": "When A Patient Is Referred To PT, Delayed Scheduling Means They May Never Start Care.",
+      "description": "Referring providers send you patients who often wait until pain is serious to act. If they can't get through easily, they may delay starting PT or look elsewhere.",
+      "problems": [
+        "High call volume during clinic hours overwhelms the front desk.",
+        "Referrals from physicians and surgeons don't all get promptly scheduled.",
+        "No-shows, cancellations, and incomplete plans of care aren't consistently re-engaged."
+      ]
+    },
+    "comparison": {
+      "currentReality": "18 missed or delayed new patient calls this month<br/>incomplete plans of care without follow-up",
+      "withVoiceCloser": "18 answered, 12 evaluations booked<br/>lapsed and no-show patients re-engaged"
+    },
+    "demoBand": {
+      "headline": "Hear How VoiceCloser Handles A New PT Evaluation Call."
+    },
+    "callsWeHandle": {
+      "headline": "Calls We Handle For Physical Therapy Clinics.",
+      "description": "From new evaluations to ongoing visit management, VoiceCloser handles the calls that keep your therapists' schedules full.",
+      "types": [
+        "New patient inquiries and evaluation scheduling",
+        "Referral intake and basic information gathering",
+        "Visit confirmations, reschedules, and cancellations",
+        "General questions about services, locations, and insurance you accept",
+        "Reactivation outreach for lapsed and no-show patients"
+      ]
+    },
+    "cta": {
+      "headline": "Want To See How Many Completed Plans Of Care You're Losing To Missed Calls?"
+    },
+    "faq1": {
+      "question": "Does it discuss treatment plans or clinical details?",
+      "answer": "No. VoiceCloser does not provide medical advice or discuss specific PT treatment plans. It collects basic intake information, explains your process at a high level, and books or routes callers to your clinical team."
+    }
+  },
+  {
+    "slug": "urgent-care",
+    "agentKey": "voicecloser_urgent_care",
+    "pageTitle": "Urgent Care",
+    "hero": {
+      "headline": "Stop Letting Your Phone Lines Collapse Every Time You Get Busy.",
+      "subheadline": "Your own AI phone agent that answers every call, shares location and wait-time info, and handles basic questions – professionally, consistently, 24/7. Less front-desk overload, more patients with clear next steps."
+    },
+    "conversation": [
+      {
+        "speaker": "agent",
+        "line": "Thank you for calling [Urgent Care Name]. This is Casey. Are you calling about our hours, location, wait times, or something else?"
+      },
+      {
+        "speaker": "caller",
+        "line": "I wanted to know how long the wait is and if you take my insurance."
+      },
+      {
+        "speaker": "agent",
+        "line": "I can help with that. We're open today until 8 PM and currently have an estimated wait of about [X] minutes from arrival. May I ask which insurance carrier you have?"
+      },
+      {
+        "speaker": "caller",
+        "line": "Blue Cross."
+      },
+      {
+        "speaker": "agent",
+        "line": "Thank you. We do see many patients with Blue Cross plans, but coverage varies by policy. We recommend bringing your card so our team can verify on-site. Would you like the address and check-in instructions by text?"
+      }
+    ],
+    "badges": {
+      "blue": "Calls Handled This Week: 143"
+    },
+    "problem": {
+      "headline": "During Peak Times, Your Front Desk Can't Answer Every Call – But Patients Still Need Answers.",
+      "description": "When flu season hits or evenings get busy, phone lines jam with the same questions: \"Are you open?\" \"What's the wait?\" \"Do you take my insurance?\" If callers can't get through, some show up confused, go elsewhere, or post frustrated reviews.",
+      "problems": [
+        "High call volume during peak hours overwhelms staff.",
+        "Routine questions pull attention from in-clinic patients.",
+        "Location, hours, and basic visit instructions aren't consistently communicated."
+      ]
+    },
+    "comparison": {
+      "currentReality": "61 missed calls during peak times this week<br/>frustrated callers and staff burnout",
+      "withVoiceCloser": "61 answered, 100 percent of callers receive clear basic information and directions"
+    },
+    "demoBand": {
+      "headline": "Hear How VoiceCloser Handles A Busy-Day Urgent Care Call."
+    },
+    "callsWeHandle": {
+      "headline": "Calls We Handle For Urgent Care Centers.",
+      "description": "From hours and location to basic visit logistics, VoiceCloser handles the high-volume, non-clinical calls clogging your lines.",
+      "types": [
+        "Hours, location, and check-in instruction questions",
+        "Basic information about estimated wait times and capacity",
+        "General questions about services offered and what to bring",
+        "Follow-up on paperwork, forms, and simple logistics",
+        "Routing non-emergency calls to the right numbers or departments you specify"
+      ]
+    },
+    "cta": {
+      "headline": "Want To See How Many Calls Your Team Could Offload Without Hurting Care?"
+    },
+    "faq1": {
+      "question": "Can it handle emergencies or give medical advice?",
+      "answer": "No. VoiceCloser is not for emergencies and does not provide medical advice. It can share your approved instructions for urgent or emergency situations, including directing callers to dial 911 or go to the nearest emergency department when appropriate, and handle only non-clinical, informational calls."
+    }
+  },
+  {
+    "slug": "veterinary",
+    "agentKey": "voicecloser_veterinary",
+    "pageTitle": "Veterinary",
+    "hero": {
+      "headline": "Stop Missing Calls From Pet Owners Who Need Help Now.",
+      "subheadline": "Your own AI phone agent that answers every call, gathers pet and visit details, and books appointments – professionally, calmly, 24/7. Less front-desk overload, more pets seen on time."
+    },
+    "conversation": [
+      {
+        "speaker": "agent",
+        "line": "Thank you for calling [Clinic Name]. This is Alex. Is this for a new patient, or an existing pet we've seen before?"
+      },
+      {
+        "speaker": "caller",
+        "line": "Existing. My dog Max needs an appointment."
+      },
+      {
+        "speaker": "agent",
+        "line": "Got it. Is this for a wellness visit, vaccines, or because something new is going on?"
+      },
+      {
+        "speaker": "caller",
+        "line": "Something new. He's been limping."
+      },
+      {
+        "speaker": "agent",
+        "line": "I'm sorry to hear that. How long has he been limping – today, a few days, or longer?"
+      },
+      {
+        "speaker": "caller",
+        "line": "About three days."
+      },
+      {
+        "speaker": "agent",
+        "line": "Thank you. I can schedule an exam so the veterinarian can take a look. Do mornings, afternoons, or evenings usually work better for you?"
+      }
+    ],
+    "badges": {
+      "blue": "Pet Visits Booked This Week: 24"
+    },
+    "problem": {
+      "headline": "Worried Pet Owners Don't Wait On Voicemail – They Call The Next Clinic.",
+      "description": "When a pet is sick or overdue for care, owners call the first few clinics they find. If they can't reach you, they assume you're too busy and book elsewhere, even if you'd have been a better fit.",
+      "problems": [
+        "Phones spike during exam hours and surgeries, overwhelming your team.",
+        "New client inquiries and online requests don't all get same-day follow-up.",
+        "Wellness reminders and overdue pets aren't consistently re-engaged."
+      ]
+    },
+    "comparison": {
+      "currentReality": "20 missed calls this week<br/>overdue wellness and vaccine reminders not fully booked",
+      "withVoiceCloser": "20 answered, 13 exams booked<br/>more reminder responses converted into appointments"
+    },
+    "demoBand": {
+      "headline": "Hear How VoiceCloser Handles A New Veterinary Appointment Call."
+    },
+    "callsWeHandle": {
+      "headline": "Calls We Handle For Veterinary Clinics.",
+      "description": "From wellness visits to follow-ups, VoiceCloser handles the non-clinical calls that keep your schedule organized.",
+      "types": [
+        "New and existing client appointment scheduling",
+        "Wellness, vaccine, and follow-up visit booking",
+        "Basic questions about services, hours, and payment options",
+        "Confirmations, reschedules, and cancellations",
+        "Responses to reminder campaigns for overdue pets"
+      ]
+    },
+    "cta": {
+      "headline": "Want To See How Many Pet Visits You're Losing To Missed Calls?"
+    },
+    "faq1": {
+      "question": "Does it give medical advice about pets or tell owners what's wrong?",
+      "answer": "No. VoiceCloser does not provide veterinary advice or diagnose pets. It collects basic information, follows your approved scripts, and books or routes callers so your clinical team can handle medical questions."
+    }
+  },
+  {
+    "slug": "electrical",
+    "agentKey": "voicecloser_electrical",
+    "pageTitle": "Electrical",
+    "hero": {
+      "headline": "Stop Losing Electrical Jobs To Missed Calls And Slow Follow-Up.",
+      "subheadline": "Your own AI phone agent that answers every call, qualifies jobs, and books estimates – professionally, consistently, 24/7. Less phone tag, more trucks rolling."
+    },
+    "conversation": [
+      {
+        "speaker": "agent",
+        "line": "Hi, thanks for calling [Company Name]. This is Chris. What can we help you with today?"
+      },
+      {
+        "speaker": "caller",
+        "line": "A few outlets stopped working in my kitchen."
+      },
+      {
+        "speaker": "agent",
+        "line": "Got it. Did they all go out at once, and have you tried resetting any breakers yet?"
+      },
+      {
+        "speaker": "caller",
+        "line": "Yeah, they went out together. I tried flipping the breaker but nothing."
+      },
+      {
+        "speaker": "agent",
+        "line": "Thanks, that's helpful. We'll have a tech take a look. Are you hoping for someone today, or is anytime this week okay?"
+      },
+      {
+        "speaker": "caller",
+        "line": "Today if possible."
+      },
+      {
+        "speaker": "agent",
+        "line": "I can flag this as a priority call and check today's openings. I see a window between 3-5 PM. Want me to lock that in and text you the arrival window?"
+      }
+    ],
+    "badges": {
+      "blue": "Service Calls Booked This Week: 19"
+    },
+    "problem": {
+      "headline": "When The Power's Out, Homeowners Call Until Someone Answers.",
+      "description": "Whether it's dead outlets, tripping breakers, or a panel upgrade, people don't wait around for a callback. They call down the list until an electrician picks up and gives them a time.",
+      "problems": [
+        "Emergency and same-day calls hit voicemail while you're on jobs.",
+        "Panel upgrades and high-value projects never get proper follow-up.",
+        "After-hours calls and weekend inquiries go unanswered."
+      ]
+    },
+    "comparison": {
+      "currentReality": "17 missed calls this week<br/>0 follow-up on quoted but unapproved jobs",
+      "withVoiceCloser": "17 answered, 11 service calls booked<br/>8 old quotes re-engaged"
+    },
+    "demoBand": {
+      "headline": "Hear How VoiceCloser Handles An Electrical Service Call."
+    },
+    "callsWeHandle": {
+      "headline": "Calls We Handle For Electricians.",
+      "description": "From urgent fixes to larger project estimates, VoiceCloser handles the calls that keep your schedule full.",
+      "types": [
+        "Emergency and same-day electrical issues",
+        "Panel upgrades, EV charger, and project estimate requests",
+        "Service and troubleshooting appointment scheduling",
+        "Scheduling, rescheduling, and access questions",
+        "Follow-ups on open estimates and past customers"
+      ]
+    },
+    "cta": {
+      "headline": "Want To See How Many Electrical Jobs You're Losing To Voicemail?"
+    },
+    "faq1": {
+      "question": "Can it tell customers how to fix electrical issues over the phone?",
+      "answer": "No. VoiceCloser doesn't walk anyone through electrical work. It asks your key questions, flags emergencies based on your rules, and books or routes the call so your licensed team can handle the job."
+    }
+  },
+  {
+    "slug": "flooring",
+    "agentKey": "voicecloser_flooring",
+    "pageTitle": "Flooring",
+    "hero": {
+      "headline": "Stop Letting Remodel And Flooring Jobs Go To Competitors.",
+      "subheadline": "Your own AI phone agent that answers every call, qualifies projects, and books in-home estimates – professionally, consistently, 24/7. Less missed calls, more installs on the calendar."
+    },
+    "conversation": [
+      {
+        "speaker": "agent",
+        "line": "Hi, thanks for calling [Company Name]. This is Taylor. What kind of flooring project are you thinking about?"
+      },
+      {
+        "speaker": "caller",
+        "line": "Replacing the carpet in our living room with something nicer."
+      },
+      {
+        "speaker": "agent",
+        "line": "Great. About how big is the space, and is it just that room or more areas?"
+      },
+      {
+        "speaker": "caller",
+        "line": "Just the living room, maybe 300 square feet."
+      },
+      {
+        "speaker": "agent",
+        "line": "Got it. Are you leaning toward hardwood, LVP, or still deciding?"
+      },
+      {
+        "speaker": "caller",
+        "line": "Still deciding."
+      },
+      {
+        "speaker": "agent",
+        "line": "No problem. The best next step is an in-home measure and estimate. Are weekdays or Saturdays better for you?"
+      }
+    ],
+    "badges": {
+      "blue": "Estimates Booked This Week: 12"
+    },
+    "problem": {
+      "headline": "When Homeowners Get The Remodel Bug, They Call Until Someone Schedules Them.",
+      "description": "People finally get motivated to replace old carpet or dated floors. If they can't reach you fast, they book an estimate with another flooring company and you never hear from them.",
+      "problems": [
+        "Estimate requests hit voicemail while your team is on installs.",
+        "Old quotes and past customers never get re-engaged for new projects.",
+        "After-hours and weekend inquiries pile up without response."
+      ]
+    },
+    "comparison": {
+      "currentReality": "10 missed calls this week<br/>0 follow-up on last season's estimates",
+      "withVoiceCloser": "10 answered, 7 estimates booked<br/>6 old estimates re-engaged"
+    },
+    "demoBand": {
+      "headline": "Hear How VoiceCloser Handles A Flooring Estimate Call."
+    },
+    "callsWeHandle": {
+      "headline": "Calls We Handle For Flooring Companies.",
+      "description": "From first ideas to final punch lists, VoiceCloser handles the calls that keep your crews busy.",
+      "types": [
+        "New flooring and remodel inquiries",
+        "In-home measure and estimate scheduling",
+        "Product, lead time, and basic pricing questions",
+        "Scheduling, rescheduling, and installation coordination",
+        "Follow-ups with past customers and open quotes"
+      ]
+    },
+    "cta": {
+      "headline": "Want To See How Many Flooring Projects You're Losing To Voicemail?"
+    },
+    "faq1": {
+      "question": "Can it help customers choose between different flooring options?",
+      "answer": "It won't do design consulting, but it can ask a few simple questions you define, share basic information you approve, and then book an in-home measure or showroom visit where your team can make recommendations."
+    }
+  },
+  {
+    "slug": "foundation-repair",
+    "agentKey": "voicecloser_foundation_repair",
+    "pageTitle": "Foundation Repair",
+    "hero": {
+      "headline": "Stop Losing High-Ticket Foundation Jobs Because No One Answered.",
+      "subheadline": "Your own AI phone agent that answers every call, asks the right screening questions, and books inspections – professionally, consistently, 24/7. Less chaos, more qualified inspections on the board."
+    },
+    "conversation": [
+      {
+        "speaker": "agent",
+        "line": "Hi, thanks for calling [Company Name]. This is Jordan. What kind of issue are you seeing with your home?"
+      },
+      {
+        "speaker": "caller",
+        "line": "We've got some cracks in the basement wall and a door that won't close right."
+      },
+      {
+        "speaker": "agent",
+        "line": "Understood. Have you noticed any water coming in, or just cracking and sticking doors?"
+      },
+      {
+        "speaker": "caller",
+        "line": "A little water after heavy rain."
+      },
+      {
+        "speaker": "agent",
+        "line": "Thanks, that's important. What type of foundation do you have – basement, crawl space, or slab, if you know?"
+      },
+      {
+        "speaker": "caller",
+        "line": "Basement."
+      },
+      {
+        "speaker": "agent",
+        "line": "Got it. The best next step is an on-site inspection and estimate. Are weekdays or Saturdays better for you for a visit?"
+      }
+    ],
+    "badges": {
+      "blue": "Inspections Booked This Week: 9"
+    },
+    "problem": {
+      "headline": "When Homeowners See Cracks, They're Worried – And They Call Whoever Picks Up First.",
+      "description": "Foundation problems are scary. If homeowners don't reach you quickly, they schedule with another company or delay until the damage (and cost) gets worse.",
+      "problems": [
+        "High-intent inspection calls roll to voicemail while your team is on jobs.",
+        "Old inspections and \"think it over\" quotes never get followed up.",
+        "After-storm spikes in calls overwhelm your office."
+      ]
+    },
+    "comparison": {
+      "currentReality": "8 missed inspection calls this week<br/>0 follow-up on open foundation quotes",
+      "withVoiceCloser": "8 answered, 6 inspections booked<br/>5 open quotes re-engaged"
+    },
+    "demoBand": {
+      "headline": "Hear How VoiceCloser Handles A Foundation Repair Call."
+    },
+    "callsWeHandle": {
+      "headline": "Calls We Handle For Foundation Repair Companies.",
+      "description": "From first signs of trouble to final walkthroughs, VoiceCloser handles the calls that lead to big-ticket jobs.",
+      "types": [
+        "New foundation and waterproofing inquiries",
+        "Inspection and estimate scheduling",
+        "Storm-related and water intrusion calls",
+        "Scheduling, rescheduling, and project coordination",
+        "Follow-ups on past inspections and open quotes"
+      ]
+    },
+    "cta": {
+      "headline": "Want To See How Many High-Value Jobs You're Losing To Voicemail?"
+    },
+    "faq1": {
+      "question": "Can it tell homeowners if their house is \"safe\" or diagnose the issue?",
+      "answer": "No. VoiceCloser doesn't diagnose structural problems. It asks your screening questions, documents what the homeowner is seeing, and books or routes them so your experts can inspect and advise."
+    }
+  },
+  {
+    "slug": "garage-door",
+    "agentKey": "voicecloser_garage_door",
+    "pageTitle": "Garage Door",
+    "hero": {
+      "headline": "Stop Losing Garage Door Jobs To Voicemail And Missed Emergencies.",
+      "subheadline": "Your own AI phone agent that answers every call, screens emergencies, and books service appointments, professionally, consistently, 24/7. Less panic, more trucks dispatched."
+    },
+    "conversation": [
+      {
+        "speaker": "agent",
+        "line": "Hi, thanks for calling [Company Name]. This is Jordan. What is going on with your garage door today?"
+      },
+      {
+        "speaker": "caller",
+        "line": "It will not open and my car is stuck inside."
+      },
+      {
+        "speaker": "agent",
+        "line": "Understood. When you press the button, do you hear the opener running or is it completely silent?"
+      },
+      {
+        "speaker": "caller",
+        "line": "It makes noise but the door does not move."
+      },
+      {
+        "speaker": "agent",
+        "line": "Thanks, that helps. Is this a single door or a double door, and is the car trapped inside right now?"
+      },
+      {
+        "speaker": "caller",
+        "line": "Double, and yes my car is stuck."
+      },
+      {
+        "speaker": "agent",
+        "line": "I will mark this as a priority call. I can get a tech out between 2 and 4 PM today. Want me to lock that in and text you the arrival window?"
+      }
+    ],
+    "badges": {
+      "blue": "Service Calls Booked This Week: 21"
+    },
+    "problem": {
+      "headline": "When The Door Will Not Open, Homeowners Do Not Wait For A Call Back.",
+      "description": "A stuck or broken door traps cars, risks security, and stresses people out. If you do not answer, they quickly call another garage door company that will.",
+      "problems": [
+        "Emergency calls hit voicemail while techs are on ladders.",
+        "After hours and weekend calls roll to voicemail with no screening.",
+        "Past installs and tune up opportunities never get reactivated."
+      ]
+    },
+    "comparison": {
+      "currentReality": "13 missed calls this week, 4 went to competitors",
+      "withVoiceCloser": "13 answered, 9 service calls booked, 5 past customers re engaged"
+    },
+    "demoBand": {
+      "headline": "Hear How VoiceCloser Handles A Garage Door Emergency Call."
+    },
+    "callsWeHandle": {
+      "headline": "Calls We Handle For Garage Door Companies.",
+      "description": "From stuck doors to new opener installs, VoiceCloser handles the calls that keep your schedule packed.",
+      "types": [
+        "Emergency no open or no close calls",
+        "Broken spring, cable, and opener issues",
+        "New door and opener estimate requests",
+        "Scheduling, rescheduling, and access instructions",
+        "Follow ups on past installs, tune ups, and warranties"
+      ]
+    },
+    "cta": {
+      "headline": "Want To See How Many Garage Door Jobs You Are Losing To Voicemail?"
+    },
+    "faq1": {
+      "question": "Can it tell callers how to fix their garage door over the phone?",
+      "answer": "No. VoiceCloser does not walk homeowners through repairs. It asks your key screening questions, flags true emergencies, and books or routes the call so your techs can safely handle the work."
+    }
+  },
+  {
+    "slug": "contractor",
+    "agentKey": "voicecloser_general_contractor",
+    "pageTitle": "General Contractor",
+    "hero": {
+      "headline": "Stop Losing Big Renovation Jobs To Missed Calls And Slow Follow Up.",
+      "subheadline": "Your own AI phone agent that answers every call, qualifies projects, and books on site consultations, professionally, consistently, 24/7. Less chaos, more projects on the calendar."
+    },
+    "conversation": [
+      {
+        "speaker": "agent",
+        "line": "Hi, thanks for calling [Company Name]. This is Alex. What kind of project are you thinking about?"
+      },
+      {
+        "speaker": "caller",
+        "line": "We want to redo our kitchen and maybe open up a wall to the living room."
+      },
+      {
+        "speaker": "agent",
+        "line": "Great. Are you looking for a full gut remodel with new cabinets and layout, or more of a cosmetic refresh?"
+      },
+      {
+        "speaker": "caller",
+        "line": "Full remodel. New layout, new everything."
+      },
+      {
+        "speaker": "agent",
+        "line": "Got it. Is this your forever home or something you might sell in a few years?"
+      },
+      {
+        "speaker": "caller",
+        "line": "Probably our long term home."
+      },
+      {
+        "speaker": "agent",
+        "line": "Perfect. The next step is an in home consultation so our estimator can look at the space and talk through options. Are weekdays or Saturdays better for you?"
+      }
+    ],
+    "badges": {
+      "blue": "Consultations Booked This Week: 11"
+    },
+    "problem": {
+      "headline": "Homeowners With Big Projects Call A Few GCs. Whoever Responds First Has The Edge.",
+      "description": "Full remodels, additions, and custom builds start with a call. If you miss it while you are on site, that project often goes to a competitor who simply picked up and scheduled first.",
+      "problems": [
+        "New project inquiries hit voicemail while you are managing crews.",
+        "Old estimates, referrals, and past clients never get re engaged.",
+        "After hours and weekend calls sit until \"later\" and go cold."
+      ]
+    },
+    "comparison": {
+      "currentReality": "9 missed project inquiries this week, 0 follow ups on stale estimates",
+      "withVoiceCloser": "9 answered, 6 consultations booked, 5 old estimates re engaged"
+    },
+    "demoBand": {
+      "headline": "Hear How VoiceCloser Handles A General Contractor Project Inquiry."
+    },
+    "callsWeHandle": {
+      "headline": "Calls We Handle For General Contractors.",
+      "description": "From first ideas to final punch lists, VoiceCloser handles the calls that keep your pipeline full.",
+      "types": [
+        "Whole home, addition, and major remodel inquiries",
+        "On site consultation and estimate scheduling",
+        "Scheduling, rescheduling, and access coordination",
+        "Sub contractor and vendor coordination calls you want routed",
+        "Follow ups on past clients, referrals, and open bids"
+      ]
+    },
+    "cta": {
+      "headline": "Want To See How Many High Value Projects You Are Losing To Voicemail?"
+    },
+    "faq1": {
+      "question": "Can it tell homeowners what a project will cost over the phone?",
+      "answer": "No. VoiceCloser does not quote pricing. It asks your qualifying questions, explains your process, and books or routes serious projects so you or your estimator can walk the site and price it correctly."
+    }
+  },
+  {
+    "slug": "gutters",
+    "agentKey": "voicecloser_gutters",
+    "pageTitle": "Gutters",
+    "hero": {
+      "headline": "Stop Letting Gutter Cleans And Installs Wash Away With Missed Calls.",
+      "subheadline": "Your own AI phone agent that answers every call, qualifies jobs, and books cleanings and estimates, professionally, consistently, 24/7. Less voicemail, more houses on the route."
+    },
+    "conversation": [
+      {
+        "speaker": "agent",
+        "line": "Hi, thanks for calling [Company Name]. This is Taylor. Are you looking for gutter cleaning, repair, or new gutters?"
+      },
+      {
+        "speaker": "caller",
+        "line": "Cleaning for now. They are overflowing every time it rains."
+      },
+      {
+        "speaker": "agent",
+        "line": "Got it. Is this a one story or two story home, and about how many sides have gutters?"
+      },
+      {
+        "speaker": "caller",
+        "line": "Two story, all the way around."
+      },
+      {
+        "speaker": "agent",
+        "line": "Thanks, that helps. Are weekdays or Saturdays better for you for service?"
+      },
+      {
+        "speaker": "caller",
+        "line": "Saturdays."
+      },
+      {
+        "speaker": "agent",
+        "line": "I can schedule a Saturday route stop between 9 and 11 AM next weekend. I will text you the arrival window and prep instructions. What is the best number to send it to?"
+      }
+    ],
+    "badges": {
+      "blue": "Jobs Booked This Week: 18"
+    },
+    "problem": {
+      "headline": "Gutter Problems Show Up In Storms. That Is When Homeowners Start Calling.",
+      "description": "Overflowing gutters, leaks, and sagging sections are urgent when it is raining. If you do not answer, homeowners move on to the next company or put it off until the next storm.",
+      "problems": [
+        "Weather spikes calls and overwhelms whoever is near the phone.",
+        "Seasonal cleanings and guard installs do not get consistent follow up.",
+        "Past customers are not reactivated before leaf or rainy season."
+      ]
+    },
+    "comparison": {
+      "currentReality": "12 missed calls during last storm, 0 outreach to past customers this season",
+      "withVoiceCloser": "12 answered, 8 jobs booked, 23 past customers re engaged"
+    },
+    "demoBand": {
+      "headline": "Hear How VoiceCloser Handles A Gutter Service Call."
+    },
+    "callsWeHandle": {
+      "headline": "Calls We Handle For Gutter Companies.",
+      "description": "From cleanings to full replacements, VoiceCloser handles the calls that keep your crews working.",
+      "types": [
+        "Cleaning, repair, and leak calls",
+        "New gutter and gutter guard estimate requests",
+        "Storm and overflow related inquiries",
+        "Scheduling, rescheduling, and access questions",
+        "Seasonal reactivations and reminder campaigns"
+      ]
+    },
+    "cta": {
+      "headline": "Want To See How Many Gutter Jobs You Are Losing To Voicemail?"
+    },
+    "faq1": {
+      "question": "Can it give exact prices for cleaning or installs on the call?",
+      "answer": "It can share simple ballpark ranges you approve, but its main job is to gather project details, explain next steps, and book an appointment so you can price it accurately."
+    }
+  },
+  {
+    "slug": "lawn-care",
+    "agentKey": "voicecloser_lawn_care",
+    "pageTitle": "Lawn Care",
+    "hero": {
+      "headline": "Stop Losing Lawn Care Routes To Missed Calls And Slow Quotes.",
+      "subheadline": "Your own AI phone agent that answers every call, gathers property details, and books estimates and service starts, professionally, consistently, 24/7. Less chasing, more yards on your routes."
+    },
+    "conversation": [
+      {
+        "speaker": "agent",
+        "line": "Hi, thanks for calling [Company Name]. This is Chris. What can we help you with, mowing, fertilization, weed control, or something else?"
+      },
+      {
+        "speaker": "caller",
+        "line": "Mostly weekly mowing and some clean up."
+      },
+      {
+        "speaker": "agent",
+        "line": "Great. Is this a small city lot, average suburban yard, or a larger property?"
+      },
+      {
+        "speaker": "caller",
+        "line": "Average suburban yard."
+      },
+      {
+        "speaker": "agent",
+        "line": "Got it. Do you prefer us to come during the week while you are at work, or are weekends better?"
+      },
+      {
+        "speaker": "caller",
+        "line": "Weekdays are fine."
+      },
+      {
+        "speaker": "agent",
+        "line": "Perfect. I can schedule a quick estimate and first service for next week. I will text you the day and time window. What is the best number to send details and a photo request to?"
+      }
+    ],
+    "badges": {
+      "blue": "New Properties Added This Week: 22"
+    },
+    "problem": {
+      "headline": "When Grass Gets Long, Homeowners Call Whoever Can Start Fast.",
+      "description": "People call when their yard looks bad, or their old provider drops the ball. If you do not answer or follow up quickly, they sign with another company and you lose that route for the season.",
+      "problems": [
+        "Calls pile up while crews are in the field.",
+        "Estimates from web forms and door hangers do not all get contacted.",
+        "Past customers are not reactivated at the start of each season."
+      ]
+    },
+    "comparison": {
+      "currentReality": "19 missed calls this month, 0 reactivation of last year's clients",
+      "withVoiceCloser": "19 answered, 13 estimates booked, 27 past clients re engaged"
+    },
+    "demoBand": {
+      "headline": "Hear How VoiceCloser Handles A Lawn Care Inquiry."
+    },
+    "callsWeHandle": {
+      "headline": "Calls We Handle For Lawn Care Companies.",
+      "description": "From basic mowing to full programs, VoiceCloser handles the calls that fill your routes.",
+      "types": [
+        "New mowing, fertilization, and weed control inquiries",
+        "Estimate and service start scheduling",
+        "Seasonal clean up and one time project calls",
+        "Route changes, skips, and reschedules",
+        "Start of season reactivations and renewal campaigns"
+      ]
+    },
+    "cta": {
+      "headline": "Want To See How Many Lawns You Are Losing To Voicemail?"
+    },
+    "faq1": {
+      "question": "Can it measure lawns or give exact quotes on the call?",
+      "answer": "VoiceCloser cannot measure yards, but it can collect addresses, photos, and basic property details, then either book a visit or pass everything to your team so you can quote quickly and win the work."
+    }
+  },
+  {
+    "slug": "painting",
+    "agentKey": "voicecloser_painting",
+    "pageTitle": "Painting",
+    "hero": {
+      "headline": "Stop Losing Painting Jobs To Voicemail And Slow Follow-Up.",
+      "subheadline": "Your own AI phone agent that answers every call, qualifies projects, and books estimates – professionally, consistently, 24/7. Less phone tag, more houses on the schedule."
+    },
+    "conversation": [
+      {
+        "speaker": "agent",
+        "line": "Hi, thanks for calling [Company Name]. This is Taylor. What kind of painting project are you thinking about?"
+      },
+      {
+        "speaker": "caller",
+        "line": "We want to repaint the inside of our house."
+      },
+      {
+        "speaker": "agent",
+        "line": "Great. Are you looking at just a couple of rooms or most of the interior?"
+      },
+      {
+        "speaker": "caller",
+        "line": "Most of the interior. Living room, hallway, and bedrooms."
+      },
+      {
+        "speaker": "agent",
+        "line": "Got it. Is the home currently occupied and furnished, or is it empty?"
+      },
+      {
+        "speaker": "caller",
+        "line": "We live here. It's furnished."
+      },
+      {
+        "speaker": "agent",
+        "line": "Perfect. The next step is an in-home estimate so we can see the space and give you a quote. Are weekdays or Saturdays better for you?"
+      }
+    ],
+    "badges": {
+      "blue": "Estimates Booked This Week: 14"
+    },
+    "problem": {
+      "headline": "Homeowners Call When They're Ready To Paint. If You Don't Answer, They Call The Next Painter.",
+      "description": "When someone finally gets serious about repainting, they want an estimate on the calendar, not a voicemail box. If nobody picks up, they move on to whoever does.",
+      "problems": [
+        "Estimate requests hit voicemail while you're on ladders or at the sprayer.",
+        "Old quotes and past customers never get re-engaged for new projects.",
+        "After-hours and weekend inquiries sit until \"later\" and go cold."
+      ]
+    },
+    "comparison": {
+      "currentReality": "11 missed estimate calls this week<br/>0 follow-up on last year's quotes",
+      "withVoiceCloser": "11 answered, 8 estimates booked<br/>7 old quotes re-engaged"
+    },
+    "demoBand": {
+      "headline": "Hear How VoiceCloser Handles A Painting Estimate Call."
+    },
+    "callsWeHandle": {
+      "headline": "Calls We Handle For Painting Companies.",
+      "description": "From quick touch-ups to full repaints, VoiceCloser handles the calls that keep your crews booked out.",
+      "types": [
+        "Interior and exterior painting inquiries",
+        "In-home estimate and color consult scheduling",
+        "Scheduling, rescheduling, and access questions",
+        "Questions about prep, timelines, and basic pricing ranges",
+        "Follow-ups with past customers and open quotes"
+      ]
+    },
+    "cta": {
+      "headline": "Want To See How Many Painting Jobs You're Losing To Voicemail?"
+    },
+    "faq1": {
+      "question": "Can it help customers choose colors or finishes?",
+      "answer": "It won't do design work, but it can ask a few questions you define, share basic info you approve (like which finishes go where), and then book an estimate or color consult so your team can guide them in person."
+    }
+  },
+  {
+    "slug": "pest-control",
+    "agentKey": "voicecloser_pest_control",
+    "pageTitle": "Pest Control",
+    "hero": {
+      "headline": "Stop Losing Pest Control Routes To Missed Calls And Slow Response.",
+      "subheadline": "Your own AI phone agent that answers every call, qualifies infestations, and books service visits – professionally, consistently, 24/7. Less scrambling, more routes filled."
+    },
+    "conversation": [
+      {
+        "speaker": "agent",
+        "line": "Hi, thanks for calling [Company Name]. This is Jordan. What kind of pest issue are you dealing with today?"
+      },
+      {
+        "speaker": "caller",
+        "line": "We've been seeing roaches in the kitchen."
+      },
+      {
+        "speaker": "agent",
+        "line": "Got it. Have you seen them mostly at night, and are they staying in the kitchen or other rooms too?"
+      },
+      {
+        "speaker": "caller",
+        "line": "Mostly at night, mostly kitchen."
+      },
+      {
+        "speaker": "agent",
+        "line": "Thanks, that helps. Is this a single family home, apartment, or something else?"
+      },
+      {
+        "speaker": "caller",
+        "line": "Single family home."
+      },
+      {
+        "speaker": "agent",
+        "line": "Okay. I can schedule an initial treatment and inspection. Are weekdays or Saturdays better for you?"
+      }
+    ],
+    "badges": {
+      "blue": "New Services Booked This Week: 17"
+    },
+    "problem": {
+      "headline": "When Bugs Show Up, Homeowners Want Help Now – Not A Voicemail Box.",
+      "description": "Roaches, ants, spiders, and rodents make people pick up the phone fast. If you don't answer, they call the next company and sign a contract there instead.",
+      "problems": [
+        "Peak season calls flood the line while your techs are in the field.",
+        "One-time jobs never get turned into recurring plans because no one follows up.",
+        "Past customers aren't reactivated before pest season hits again."
+      ]
+    },
+    "comparison": {
+      "currentReality": "15 missed pest calls this week<br/>0 reactivation of last year's customers",
+      "withVoiceCloser": "15 answered, 10 new services booked<br/>26 past customers re-engaged"
+    },
+    "demoBand": {
+      "headline": "Hear How VoiceCloser Handles A Pest Control Call."
+    },
+    "callsWeHandle": {
+      "headline": "Calls We Handle For Pest Control Companies.",
+      "description": "From emergencies to quarterly plans, VoiceCloser handles the calls that keep your routes packed.",
+      "types": [
+        "New infestation and emergency pest calls",
+        "One-time treatment and recurring plan scheduling",
+        "Questions about pests treated, areas served, and basic pricing ranges",
+        "Reschedules, access, and service reminders",
+        "Seasonal reactivations and follow-ups on past services"
+      ]
+    },
+    "cta": {
+      "headline": "Want To See How Many Pest Control Jobs You're Losing To Voicemail?"
+    },
+    "faq1": {
+      "question": "Can it identify the exact pest or recommend chemicals?",
+      "answer": "No. VoiceCloser doesn't identify species or recommend products. It asks your screening questions, logs what the customer is seeing, and books or routes the call so your licensed techs can diagnose and treat."
+    }
+  },
+  {
+    "slug": "pool-service",
+    "agentKey": "voicecloser_pool_service",
+    "pageTitle": "Pool Service",
+    "hero": {
+      "headline": "Stop Losing Pool Service Accounts Because You Missed The Call.",
+      "subheadline": "Your own AI phone agent that answers every call, gathers pool details, and books estimates and cleanings – professionally, consistently, 24/7. Less chasing, more pools on route."
+    },
+    "conversation": [
+      {
+        "speaker": "agent",
+        "line": "Hi, thanks for calling [Company Name]. This is Casey. Are you looking for weekly service, a one-time clean, or equipment help?"
+      },
+      {
+        "speaker": "caller",
+        "line": "Probably weekly service. The water keeps turning green."
+      },
+      {
+        "speaker": "agent",
+        "line": "Got it. Is this an in-ground or above-ground pool, and about how big is it?"
+      },
+      {
+        "speaker": "caller",
+        "line": "In-ground, average size."
+      },
+      {
+        "speaker": "agent",
+        "line": "Thanks. Do you currently have anyone servicing it, or are you doing it yourself right now?"
+      },
+      {
+        "speaker": "caller",
+        "line": "Doing it myself."
+      },
+      {
+        "speaker": "agent",
+        "line": "Understood. I can schedule a visit to check the pool and get you a quote for service. Are weekdays or Saturdays better for you?"
+      }
+    ],
+    "badges": {
+      "blue": "New Accounts Booked This Week: 13"
+    },
+    "problem": {
+      "headline": "When The Pool Turns Green, Homeowners Call Whoever Can Fix It Fast.",
+      "description": "People don't want to stare at cloudy or green water all weekend. If they can't reach you quickly, they hire another service and you lose that account for the season.",
+      "problems": [
+        "Routing calls hit voicemail while you're out cleaning and repairing.",
+        "Estimate requests from door hangers and web forms don't all get called back.",
+        "Past customers aren't reactivated before opening or closing season."
+      ]
+    },
+    "comparison": {
+      "currentReality": "12 missed calls this month<br/>0 systematic outreach to prior season clients",
+      "withVoiceCloser": "12 answered, 8 quotes booked<br/>20 past clients re-engaged"
+    },
+    "demoBand": {
+      "headline": "Hear How VoiceCloser Handles A Pool Service Inquiry."
+    },
+    "callsWeHandle": {
+      "headline": "Calls We Handle For Pool Service Companies.",
+      "description": "From green pool emergencies to weekly routes, VoiceCloser handles the calls that keep your trucks and techs busy.",
+      "types": [
+        "Weekly service and maintenance inquiries",
+        "One-time clean, opening, and closing calls",
+        "Equipment issue and repair appointment requests",
+        "Scheduling, rescheduling, and access coordination",
+        "Start-of-season and end-of-season reactivation campaigns"
+      ]
+    },
+    "cta": {
+      "headline": "Want To See How Many Pool Accounts You're Losing To Voicemail?"
+    },
+    "faq1": {
+      "question": "Can it tell customers how to balance their water or fix equipment?",
+      "answer": "No. VoiceCloser doesn't walk homeowners through chemistry or repairs. It collects the right details, shares basic info you approve, and books or routes the visit so your techs can handle it on site."
+    }
+  },
+  {
+    "slug": "windows",
+    "agentKey": "voicecloser_windows",
+    "pageTitle": "Windows",
+    "hero": {
+      "headline": "Stop Letting Window Replacement Jobs Disappear After One Missed Call.",
+      "subheadline": "Your own AI phone agent that answers every call, qualifies projects, and books in-home demos – professionally, consistently, 24/7. Less voicemail, more installs on the calendar."
+    },
+    "conversation": [
+      {
+        "speaker": "agent",
+        "line": "Hi, thanks for calling [Company Name]. This is Jordan. What kind of window project are you thinking about?"
+      },
+      {
+        "speaker": "caller",
+        "line": "Replacing the old drafty windows in our house."
+      },
+      {
+        "speaker": "agent",
+        "line": "Got it. About how many windows are you looking to replace right now?"
+      },
+      {
+        "speaker": "caller",
+        "line": "Probably all of them, around 15."
+      },
+      {
+        "speaker": "agent",
+        "line": "Great. Is this a one-story or two-story home?"
+      },
+      {
+        "speaker": "caller",
+        "line": "Two-story."
+      },
+      {
+        "speaker": "agent",
+        "line": "Perfect. The next step is a free in-home consultation so a rep can measure and show options. Are weekdays or Saturdays better for you?"
+      }
+    ],
+    "badges": {
+      "blue": "In-Home Consults Booked This Week: 10"
+    },
+    "problem": {
+      "headline": "Big Ticket Window Jobs Start With A Phone Call. If You Miss It, You May Never Get Another Shot.",
+      "description": "When homeowners are ready to invest in new windows, they schedule a couple of estimates and go with whoever shows up and follows up. If you don't answer quickly, you don't get on the list.",
+      "problems": [
+        "High-value inquiries hit voicemail while reps are in appointments.",
+        "Old quotes never get re-touched when promos or seasons change.",
+        "After-hours and weekend calls sit until Monday and go cold."
+      ]
+    },
+    "comparison": {
+      "currentReality": "9 missed replacement inquiries this week<br/>0 follow-up on last quarter's open quotes",
+      "withVoiceCloser": "9 answered, 6 in-home consults booked<br/>7 old quotes re-engaged"
+    },
+    "demoBand": {
+      "headline": "Hear How VoiceCloser Handles A Window Replacement Inquiry."
+    },
+    "callsWeHandle": {
+      "headline": "Calls We Handle For Window Companies.",
+      "description": "From first interest to close, VoiceCloser handles the calls that lead to high-ticket installs.",
+      "types": [
+        "Full home and partial window replacement inquiries",
+        "In-home consultation and measure scheduling",
+        "Questions about products, lead times, and basic pricing ranges",
+        "Scheduling, rescheduling, and installation coordination",
+        "Follow-ups on past quotes and prior installs"
+      ]
+    },
+    "cta": {
+      "headline": "Want To See How Many Window Jobs You're Losing To Voicemail?"
+    },
+    "faq1": {
+      "question": "Can it give exact pricing for windows over the phone?",
+      "answer": "It can share simple ranges you approve, but its main job is to gather project details, explain your process, and book an in-home consultation so your reps can measure and quote accurately."
+    }
+  },
+  {
+    "slug": "family-law",
+    "agentKey": "voicecloser_family_law",
+    "pageTitle": "Family Law",
+    "hero": {
+      "headline": "Stop Letting Sensitive Family Law Inquiries Die In Voicemail.",
+      "subheadline": "Your own AI phone agent that answers every call, gathers basic intake details, and books consultations – professionally, calmly, 24/7. Less administrative strain, more qualified clients on your calendar."
+    },
+    "conversation": [
+      {
+        "speaker": "agent",
+        "line": "Thank you for calling [Firm Name]. This is Taylor. Are you a new client, or are we already assisting you with a matter?"
+      },
+      {
+        "speaker": "caller",
+        "line": "New. I need to talk to someone about a divorce."
+      },
+      {
+        "speaker": "agent",
+        "line": "Understood. I am sorry you are going through that. Without going into details, is this mainly about separation, custody, or both?"
+      },
+      {
+        "speaker": "caller",
+        "line": "Both."
+      },
+      {
+        "speaker": "agent",
+        "line": "Thank you. The best next step is a confidential consultation with an attorney so they can understand your situation and explain options. Do mornings, afternoons, or early evenings usually work better for you?"
+      },
+      {
+        "speaker": "caller",
+        "line": "Afternoons."
+      },
+      {
+        "speaker": "agent",
+        "line": "I can schedule a consultation this Wednesday at 3 PM or Friday at 2 PM. Which do you prefer? I will send you the confirmation and intake form by text or email. What is the best number to use?"
+      }
+    ],
+    "badges": {
+      "blue": "New Client Consults Booked This Week: 9"
+    },
+    "problem": {
+      "headline": "When Someone Reaches Out About Divorce Or Custody, One Missed Call Can Lose Their Trust.",
+      "description": "Prospective clients are often anxious, emotional, and under pressure. If they reach only voicemail or wait days for a response, they either go to another firm or delay taking action.",
+      "problems": [
+        "High-emotion intake calls arrive while attorneys are in court or meetings.",
+        "Voicemails, emails, and web forms pile up with no consistent intake process.",
+        "Your staff spends time answering basic process questions instead of moving cases forward."
+      ]
+    },
+    "comparison": {
+      "currentReality": "12 missed or delayed family law inquiries this month<br/>inconsistent intake and screening",
+      "withVoiceCloser": "12 answered, 8 consults booked<br/>all inquiries logged and organized for review"
+    },
+    "demoBand": {
+      "headline": "Hear How VoiceCloser Handles A New Family Law Inquiry."
+    },
+    "callsWeHandle": {
+      "headline": "Calls We Handle For Family Law Firms.",
+      "description": "From first contact to consultation scheduling, VoiceCloser handles the non-legal calls that keep your pipeline steady.",
+      "types": [
+        "New client inquiries for divorce, custody, and support",
+        "Consultation and case review scheduling",
+        "Basic questions about process, timelines, and what to bring",
+        "Appointment confirmations, reschedules, and cancellations",
+        "Follow-ups on web forms and referral inquiries"
+      ]
+    },
+    "cta": {
+      "headline": "Want To See How Many Qualified Matters You Are Losing To Missed Calls?"
+    },
+    "faq1": {
+      "question": "Does it give legal advice or discuss strategy with callers?",
+      "answer": "No. VoiceCloser does not provide legal advice or discuss case strategy. It follows your approved intake questions, shares high-level information about your process, and books or routes callers so an attorney or staff member can advise them."
+    }
+  },
+  {
+    "slug": "immigration-law",
+    "agentKey": "voicecloser_immigration_law",
+    "pageTitle": "Immigration Law",
+    "hero": {
+      "headline": "Stop Missing Calls From People Desperate For Clear Immigration Help.",
+      "subheadline": "Your own AI phone agent that answers every call, collects key intake details, and books consultations – professionally, patiently, 24/7. Less chaos, more qualified matters on the calendar."
+    },
+    "conversation": [
+      {
+        "speaker": "agent",
+        "line": "Thank you for calling [Firm Name]. This is Alex. Are you a new client or are we already assisting you with an immigration matter?"
+      },
+      {
+        "speaker": "caller",
+        "line": "New. I need help with my green card."
+      },
+      {
+        "speaker": "agent",
+        "line": "Understood. Is this for your own case or are you calling on behalf of a family member?"
+      },
+      {
+        "speaker": "caller",
+        "line": "For my wife."
+      },
+      {
+        "speaker": "agent",
+        "line": "Thank you. Without going into detail, is this about family-based immigration, employment, or something else?"
+      },
+      {
+        "speaker": "caller",
+        "line": "Family."
+      },
+      {
+        "speaker": "agent",
+        "line": "Thank you. I can schedule a consultation with an attorney to review her situation and explain possible options. Do mornings, afternoons, or evenings usually work better for you?"
+      }
+    ],
+    "badges": {
+      "blue": "Immigration Consults Booked This Week: 8"
+    },
+    "problem": {
+      "headline": "Immigration Clients Are Anxious And Time-Sensitive. If You Do Not Answer, They Call Another Firm.",
+      "description": "People call when they are worried about status, deadlines, and family. Voicemail and slow responses signal that they may not get the attention they need, so they move to another attorney or give up.",
+      "problems": [
+        "Calls from different time zones and work schedules come in at all hours.",
+        "Referral and online leads do not all receive prompt, structured intake.",
+        "Staff time is consumed answering basic process and document questions."
+      ]
+    },
+    "comparison": {
+      "currentReality": "14 missed or delayed immigration inquiries this month<br/>no standardized intake across channels",
+      "withVoiceCloser": "14 answered, 9 consults booked<br/>complete intake details sent to your team"
+    },
+    "demoBand": {
+      "headline": "Hear How VoiceCloser Handles A New Immigration Law Inquiry."
+    },
+    "callsWeHandle": {
+      "headline": "Calls We Handle For Immigration Law Firms.",
+      "description": "From first inquiry to consultation scheduling, VoiceCloser handles the administrative calls so your team can focus on cases.",
+      "types": [
+        "New client inquiries for family, business, and other immigration matters",
+        "Consultation and follow-up appointment scheduling",
+        "Basic questions about process, timelines, and what documents to bring",
+        "Confirmations, reschedules, and cancellations",
+        "Follow-ups on web forms, referrals, and event leads"
+      ]
+    },
+    "cta": {
+      "headline": "Want To See How Many Qualified Immigration Matters You Are Losing To Voicemail?"
+    },
+    "faq1": {
+      "question": "Does it answer legal questions or say which visa someone should apply for?",
+      "answer": "No. VoiceCloser does not provide legal advice or recommend visa types. It collects the information you define, shares only the general process details you approve, and books or routes callers to your licensed attorneys or staff."
+    }
+  },
+  {
+    "slug": "commercial-re",
+    "agentKey": "voicecloser_commercial_re",
+    "pageTitle": "Commercial Real Estate",
+    "hero": {
+      "headline": "Stop Missing Calls From Investors And Tenants Who Are Ready To Tour.",
+      "subheadline": "Your own AI phone agent that answers every call, qualifies opportunities, and books property tours and strategy calls – professionally, consistently, 24/7. Less chasing, more deals and occupancies."
+    },
+    "conversation": [
+      {
+        "speaker": "agent",
+        "line": "Thank you for calling [Company Name]. This is Morgan. Are you calling about leasing, buying, or something else today?"
+      },
+      {
+        "speaker": "caller",
+        "line": "Leasing. I saw a warehouse listing on your website."
+      },
+      {
+        "speaker": "agent",
+        "line": "Great. Do you know the property address or listing ID?"
+      },
+      {
+        "speaker": "caller",
+        "line": "It is the one on Industrial Drive, about 10,000 square feet."
+      },
+      {
+        "speaker": "agent",
+        "line": "Got it. Are you currently in a lease and planning a move, or looking to expand into a new space?"
+      },
+      {
+        "speaker": "caller",
+        "line": "Expanding."
+      },
+      {
+        "speaker": "agent",
+        "line": "Understood. I can schedule a tour and an initial call with one of our brokers. Do mornings or afternoons work better for you this week?"
+      }
+    ],
+    "badges": {
+      "blue": "Tours & Broker Calls Booked This Week: 12"
+    },
+    "problem": {
+      "headline": "Serious Tenants And Investors Have Options. If You Miss Their Call, Another Broker Gets The First Look.",
+      "description": "When someone is actively searching for space or deals, they do not wait long for a reply. If you are tied up in meetings and transactions, high-value inquiries can sit unheard in voicemail.",
+      "problems": [
+        "Inbound leasing and acquisition calls arrive while you are in the field.",
+        "Sign and web leads do not all receive prompt, consistent follow-up.",
+        "Your team loses time fielding basic questions instead of working deals."
+      ]
+    },
+    "comparison": {
+      "currentReality": "15 missed leasing and investment calls this month<br/>inconsistent follow-up on sign and web inquiries",
+      "withVoiceCloser": "15 answered, 10 tours or calls booked<br/>all leads captured and routed"
+    },
+    "demoBand": {
+      "headline": "Hear How VoiceCloser Handles A Commercial Leasing Inquiry."
+    },
+    "callsWeHandle": {
+      "headline": "Calls We Handle For Commercial Real Estate Teams.",
+      "description": "From sign calls to warm investor leads, VoiceCloser handles the calls that create deal flow.",
+      "types": [
+        "New leasing and sale listing inquiries",
+        "Property tour and strategy call scheduling",
+        "Basic questions about property details, availability, and process",
+        "Confirmations, reschedules, and access coordination",
+        "Follow-ups on web, sign, and referral leads"
+      ]
+    },
+    "cta": {
+      "headline": "Want To See How Many Tours And Deals You Are Losing To Missed Calls?"
+    },
+    "faq1": {
+      "question": "Can it discuss cap rates, lease terms, or deal structure?",
+      "answer": "No. VoiceCloser does not negotiate or give investment advice. It asks your qualifying questions, shares only the high-level information you approve, and books or routes callers so your brokers can handle the details."
+    }
+  },
+  {
+    "slug": "property-management",
+    "agentKey": "voicecloser_property_management",
+    "pageTitle": "Property Management",
+    "hero": {
+      "headline": "Stop Letting Owner Leads And Tenant Calls Overwhelm Your Office.",
+      "subheadline": "Your own AI phone agent that answers every call, separates owner leads from tenant issues, and books calls and showings – professionally, consistently, 24/7. Less chaos, more doors under management."
+    },
+    "conversation": [
+      {
+        "speaker": "agent",
+        "line": "Thank you for calling [Company Name]. This is Jamie. Are you a property owner, a current tenant, or calling about a rental listing?"
+      },
+      {
+        "speaker": "caller",
+        "line": "Property owner. I am thinking about hiring a manager for my rentals."
+      },
+      {
+        "speaker": "agent",
+        "line": "Great. About how many units do you have, and are they single family, multifamily, or a mix?"
+      },
+      {
+        "speaker": "caller",
+        "line": "Three single family homes."
+      },
+      {
+        "speaker": "agent",
+        "line": "Understood. I can schedule a call with our team to review your properties, fees, and services. Do mornings or afternoons work better for you this week?"
+      }
+    ],
+    "badges": {
+      "blue": "Owner Calls & Showings Booked This Week: 23"
+    },
+    "problem": {
+      "headline": "Your Phones Ring With Tenants, Prospects, And Owners. Missing The Right Calls Costs You Doors.",
+      "description": "When a potential owner or qualified tenant calls, they expect someone to pick up. If your staff is buried in maintenance and tenant questions, growth opportunities slip through the cracks.",
+      "problems": [
+        "Owner inquiries hit the same line as tenant maintenance calls.",
+        "Leasing calls and showings are not scheduled or confirmed consistently.",
+        "Your team spends valuable time giving the same basic information all day."
+      ]
+    },
+    "comparison": {
+      "currentReality": "19 missed calls this week<br/>no clear triage between owners, tenants, and prospects",
+      "withVoiceCloser": "19 answered, 8 owner consults and 14 showings booked<br/>calls tagged and routed correctly"
+    },
+    "demoBand": {
+      "headline": "Hear How VoiceCloser Handles A Property Management Call."
+    },
+    "callsWeHandle": {
+      "headline": "Calls We Handle For Property Management Companies.",
+      "description": "From owner leads to tenant logistics, VoiceCloser handles the front-end calls that keep your portfolio and occupancies healthy.",
+      "types": [
+        "New owner and portfolio management inquiries",
+        "Rental listing and showing scheduling calls",
+        "Basic tenant questions about payments, portals, and policies",
+        "Routing maintenance requests to your systems or on-call team",
+        "Follow-ups on web forms and referral leads"
+      ]
+    },
+    "cta": {
+      "headline": "Want To See How Many Doors And Leases You Are Losing To Voicemail?"
+    },
+    "faq1": {
+      "question": "Can it take maintenance requests from tenants too?",
+      "answer": "Yes. VoiceCloser can ask your standard maintenance questions, log the issue with photos or details you define, and send everything to your maintenance system or on-call contact, while keeping owner and leasing calls clearly separated."
+    }
+  },
+  {
+    "slug": "residential-re",
+    "agentKey": "voicecloser_residential_re",
+    "pageTitle": "Residential Real Estate",
+    "hero": {
+      "headline": "Stop Missing Buyer And Seller Calls That Should Be On Your Calendar.",
+      "subheadline": "Your own AI phone agent that answers every call, qualifies buyers and sellers, and books appointments – professionally, consistently, 24/7. Less chasing, more listings and tours."
+    },
+    "conversation": [
+      {
+        "speaker": "agent",
+        "line": "Thank you for calling [Team/Agent Name]. This is Jordan. Are you calling about buying, selling, or a specific property you saw?"
+      },
+      {
+        "speaker": "caller",
+        "line": "Buying. I saw a listing on Maple Street and had some questions."
+      },
+      {
+        "speaker": "agent",
+        "line": "Great. Do you already have an agent representing you, or are you still looking for one to work with?"
+      },
+      {
+        "speaker": "caller",
+        "line": "Still looking."
+      },
+      {
+        "speaker": "agent",
+        "line": "Understood. Are you pre-approved yet, or is this your first step?"
+      },
+      {
+        "speaker": "caller",
+        "line": "First step."
+      },
+      {
+        "speaker": "agent",
+        "line": "Perfect. The best next move is a quick call or meeting with [Agent Name] to talk through your situation and that property. Do weekdays after work or Saturdays usually work better for you?"
+      }
+    ],
+    "badges": {
+      "blue": "Buyer & Seller Appointments Booked This Week: 15"
+    },
+    "problem": {
+      "headline": "Serious Buyers And Sellers Don't Wait For Voicemail. They Call The Next Agent.",
+      "description": "When someone is ready to move, they're reaching out to multiple agents and sites. If they can't reach you quickly, you never even get a shot at the listing or buyer relationship.",
+      "problems": [
+        "Sign calls and portal leads hit voicemail while you're in showings.",
+        "Online inquiries and referrals don't all get fast, consistent follow-up.",
+        "Old leads and past clients aren't systematically re-engaged."
+      ]
+    },
+    "comparison": {
+      "currentReality": "18 missed calls and web inquiries this week<br/>0 structured follow-up on old leads",
+      "withVoiceCloser": "18 answered, 12 appointments booked<br/>34 old leads re-engaged"
+    },
+    "demoBand": {
+      "headline": "Hear How VoiceCloser Handles A Residential Buyer Call."
+    },
+    "callsWeHandle": {
+      "headline": "Calls We Handle For Residential Real Estate Teams.",
+      "description": "From sign calls to past clients, VoiceCloser handles the conversations that create listings and buyer agreements.",
+      "types": [
+        "New buyer and seller inquiries",
+        "Sign calls and portal / website listing inquiries",
+        "Listing, consult, and showing appointment scheduling",
+        "Basic questions about properties, process, and next steps",
+        "Follow-ups on old leads, referrals, and past clients"
+      ]
+    },
+    "cta": {
+      "headline": "Want To See How Many Closings You're Losing To Missed Calls?"
+    },
+    "faq1": {
+      "question": "Can it replace my ISA or handle detailed real estate advice?",
+      "answer": "VoiceCloser doesn't replace licensed agents or give advice. It handles first contact, asks your qualifying questions, answers simple process and property questions you approve, and books or routes appointments so your agents can focus on closing."
+    }
+  },
+  {
+    "slug": "short-term-rental",
+    "agentKey": "voicecloser_short_term_rental",
+    "pageTitle": "Short-Term Rental",
+    "hero": {
+      "headline": "Stop Missing Guest Calls, Direct Bookings, And After-Hours Questions.",
+      "subheadline": "Your own AI phone agent that answers every call, handles common guest questions, and routes issues – professionally, consistently, 24/7. Less late-night chaos, more 5-star stays."
+    },
+    "conversation": [
+      {
+        "speaker": "agent",
+        "line": "Hi, thanks for calling [Brand/Property Name]. This is Casey. Are you calling about an existing reservation or a new booking?"
+      },
+      {
+        "speaker": "caller",
+        "line": "New booking. I saw your place on Airbnb and had a couple of questions."
+      },
+      {
+        "speaker": "agent",
+        "line": "Great. Are you mainly checking on dates and pricing, or things like parking and beds?"
+      },
+      {
+        "speaker": "caller",
+        "line": "Parking and if it's good for kids."
+      },
+      {
+        "speaker": "agent",
+        "line": "Got it. This property has [X] dedicated parking spot(s) and [Y] bedrooms. It's set up for families and sleeps up to [Z] guests. Are you looking at specific dates so I can check availability?"
+      },
+      {
+        "speaker": "caller",
+        "line": "Yeah, June 14-17."
+      },
+      {
+        "speaker": "agent",
+        "line": "Perfect. I'll confirm availability and send you the booking link by text. What's the best number to send that to?"
+      }
+    ],
+    "badges": {
+      "blue": "Guest Calls & Booking Inquiries Handled This Week: 39"
+    },
+    "problem": {
+      "headline": "Guests Have Questions At All Hours. If You Don't Answer, They Book Somewhere Else Or Leave Frustrated.",
+      "description": "Prospective guests call to clarify details before booking. Current guests call when they're locked out, confused, or need something simple. If no one picks up, you lose bookings, get bad reviews, or wake up to a mess.",
+      "problems": [
+        "After-hours and international calls hit voicemail.",
+        "Simple questions about parking, Wi-Fi, and house rules pull you away from real work.",
+        "Potential direct bookings never get captured or encouraged."
+      ]
+    },
+    "comparison": {
+      "currentReality": "22 missed calls this month<br/>unclear tracking on lost direct booking opportunities",
+      "withVoiceCloser": "22 answered, 15 booking-ready leads captured<br/>fewer confused or frustrated guest calls"
+    },
+    "demoBand": {
+      "headline": "Hear How VoiceCloser Handles A Short-Term Rental Guest Call."
+    },
+    "callsWeHandle": {
+      "headline": "Calls We Handle For Short-Term Rental Hosts And Managers.",
+      "description": "From pre-booking questions to stay logistics, VoiceCloser handles the calls that drive bookings and better reviews.",
+      "types": [
+        "New guest and booking inquiries",
+        "Basic questions about parking, access, amenities, and house rules",
+        "Check-in, check-out, and extension requests",
+        "Routing maintenance or urgent issues to your on-call contacts",
+        "Capturing and routing potential direct booking leads"
+      ]
+    },
+    "cta": {
+      "headline": "Want To See How Many Bookings And Reviews You're Risking With Missed Calls?"
+    },
+    "faq1": {
+      "question": "Can it handle guest issues in the middle of the night?",
+      "answer": "Yes. VoiceCloser can answer your common questions 24/7, share approved instructions (like access steps or Wi-Fi details), and immediately notify your on-call person for issues you define as urgent, so you're not glued to your phone all night."
+    }
+  }
+]

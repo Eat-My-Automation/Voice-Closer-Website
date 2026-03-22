@@ -5,16 +5,78 @@
 // Agent IDs are stored in Replit secrets so they're easily switchable.
 
 const AGENT_MAP = {
-  voicecloser_demo:          'AGENT_VOICECLOSER_DEMO',
-  voicecloser_homepage:      'AGENT_VOICECLOSER_HOMEPAGE',
-  voicecloser_roofing:       'AGENT_VOICECLOSER_ROOFING',
-  voicecloser_plumbing:      'AGENT_VOICECLOSER_PLUMBING',
-  voicecloser_hvac:          'AGENT_VOICECLOSER_HVAC',
-  voicecloser_gym:           'AGENT_VOICECLOSER_GYM',
-  voicecloser_contractor:    'AGENT_VOICECLOSER_CONTRACTOR',
-  city_fitness_reactivation: 'AGENT_CITY_FITNESS_REACTIVATION',
-  cre_cold_caller:           'AGENT_CRE_COLD_CALLER',
-  limitless_storage:         'AGENT_LIMITLESS_STORAGE',
+  // Non-industry agents
+  voicecloser_demo:              'AGENT_VOICECLOSER_DEMO',
+  voicecloser_homepage:          'AGENT_VOICECLOSER_HOMEPAGE',
+  city_fitness_reactivation:     'AGENT_CITY_FITNESS_REACTIVATION',
+  cre_cold_caller:               'AGENT_CRE_COLD_CALLER',
+  limitless_storage:             'AGENT_LIMITLESS_STORAGE',
+
+  // Existing industries
+  voicecloser_hvac:              'AGENT_VOICECLOSER_HVAC',
+  voicecloser_gym:               'AGENT_VOICECLOSER_GYM',
+  voicecloser_roofing:           'AGENT_VOICECLOSER_ROOFING',
+  voicecloser_plumbing:          'AGENT_VOICECLOSER_PLUMBING',
+
+  // Automotive
+  voicecloser_auto_dealership:   'AGENT_VOICECLOSER_AUTO_DEALERSHIP',
+  voicecloser_auto_detailing:    'AGENT_VOICECLOSER_AUTO_DETAILING',
+  voicecloser_towing:            'AGENT_VOICECLOSER_TOWING',
+
+  // Education
+  voicecloser_music_school:      'AGENT_VOICECLOSER_MUSIC_SCHOOL',
+  voicecloser_tutoring:          'AGENT_VOICECLOSER_TUTORING',
+  voicecloser_vocational_school: 'AGENT_VOICECLOSER_VOCATIONAL_SCHOOL',
+
+  // Finance
+  voicecloser_accounting:        'AGENT_VOICECLOSER_ACCOUNTING',
+  voicecloser_financial_advisor: 'AGENT_VOICECLOSER_FINANCIAL_ADVISOR',
+  voicecloser_mortgage:          'AGENT_VOICECLOSER_MORTGAGE',
+  voicecloser_insurance:         'AGENT_VOICECLOSER_INSURANCE',
+
+  // Fitness & Wellness
+  voicecloser_dance_studio:      'AGENT_VOICECLOSER_DANCE_STUDIO',
+  voicecloser_martial_arts:      'AGENT_VOICECLOSER_MARTIAL_ARTS',
+  voicecloser_personal_training: 'AGENT_VOICECLOSER_PERSONAL_TRAINING',
+  voicecloser_yoga_studio:       'AGENT_VOICECLOSER_YOGA_STUDIO',
+  voicecloser_weight_loss:       'AGENT_VOICECLOSER_WEIGHT_LOSS',
+
+  // Food & Hospitality
+  voicecloser_catering:          'AGENT_VOICECLOSER_CATERING',
+  voicecloser_restaurant:        'AGENT_VOICECLOSER_RESTAURANT',
+
+  // Healthcare
+  voicecloser_chiropractic:      'AGENT_VOICECLOSER_CHIROPRACTIC',
+  voicecloser_dermatology:       'AGENT_VOICECLOSER_DERMATOLOGY',
+  voicecloser_med_spa:           'AGENT_VOICECLOSER_MED_SPA',
+  voicecloser_mental_health:     'AGENT_VOICECLOSER_MENTAL_HEALTH',
+  voicecloser_optometry:         'AGENT_VOICECLOSER_OPTOMETRY',
+  voicecloser_physical_therapy:  'AGENT_VOICECLOSER_PHYSICAL_THERAPY',
+  voicecloser_urgent_care:       'AGENT_VOICECLOSER_URGENT_CARE',
+  voicecloser_veterinary:        'AGENT_VOICECLOSER_VETERINARY',
+
+  // Home Services
+  voicecloser_electrical:        'AGENT_VOICECLOSER_ELECTRICAL',
+  voicecloser_flooring:          'AGENT_VOICECLOSER_FLOORING',
+  voicecloser_foundation_repair: 'AGENT_VOICECLOSER_FOUNDATION_REPAIR',
+  voicecloser_garage_door:       'AGENT_VOICECLOSER_GARAGE_DOOR',
+  voicecloser_general_contractor:'AGENT_VOICECLOSER_GENERAL_CONTRACTOR',
+  voicecloser_gutters:           'AGENT_VOICECLOSER_GUTTERS',
+  voicecloser_lawn_care:         'AGENT_VOICECLOSER_LAWN_CARE',
+  voicecloser_painting:          'AGENT_VOICECLOSER_PAINTING',
+  voicecloser_pest_control:      'AGENT_VOICECLOSER_PEST_CONTROL',
+  voicecloser_pool_service:      'AGENT_VOICECLOSER_POOL_SERVICE',
+  voicecloser_windows:           'AGENT_VOICECLOSER_WINDOWS',
+
+  // Legal
+  voicecloser_family_law:        'AGENT_VOICECLOSER_FAMILY_LAW',
+  voicecloser_immigration_law:   'AGENT_VOICECLOSER_IMMIGRATION_LAW',
+
+  // Real Estate & Property
+  voicecloser_commercial_re:     'AGENT_VOICECLOSER_COMMERCIAL_RE',
+  voicecloser_property_management:'AGENT_VOICECLOSER_PROPERTY_MANAGEMENT',
+  voicecloser_residential_re:    'AGENT_VOICECLOSER_RESIDENTIAL_RE',
+  voicecloser_short_term_rental: 'AGENT_VOICECLOSER_SHORT_TERM_RENTAL',
 };
 
 export default async function testCallHomepage(req, res) {

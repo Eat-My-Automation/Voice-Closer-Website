@@ -1,16 +1,27 @@
 ---
-import Layout from '../layouts/LandingLayout.astro';
----
-<Layout title="Plumbing">
+import LandingLayout from '../layouts/LandingLayout.astro';
+import industries from '../data/industries.json';
 
-  <!-- ===== 1. HERO -DEMO FIRST ===== -->
+export function getStaticPaths() {
+  return industries.map((industry) => ({
+    params: { slug: industry.slug },
+    props: { industry },
+  }));
+}
+
+const { industry } = Astro.props;
+---
+<LandingLayout title={industry.pageTitle}>
+
+  <div id="page-data" data-agent-key={industry.agentKey} style="display:none;"></div>
+
+  <!-- ===== 1. HERO ===== -->
   <section class="hero">
     <div class="hero-inner">
       <div class="hero-text">
-        <h1>Stop Losing Plumbing Jobs To Missed Calls.</h1>
+        <h1>{industry.hero.headline}</h1>
         <p class="hero-sub">
-          Your own AI phone agent that answers every call, follows up with past customers,
-          and books service appointments - professionally, consistently, 24/7. Less drama, more jobs on the books.
+          {industry.hero.subheadline}
         </p>
 
         <div class="demo-cta">
@@ -23,7 +34,7 @@ import Layout from '../layouts/LandingLayout.astro';
               <span>Don't take our word for it - hear it live</span>
             </div>
           </div>
-          <form action="#" method="POST" id="heroPlumbingForm" class="demo-form">
+          <form action="#" method="POST" class="demo-form">
             <div class="demo-cta-row">
               <input type="tel" name="phone" placeholder="Enter your mobile number" required />
               <button type="submit" class="btn btn-gold">Get A Free Test Call</button>
@@ -42,21 +53,11 @@ import Layout from '../layouts/LandingLayout.astro';
             <div class="caller-name">Incoming Call</div>
             <div class="caller-status">VoiceCloser Answering...</div>
           </div>
-          <div class="chat-bubble agent">
-            Hi, thanks for calling! How can I help you?
-          </div>
-          <div class="chat-bubble caller">
-            I've got water coming up through my basement floor drain.
-          </div>
-          <div class="chat-bubble agent">
-            That sounds urgent. Is it clean water or does it smell like sewage? And is it actively rising right now?
-          </div>
-          <div class="chat-bubble caller">
-            It smells terrible and it's still coming up slowly.
-          </div>
-          <div class="chat-bubble agent">
-            Okay, that sounds like a sewer backup. Don't run any water or flush anything in the house. I'm flagging this as an emergency and our on-call tech will call you back within 15 minutes. What's the best number to reach you?
-          </div>
+          {industry.conversation.map((msg) => (
+            <div class={`chat-bubble ${msg.speaker}`}>
+              {msg.line}
+            </div>
+          ))}
         </div>
 
         <div class="hero-badge badge-top-right">
@@ -66,7 +67,7 @@ import Layout from '../layouts/LandingLayout.astro';
           <span class="badge-dot gold"></span> Missed Calls: 0
         </div>
         <div class="hero-badge badge-bottom-right">
-          <span class="badge-dot blue"></span> Service Calls Booked This Week: 11
+          <span class="badge-dot blue"></span> {industry.badges.blue}
         </div>
       </div>
     </div>
@@ -76,25 +77,17 @@ import Layout from '../layouts/LandingLayout.astro';
   <section class="problem-section">
     <div class="problem-inner container">
       <div class="problem-text">
-        <h2>A Burst Pipe Won't Wait For You To Call Back.</h2>
+        <h2>{industry.problem.headline}</h2>
         <p>
-          Plumbing emergencies happen at the worst times. Nights, weekends, holidays.
-          When a homeowner has water pouring into their basement, they're calling every
-          plumber in their phone until someone picks up.
+          {industry.problem.description}
         </p>
         <ul class="problem-list">
-          <li>
-            <span class="icon">&#10007;</span>
-            <span>Emergency calls go to voicemail while you're under a sink.</span>
-          </li>
-          <li>
-            <span class="icon">&#10007;</span>
-            <span>Repeat customers can't get through when they need you most.</span>
-          </li>
-          <li>
-            <span class="icon">&#10007;</span>
-            <span>That list of past service calls? Nobody's following up.</span>
-          </li>
+          {industry.problem.problems.map((p) => (
+            <li>
+              <span class="icon">&#10007;</span>
+              <span>{p}</span>
+            </li>
+          ))}
         </ul>
         <a href="#how-it-works" class="btn btn-outline btn-sm">See How VoiceCloser Fixes This</a>
       </div>
@@ -104,14 +97,14 @@ import Layout from '../layouts/LandingLayout.astro';
           <div class="comparison-label">Current Reality</div>
           <div class="comparison-stat">
             <span class="stat-icon">&#128222;</span>
-            <span class="stat-text">8 missed calls this week<br/>3 went to competitors</span>
+            <span class="stat-text" set:html={industry.comparison.currentReality} />
           </div>
         </div>
         <div class="comparison-side better">
           <div class="comparison-label">With VoiceCloser</div>
           <div class="comparison-stat">
             <span class="stat-icon">&#9989;</span>
-            <span class="stat-text">8 answered, 6 service calls booked<br/>2 past customers re-engaged</span>
+            <span class="stat-text" set:html={industry.comparison.withVoiceCloser} />
           </div>
         </div>
       </div>
@@ -157,7 +150,7 @@ import Layout from '../layouts/LandingLayout.astro';
     </div>
   </section>
 
-  <!-- ===== 4. HOW IT WORKS -3 STEPS ===== -->
+  <!-- ===== 4. HOW IT WORKS ===== -->
   <section class="steps-section" id="how-it-works">
     <div class="container text-center">
       <h2 class="section-title">Here's How VoiceCloser Goes Live In Days, Not Months.</h2>
@@ -201,9 +194,9 @@ import Layout from '../layouts/LandingLayout.astro';
     </div>
   </section>
 
-  <!-- ===== 5. TRY IT YOURSELF (DEMO BAND) ===== -->
+  <!-- ===== 5. DEMO BAND ===== -->
   <section class="demo-band" id="demo">
-    <h2>Hear How VoiceCloser Handles A Plumbing Emergency Call.</h2>
+    <h2>{industry.demoBand.headline}</h2>
     <p class="demo-band-sub">
       Enter your number and VoiceCloser will call you in under a minute.
     </p>
@@ -217,7 +210,7 @@ import Layout from '../layouts/LandingLayout.astro';
           <span>Don't take our word for it - hear it live</span>
         </div>
       </div>
-      <form action="#" method="POST" id="demoPlumbingForm" class="demo-form">
+      <form action="#" method="POST" class="demo-form">
         <div class="demo-cta-row">
           <input type="tel" name="phone" placeholder="Enter your mobile number" required />
           <button type="submit" class="btn btn-gold">Get A Free Test Call</button>
@@ -234,34 +227,19 @@ import Layout from '../layouts/LandingLayout.astro';
   <section class="audience-section" id="who-its-for">
     <div class="audience-inner container">
       <div class="audience-text">
-        <h2>Calls We Handle For Plumbers.</h2>
+        <h2>{industry.callsWeHandle.headline}</h2>
         <p>
-          From burst pipe emergencies to routine maintenance scheduling, VoiceCloser
-          handles the calls that keep your trucks rolling.
+          {industry.callsWeHandle.description}
         </p>
       </div>
 
       <ul class="audience-list">
-        <li class="audience-pill">
-          <span class="check">&#10003;</span>
-          <span>Emergency and after-hours calls</span>
-        </li>
-        <li class="audience-pill">
-          <span class="check">&#10003;</span>
-          <span>Service appointment requests</span>
-        </li>
-        <li class="audience-pill">
-          <span class="check">&#10003;</span>
-          <span>Estimate follow-ups</span>
-        </li>
-        <li class="audience-pill">
-          <span class="check">&#10003;</span>
-          <span>Drain cleaning and maintenance scheduling</span>
-        </li>
-        <li class="audience-pill">
-          <span class="check">&#10003;</span>
-          <span>Warranty and callback questions</span>
-        </li>
+        {industry.callsWeHandle.types.map((type) => (
+          <li class="audience-pill">
+            <span class="check">&#10003;</span>
+            <span>{type}</span>
+          </li>
+        ))}
       </ul>
     </div>
   </section>
@@ -299,9 +277,9 @@ import Layout from '../layouts/LandingLayout.astro';
     </div>
   </section>
 
-  <!-- ===== 8. CTA -BOOK A STRATEGY CALL ===== -->
+  <!-- ===== 8. CTA BAND ===== -->
   <section class="cta-band" id="book">
-    <h2>Want To See How Many Service Calls You're Losing To Voicemail?</h2>
+    <h2>{industry.cta.headline}</h2>
     <p class="cta-band-sub">
       On a short call, we'll map your current missed calls and database, then show
       you how a voice agent could plug in.
@@ -322,14 +300,12 @@ import Layout from '../layouts/LandingLayout.astro';
     <div class="faq-list">
       <div class="faq-item">
         <button class="faq-question" aria-expanded="false">
-          <span>Can it handle emergency calls differently?</span>
+          <span>{industry.faq1.question}</span>
           <span class="faq-icon">+</span>
         </button>
         <div class="faq-answer">
           <div class="faq-answer-inner">
-            Yes. VoiceCloser can be trained to flag emergencies, collect key details
-            like the address and problem, and immediately notify your on-call tech
-            via text or email while the call is still happening.
+            {industry.faq1.answer}
           </div>
         </div>
       </div>
@@ -406,7 +382,7 @@ import Layout from '../layouts/LandingLayout.astro';
     </div>
   </section>
 
-</Layout>
+</LandingLayout>
 
 <script is:inline>
   // FAQ accordion
@@ -446,6 +422,8 @@ import Layout from '../layouts/LandingLayout.astro';
 
   // Demo call forms
   (function() {
+    const agentKey = document.getElementById('page-data')?.dataset.agentKey || 'voicecloser_demo';
+
     document.querySelectorAll('.demo-form').forEach(form => {
       const phoneInput = form.querySelector('input[name="phone"]');
       const nameField = form.querySelector('.demo-name-field');
@@ -495,7 +473,7 @@ import Layout from '../layouts/LandingLayout.astro';
           const res = await fetch('/api/test-call-homepage', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ phone, name, agent: 'voicecloser_plumbing' }),
+            body: JSON.stringify({ phone, name, agent: agentKey }),
           });
 
           const data = await res.json();
