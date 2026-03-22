@@ -96,7 +96,7 @@ h1, h2, h3, h4 {
   color: var(--text-primary);
 }
 
-h1 { font-size: clamp(2.2rem, 5vw, 3.8rem); font-weight: 700; }
+h1 { font-size: clamp(2rem, 4vw, 3rem); font-weight: 700; }
 h2 { font-size: clamp(1.8rem, 3.5vw, 2.8rem); font-weight: 700; }
 h3 { font-size: clamp(1.2rem, 2vw, 1.6rem); font-weight: 600; }
 
@@ -215,7 +215,7 @@ p {
   justify-content: space-between;
   max-width: var(--max-width);
   margin: 0 auto;
-  padding: 1rem 1.5rem;
+  padding: 0.65rem 1.5rem;
 }
 
 .navbar-logo {
@@ -364,7 +364,7 @@ p {
    ============================================ */
 
 .hero {
-  padding: clamp(4rem, 10vw, 8rem) 1.5rem clamp(3rem, 8vw, 6rem);
+  padding: clamp(2rem, 4vw, 3.5rem) 1.5rem clamp(2rem, 4vw, 3.5rem);
   background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 60%, var(--bg-primary) 100%);
   position: relative;
   overflow: hidden;
@@ -386,22 +386,22 @@ p {
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1.2fr 1fr;
-  gap: 3rem;
+  gap: 2rem;
   align-items: center;
   position: relative;
   z-index: 1;
 }
 
 .hero-text h1 {
-  margin-bottom: 1.25rem;
+  margin-bottom: 0.75rem;
   max-width: 620px;
 }
 
 .hero-sub {
-  font-size: clamp(1rem, 2vw, 1.15rem);
+  font-size: clamp(0.95rem, 1.8vw, 1.05rem);
   color: var(--text-muted);
   max-width: 620px;
-  margin-bottom: 2rem;
+  margin-bottom: 1.25rem;
   line-height: 1.8;
 }
 
