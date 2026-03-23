@@ -83,17 +83,17 @@ import Layout from '../layouts/Layout.astro';
 
       <div class="form-section">
         <label class="checkbox-label">
-          <input type="checkbox" name="consent_reminders" />
+          <input type="checkbox" name="consent_reminders" required />
           <div>
-            <strong>Appointment reminders & follow-ups</strong>
-            <p class="checkbox-detail">By checking this box, I agree to receive email and SMS reminders and follow-up messages from RECO QA LLC about my VoiceCloser appointment. Message frequency varies. Message & data rates may apply. Reply STOP to stop, HELP for help.</p>
+            <strong>Appointment reminders & follow-ups <span class="req">*</span></strong>
+            <p class="checkbox-detail">By checking this box, I agree to receive email and SMS reminders and follow-up messages from RECO QA LLC (VoiceCloser) about my VoiceCloser appointment. Message frequency varies. Message & data rates may apply. Reply STOP to stop, HELP for help.</p>
           </div>
         </label>
         <label class="checkbox-label">
           <input type="checkbox" name="consent_marketing" />
           <div>
             <strong>Product tips, updates & offers</strong>
-            <p class="checkbox-detail">I'd like to receive occasional VoiceCloser tips, workflow ideas, feature announcements, and exclusive offers by email or SMS. Message frequency varies. Message & data rates may apply. Reply STOP to stop, HELP for help.</p>
+            <p class="checkbox-detail">I'd like to receive occasional VoiceCloser tips, workflow ideas, feature announcements, and exclusive offers by email or SMS from RECO QA LLC (VoiceCloser). Message frequency varies. Message & data rates may apply. Reply STOP to stop, HELP for help.</p>
             <p class="checkbox-note">We hate spam too. We typically send 1-2 helpful messages per month.</p>
           </div>
         </label>
@@ -301,6 +301,15 @@ import Layout from '../layouts/Layout.astro';
     errorEl.style.display = 'none';
     submitBtn.disabled = true;
     submitBtn.textContent = 'Submitting...';
+
+    // Validate required consent checkbox
+    const remindersBox = form.querySelector('input[name="consent_reminders"]');
+    if (!remindersBox.checked) {
+      remindersBox.reportValidity();
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'Submit';
+      return;
+    }
 
     const data = Object.fromEntries(new FormData(form));
     // Convert checkboxes to booleans

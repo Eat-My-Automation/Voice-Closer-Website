@@ -1,0 +1,228 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+<Layout title="Opt Out of Communications" description="Opt out of SMS or email communications from VoiceCloser.">
+  <div class="legal-page">
+    <h1>Opt Out of Communications</h1>
+    <p>We respect your communication preferences. Use this page to opt out of SMS or email messages from VoiceCloser.</p>
+
+    <h2>Fastest Way to Opt Out of SMS</h2>
+    <p>Simply reply <strong>STOP</strong> to any text message you receive from VoiceCloser. You'll be immediately unsubscribed from SMS messages.</p>
+    <p>Reply <strong>HELP</strong> to any message for assistance.</p>
+
+    <h2>Opt Out via This Form</h2>
+    <p>Fill out the form below and we'll process your opt-out request.</p>
+
+    <form id="optOutForm" class="opt-out-form">
+      <div class="form-group">
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="phone" placeholder="(555) 555-5555" />
+      </div>
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" placeholder="you@example.com" />
+      </div>
+      <div class="form-group">
+        <label>What would you like to opt out of?</label>
+        <label class="opt-out-checkbox">
+          <input type="checkbox" name="opt_out_sms" checked />
+          <span>SMS / Text Messages</span>
+        </label>
+        <label class="opt-out-checkbox">
+          <input type="checkbox" name="opt_out_email" />
+          <span>Email Communications</span>
+        </label>
+      </div>
+
+      <div id="optOutError" class="form-error" style="display:none;"></div>
+      <div id="optOutSuccess" class="form-success" style="display:none;"></div>
+
+      <button type="submit" id="optOutBtn">Submit Opt-Out Request</button>
+    </form>
+
+    <h2>Opt Out via Email</h2>
+    <p>If you prefer, you can email us to opt out:</p>
+    <p><a href="mailto:support@voicecloser.io?subject=SMS/Email Opt-Out Request">support@voicecloser.io</a></p>
+    <p>Please include your phone number and/or email address in your request so we can locate your records.</p>
+
+    <h2>Processing Time</h2>
+    <ul>
+      <li><strong>STOP replies:</strong> Processed immediately</li>
+      <li><strong>Form and email requests:</strong> Processed within 2 business days</li>
+    </ul>
+    <p>You may receive a confirmation message after opting out. This is not a marketing message.</p>
+
+    <p>For more information about how we handle your data, see our <a href="/privacy">Privacy Policy</a>.</p>
+  </div>
+</Layout>
+
+<style>
+  .opt-out-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    max-width: 480px;
+    margin: 1.5rem 0 2rem;
+  }
+
+  .opt-out-form .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+  }
+
+  .opt-out-form .form-group label:first-child {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+  }
+
+  .opt-out-form input[type="tel"],
+  .opt-out-form input[type="email"] {
+    background: var(--input-bg);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 0.65rem 0.85rem;
+    font-size: 0.95rem;
+    color: var(--text-primary);
+    font-family: var(--font-body);
+    transition: border-color 0.2s;
+  }
+
+  .opt-out-form input[type="tel"]:focus,
+  .opt-out-form input[type="email"]:focus {
+    outline: none;
+    border-color: var(--gold);
+  }
+
+  .opt-out-checkbox {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 400 !important;
+    cursor: pointer;
+    margin-top: 0.25rem;
+  }
+
+  .opt-out-checkbox input[type="checkbox"] {
+    accent-color: var(--gold);
+    width: 16px;
+    height: 16px;
+  }
+
+  .opt-out-form button {
+    background: var(--gold);
+    color: #0a0f1e;
+    border: none;
+    border-radius: 8px;
+    padding: 0.75rem;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    font-family: var(--font-body);
+    transition: background 0.2s;
+  }
+
+  .opt-out-form button:hover {
+    background: var(--gold-light);
+  }
+
+  .opt-out-form button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+
+  .form-error {
+    background: rgba(220, 38, 38, 0.1);
+    border: 1px solid rgba(220, 38, 38, 0.3);
+    color: #ef4444;
+    padding: 0.75rem 1rem;
+    border-radius: 6px;
+    font-size: 0.9rem;
+  }
+
+  .form-success {
+    background: rgba(52, 211, 153, 0.1);
+    border: 1px solid rgba(52, 211, 153, 0.3);
+    color: #34d399;
+    padding: 0.75rem 1rem;
+    border-radius: 6px;
+    font-size: 0.9rem;
+  }
+</style>
+
+<script is:inline>
+  const form = document.getElementById('optOutForm');
+  const btn = document.getElementById('optOutBtn');
+  const errorEl = document.getElementById('optOutError');
+  const successEl = document.getElementById('optOutSuccess');
+
+  // Phone formatting
+  function formatPhone(value) {
+    const digits = value.replace(/\D/g, '').slice(0, 10);
+    if (digits.length === 0) return '';
+    if (digits.length <= 3) return `(${digits}`;
+    if (digits.length <= 6) return `(${digits.slice(0,3)}) ${digits.slice(3)}`;
+    return `(${digits.slice(0,3)}) ${digits.slice(3,6)}-${digits.slice(6)}`;
+  }
+
+  const phoneInput = document.getElementById('phone');
+  phoneInput.addEventListener('input', () => {
+    const cursor = phoneInput.selectionStart;
+    const oldLen = phoneInput.value.length;
+    phoneInput.value = formatPhone(phoneInput.value);
+    const newLen = phoneInput.value.length;
+    phoneInput.setSelectionRange(cursor + (newLen - oldLen), cursor + (newLen - oldLen));
+  });
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    errorEl.style.display = 'none';
+    successEl.style.display = 'none';
+
+    const phone = phoneInput.value.replace(/\D/g, '');
+    const email = form.querySelector('input[name="email"]').value.trim();
+    const opt_out_sms = form.querySelector('input[name="opt_out_sms"]').checked;
+    const opt_out_email = form.querySelector('input[name="opt_out_email"]').checked;
+
+    if (!phone && !email) {
+      errorEl.textContent = 'Please provide a phone number or email address.';
+      errorEl.style.display = 'block';
+      return;
+    }
+
+    if (!opt_out_sms && !opt_out_email) {
+      errorEl.textContent = 'Please select at least one communication type to opt out of.';
+      errorEl.style.display = 'block';
+      return;
+    }
+
+    btn.disabled = true;
+    btn.textContent = 'Processing...';
+
+    try {
+      const res = await fetch('/api/opt-out', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ phone, email, opt_out_sms, opt_out_email }),
+      });
+
+      const data = await res.json();
+
+      if (data.success) {
+        successEl.textContent = 'Your opt-out request has been processed. You will no longer receive the selected communications.';
+        successEl.style.display = 'block';
+        form.reset();
+      } else {
+        errorEl.textContent = data.error || 'Something went wrong. Please try again.';
+        errorEl.style.display = 'block';
+      }
+    } catch (err) {
+      errorEl.textContent = 'Network error. Please check your connection and try again.';
+      errorEl.style.display = 'block';
+    }
+
+    btn.disabled = false;
+    btn.textContent = 'Submit Opt-Out Request';
+  });
+</script>

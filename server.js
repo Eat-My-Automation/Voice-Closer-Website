@@ -4,6 +4,7 @@ import { fileURLToPath } from 'url';
 import testCallHomepage from './src/api/test-call-homepage.js';
 import buildIntake from './src/api/build-intake.js';
 import buildReviewCalendar from './src/api/build-review-calendar.js';
+import optOut from './src/api/opt-out.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const app = express();
@@ -15,6 +16,7 @@ app.use(express.json());
 app.post('/api/test-call-homepage', testCallHomepage);
 app.post('/api/build-intake', buildIntake);
 app.get('/api/build-review-calendar', buildReviewCalendar);
+app.post('/api/opt-out', optOut);
 
 // Serve static Astro build
 app.use(express.static(path.join(__dirname, 'dist')));

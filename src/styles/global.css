@@ -496,6 +496,58 @@ p {
   color: #6b7280;
 }
 
+/* Consent checkboxes (hidden until phone entered) */
+.demo-consent-fields {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease, opacity 0.3s ease;
+  opacity: 0;
+}
+
+.demo-consent-fields.visible {
+  max-height: 300px;
+  opacity: 1;
+  margin-top: 0.6rem;
+}
+
+.demo-checkbox-label {
+  display: flex;
+  gap: 0.5rem;
+  align-items: flex-start;
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  cursor: pointer;
+  margin-top: 0.5rem;
+  line-height: 1.4;
+}
+
+.demo-checkbox-label input[type="checkbox"] {
+  margin-top: 0.15rem;
+  accent-color: var(--gold);
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+}
+
+.demo-consent-links {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  margin-top: 0.5rem;
+}
+
+.demo-consent-links a {
+  color: var(--gold);
+}
+
+/* Demo band consent overrides */
+.demo-band .demo-checkbox-label {
+  color: rgba(10, 15, 30, 0.6);
+}
+
+.demo-band .demo-consent-links {
+  color: rgba(10, 15, 30, 0.5);
+}
+
 .demo-cta-helper {
   font-size: 0.78rem;
   color: var(--text-muted);

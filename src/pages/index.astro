@@ -32,9 +32,20 @@ import Layout from '../layouts/Layout.astro';
               <button type="submit" class="btn btn-gold">Get A Free Test Call</button>
             </div>
             <input type="text" name="name" class="demo-name-field" placeholder="Your first name" autocomplete="given-name" />
+            <div class="demo-consent-fields">
+              <label class="demo-checkbox-label">
+                <input type="checkbox" name="consent_call" required />
+                <span>I agree to receive a phone call from an AI voice agent and related follow-up messages from RECO QA LLC (VoiceCloser). Msg &amp; data rates may apply. Reply STOP to stop, HELP for help. <span class="req">*</span></span>
+              </label>
+              <label class="demo-checkbox-label">
+                <input type="checkbox" name="consent_marketing" />
+                <span>Also send me follow-up tips and offers from VoiceCloser via text. Msg frequency varies. Msg &amp; data rates may apply. Reply STOP to stop, HELP for help.</span>
+              </label>
+              <p class="demo-consent-links"><a href="/privacy" target="_blank">Privacy Policy</a> &middot; <a href="/terms" target="_blank">Terms of Service</a></p>
+            </div>
           </form>
           <p class="demo-cta-helper">
-            1 demo call. No spam. US &amp; Canada only. Works for inbound and outbound follow-up.
+            US &amp; Canada only.
           </p>
           <!-- <p class="demo-cta-secondary">
             <a href="#demo">Prefer to listen instead? Hear a sample call.</a>
@@ -229,9 +240,20 @@ import Layout from '../layouts/Layout.astro';
           <button type="submit" class="btn btn-gold">Get A Free Test Call</button>
         </div>
         <input type="text" name="name" class="demo-name-field" placeholder="Your first name" autocomplete="given-name" />
+        <div class="demo-consent-fields">
+          <label class="demo-checkbox-label">
+            <input type="checkbox" name="consent_call" required />
+            <span>I agree to receive a phone call from an AI voice agent and related follow-up messages from RECO QA LLC (VoiceCloser). Msg &amp; data rates may apply. Reply STOP to stop, HELP for help. <span class="req">*</span></span>
+          </label>
+          <label class="demo-checkbox-label">
+            <input type="checkbox" name="consent_marketing" />
+            <span>Also send me follow-up tips and offers from VoiceCloser via text. Msg frequency varies. Msg &amp; data rates may apply. Reply STOP to stop, HELP for help.</span>
+          </label>
+          <p class="demo-consent-links"><a href="/privacy" target="_blank">Privacy Policy</a> &middot; <a href="/terms" target="_blank">Terms of Service</a></p>
+        </div>
       </form>
       <p class="demo-cta-helper">
-        1 demo call. No spam. US &amp; Canada only.
+        US &amp; Canada only.
       </p>
     </div>
   </section>
@@ -456,6 +478,8 @@ import Layout from '../layouts/Layout.astro';
     document.querySelectorAll('.demo-form').forEach(form => {
       const phoneInput = form.querySelector('input[name="phone"]');
       const nameField = form.querySelector('.demo-name-field');
+      const consentFields = form.querySelector('.demo-consent-fields');
+      const consentCallBox = form.querySelector('input[name="consent_call"]');
       const btn = form.querySelector('button[type="submit"]');
 
       // Auto-format phone as user types
@@ -467,11 +491,13 @@ import Layout from '../layouts/Layout.astro';
         // Keep cursor in a reasonable spot
         phoneInput.setSelectionRange(cursor + (newLen - oldLen), cursor + (newLen - oldLen));
 
-        // Reveal name field once they start typing
+        // Reveal name field + consent once they start typing
         if (stripPhone(phoneInput.value).length > 0) {
           nameField.classList.add('visible');
+          if (consentFields) consentFields.classList.add('visible');
         } else {
           nameField.classList.remove('visible');
+          if (consentFields) consentFields.classList.remove('visible');
         }
       });
 
@@ -492,6 +518,15 @@ import Layout from '../layouts/Layout.astro';
 
         if (!phone || phone.length < 10) return;
 
+        // Check required consent
+        if (consentCallBox && !consentCallBox.checked) {
+          consentCallBox.reportValidity();
+          return;
+        }
+
+        const consent_call = consentCallBox ? consentCallBox.checked : false;
+        const consent_marketing = form.querySelector('input[name="consent_marketing"]')?.checked || false;
+
         const originalText = btn.textContent;
         btn.textContent = 'Calling you now...';
         btn.disabled = true;
@@ -502,7 +537,7 @@ import Layout from '../layouts/Layout.astro';
           const res = await fetch('/api/test-call-homepage', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ phone, name, agent: 'voicecloser_homepage' }),
+            body: JSON.stringify({ phone, name, agent: 'voicecloser_homepage', consent_call, consent_marketing }),
           });
 
           const data = await res.json();
