@@ -5,12 +5,12 @@
     "pageTitle": "HVAC",
     "hero": {
       "headline": "Stop Losing HVAC Jobs To Missed Calls.",
-      "subheadline": "Your own AI phone agent that answers every call, follows up on old service quotes, and books appointments - professionally, consistently, 24/7. Less drama, more jobs on the books."
+      "subheadline": "Your own AI phone agent that answers every call, follows up on old service quotes, and books appointments \u2013 professionally, consistently, 24/7. Less drama, more jobs on the books."
     },
     "conversation": [
       {
         "speaker": "agent",
-        "line": "Hi, thanks for calling! How can I help you?"
+        "line": "Hi, thanks for calling! How can I help you today?"
       },
       {
         "speaker": "caller",
@@ -18,15 +18,15 @@
       },
       {
         "speaker": "agent",
-        "line": "That's no fun in this heat. Quick question - is the outdoor unit running, or is it completely silent outside?"
+        "line": "That\u2019s no fun in this heat. Quick question \u2013 is the outdoor unit running, or is it completely silent outside?"
       },
       {
         "speaker": "caller",
-        "line": "Actually I think it's running but the air inside is just warm."
+        "line": "I think it\u2019s running but the air inside is just warm."
       },
       {
         "speaker": "agent",
-        "line": "Okay, that's helpful. It could be a refrigerant issue or a compressor problem. I have an opening this afternoon at 2 PM. Want me to send a tech out?"
+        "line": "Okay, that\u2019s helpful. It could be a refrigerant issue or a compressor problem. I have an opening this afternoon at 2 PM. Want me to send a tech out?"
       },
       {
         "speaker": "caller",
@@ -34,19 +34,19 @@
       },
       {
         "speaker": "agent",
-        "line": "Done. Tech will be there at 2. If you can, keep the thermostat set and don't keep turning it off and on before they arrive."
+        "line": "Done. A tech will be there at 2. If you can, leave the thermostat set and don\u2019t keep turning it off and on before they arrive."
       }
     ],
     "badges": {
       "blue": "Service Calls Booked This Week: 18"
     },
     "problem": {
-      "headline": "When The AC Goes Out, They Call Everyone. Who Answers First Wins.",
-      "description": "Summer heat doesn't wait. When a homeowner's AC dies, they're calling every HVAC company they can find. The one who picks up first gets the job. Everyone else gets forgotten.",
+      "headline": "When The AC Goes Out, They Call Everyone. Whoever Answers First Wins.",
+      "description": "Summer heat doesn\u2019t wait. When a homeowner\u2019s AC dies, they\u2019re calling every HVAC company they can find. The one who picks up first gets the job. Everyone else gets forgotten.",
       "problems": [
-        "Peak season calls go to voicemail while your techs are in attics.",
+        "Peak-season calls go to voicemail while your techs are in attics and crawl spaces.",
         "Maintenance agreement renewals expire with no follow-up.",
-        "Last year's estimate requests are collecting dust."
+        "Last year\u2019s estimate requests are collecting dust instead of turning into installs."
       ]
     },
     "comparison": {
@@ -64,7 +64,7 @@
         "Seasonal maintenance and tune-up scheduling",
         "Estimate and quote follow-ups",
         "Maintenance agreement renewals",
-        "After-hours emergency dispatch"
+        "After-hours and weekend emergency call screening"
       ]
     },
     "cta": {
@@ -157,16 +157,16 @@
     "pageTitle": "Plumbing",
     "hero": {
       "headline": "Stop Losing Plumbing Jobs To Missed Calls.",
-      "subheadline": "Your own AI phone agent that answers every call, follows up with past customers, and books service appointments - professionally, consistently, 24/7. Less drama, more jobs on the books."
+      "subheadline": "Your own AI phone agent that answers every call, follows up with past customers, and books service appointments \u2013 professionally, consistently, 24/7. Less chaos, more jobs on the books."
     },
     "conversation": [
       {
         "speaker": "agent",
-        "line": "Hi, thanks for calling! How can I help you?"
+        "line": "Hi, thanks for calling! How can I help you today?"
       },
       {
         "speaker": "caller",
-        "line": "I've got water coming up through my basement floor drain."
+        "line": "I\u2019ve got water coming up through my basement floor drain."
       },
       {
         "speaker": "agent",
@@ -174,23 +174,23 @@
       },
       {
         "speaker": "caller",
-        "line": "It smells terrible and it's still coming up slowly."
+        "line": "It smells terrible and it\u2019s still coming up slowly."
       },
       {
         "speaker": "agent",
-        "line": "Okay, that sounds like a sewer backup. Don't run any water or flush anything in the house. I'm flagging this as an emergency and our on-call tech will call you back within 15 minutes. What's the best number to reach you?"
+        "line": "Okay, that sounds like a sewer backup. Don\u2019t run any water or flush anything in the house. I\u2019m flagging this as an emergency and our on-call tech will call you back within 15 minutes. What\u2019s the best number to reach you at?"
       }
     ],
     "badges": {
       "blue": "Service Calls Booked This Week: 11"
     },
     "problem": {
-      "headline": "A Burst Pipe Won't Wait For You To Call Back.",
-      "description": "Plumbing emergencies happen at the worst times. Nights, weekends, holidays. When a homeowner has water pouring into their basement, they're calling every plumber in their phone until someone picks up.",
+      "headline": "A Burst Pipe Won\u2019t Wait For You To Call Back.",
+      "description": "Plumbing emergencies happen at the worst times \u2013 nights, weekends, holidays. When a homeowner has water pouring into their basement, they\u2019re calling every plumber in their phone until someone picks up.",
       "problems": [
-        "Emergency calls go to voicemail while you're under a sink.",
-        "Repeat customers can't get through when they need you most.",
-        "That list of past service calls? Nobody's following up."
+        "Emergency calls go to voicemail while you\u2019re under a sink.",
+        "Repeat customers can\u2019t get through when they need you most.",
+        "That list of past service calls? Nobody\u2019s following up."
       ]
     },
     "comparison": {
@@ -212,7 +212,7 @@
       ]
     },
     "cta": {
-      "headline": "Want To See How Many Service Calls You're Losing To Voicemail?"
+      "headline": "Want To See How Many Service Calls You\u2019re Losing To Voicemail?"
     },
     "faq1": {
       "question": "Can it handle emergency calls differently?",
@@ -225,16 +225,16 @@
     "pageTitle": "Roofing",
     "hero": {
       "headline": "Stop Losing Roofing Jobs To Missed Calls.",
-      "subheadline": "Your own AI phone agent that answers every call, follows up with old estimates, and books inspections - professionally, consistently, 24/7. Less drama, more jobs on the books."
+      "subheadline": "Your own AI phone agent that answers every call, follows up with old estimates, and books inspections \u2013 professionally, consistently, 24/7. Less scramble, more jobs on the books."
     },
     "conversation": [
       {
         "speaker": "agent",
-        "line": "Hi, thanks for calling! How can I help you?"
+        "line": "Hi, thanks for calling! How can I help you today?"
       },
       {
         "speaker": "caller",
-        "line": "Hey, I've got water coming into my ceiling after the rain last night."
+        "line": "I\u2019ve got water coming into my ceiling after the rain last night."
       },
       {
         "speaker": "agent",
@@ -242,11 +242,11 @@
       },
       {
         "speaker": "caller",
-        "line": "Just one spot in the upstairs bedroom, and yeah, it's shingles."
+        "line": "Just one spot in the upstairs bedroom, and yeah, it\u2019s shingles."
       },
       {
         "speaker": "agent",
-        "line": "That helps. How big is the water spot - like dinner plate size or bigger?"
+        "line": "That helps. How big is the water spot \u2013 like dinner-plate size or bigger?"
       },
       {
         "speaker": "caller",
@@ -262,11 +262,11 @@
     },
     "problem": {
       "headline": "Every Storm Brings Calls. Are You Catching Them All?",
-      "description": "A homeowner notices a leak at 7 PM. They call three roofers. The first one who answers gets the job. If that's not you, it's your competitor down the street.",
+      "description": "A homeowner notices a leak at 7 PM. They call three roofers. The first one who answers gets the job. If that\u2019s not you, it\u2019s your competitor down the street.",
       "problems": [
         "Homeowners call after storms and give up after one ring.",
         "Old estimate requests from last season are just sitting there.",
-        "Your crew is on a roof all day. Nobody's answering the phone."
+        "Your crew is on a roof all day. Nobody\u2019s answering the phone."
       ]
     },
     "comparison": {
@@ -278,7 +278,7 @@
     },
     "callsWeHandle": {
       "headline": "Calls We Handle For Roofers.",
-      "description": "From storm damage emergencies to old estimate follow-ups, VoiceCloser handles the calls that keep your crew booked.",
+      "description": "From storm-damage emergencies to old estimate follow-ups, VoiceCloser handles the calls that keep your crew booked.",
       "types": [
         "Emergency leak and storm damage calls",
         "Estimate and inspection requests",
@@ -288,10 +288,10 @@
       ]
     },
     "cta": {
-      "headline": "Want To See How Many Roofing Leads You're Losing Right Now?"
+      "headline": "Want To See How Many Roofing Leads You\u2019re Losing Right Now?"
     },
     "faq1": {
-      "question": "Can it handle storm surge call volume?",
+      "question": "Can it handle storm-surge call volume?",
       "answer": "Yes. VoiceCloser handles unlimited simultaneous calls. When a storm hits and your phone blows up, every single call gets answered. No busy signals, no voicemail."
     }
   },
@@ -2493,78 +2493,78 @@
   },
   {
     "slug": "contractor",
-    "agentKey": "voicecloser_general_contractor",
-    "pageTitle": "General Contractor",
+    "agentKey": "voicecloser_contractor",
+    "pageTitle": "Contractor",
     "hero": {
-      "headline": "Stop Losing Big Renovation Jobs To Missed Calls And Slow Follow Up.",
-      "subheadline": "Your own AI phone agent that answers every call, qualifies projects, and books on site consultations, professionally, consistently, 24/7. Less chaos, more projects on the calendar."
+      "headline": "Stop Losing Big Renovation Jobs To Missed Calls And Slow Follow-Up.",
+      "subheadline": "Your own AI phone agent that answers every call, qualifies projects, and books on-site consultations \u2013 professionally, consistently, 24/7. Less chaos, more projects on the calendar."
     },
     "conversation": [
       {
         "speaker": "agent",
-        "line": "Hi, thanks for calling [Company Name]. This is Alex. What kind of project are you thinking about?"
+        "line": "Hi, thanks for calling! How can I help you today?"
       },
       {
         "speaker": "caller",
-        "line": "We want to redo our kitchen and maybe open up a wall to the living room."
+        "line": "Hey, I\u2019m looking to get my deck replaced. The wood\u2019s all rotted out."
       },
       {
         "speaker": "agent",
-        "line": "Great. Are you looking for a full gut remodel with new cabinets and layout, or more of a cosmetic refresh?"
+        "line": "Got it \u2013 how big is the deck roughly? Like a small porch or more of a full backyard setup?"
       },
       {
         "speaker": "caller",
-        "line": "Full remodel. New layout, new everything."
+        "line": "It\u2019s pretty big, wraps around the back of the house."
       },
       {
         "speaker": "agent",
-        "line": "Got it. Is this your forever home or something you might sell in a few years?"
+        "line": "Okay, sounds like a solid project. Are you thinking wood again or interested in composite?"
       },
       {
         "speaker": "caller",
-        "line": "Probably our long term home."
+        "line": "Probably composite this time."
       },
       {
         "speaker": "agent",
-        "line": "Perfect. The next step is an in home consultation so our estimator can look at the space and talk through options. Are weekdays or Saturdays better for you?"
+        "line": "Smart choice, way less maintenance. I can get our estimator out to measure and quote it. Does Thursday or Friday morning work better for you?"
       }
     ],
     "badges": {
       "blue": "Consultations Booked This Week: 11"
     },
     "problem": {
-      "headline": "Homeowners With Big Projects Call A Few GCs. Whoever Responds First Has The Edge.",
-      "description": "Full remodels, additions, and custom builds start with a call. If you miss it while you are on site, that project often goes to a competitor who simply picked up and scheduled first.",
+      "headline": "Every Missed Call Is A Job That Went To Someone Else.",
+      "description": "Your phone rings while you\u2019re on a job site. A homeowner fills out a form at 9 PM. A past customer who needs more work done hasn\u2019t heard from you in months. Every one of those is revenue walking out the door.",
       "problems": [
-        "New project inquiries hit voicemail while you are managing crews.",
-        "Old estimates, referrals, and past clients never get re engaged.",
-        "After hours and weekend calls sit until \"later\" and go cold."
+        "New leads hit voicemail while you\u2019re swinging a hammer.",
+        "Past customers can\u2019t get through when they need you again.",
+        "That list of old estimates and past jobs? Nobody\u2019s following up."
       ]
     },
     "comparison": {
-      "currentReality": "9 missed project inquiries this week, 0 follow ups on stale estimates",
-      "withVoiceCloser": "9 answered, 6 consultations booked, 5 old estimates re engaged"
+      "currentReality": "11 missed calls this week<br/>0 past customers re-engaged",
+      "withVoiceCloser": "11 answered, 8 consultations booked<br/>4 past customers re-engaged"
     },
     "demoBand": {
-      "headline": "Hear How VoiceCloser Handles A General Contractor Project Inquiry."
+      "headline": "Hear How VoiceCloser Handles A Contractor Inquiry."
     },
     "callsWeHandle": {
-      "headline": "Calls We Handle For General Contractors.",
-      "description": "From first ideas to final punch lists, VoiceCloser handles the calls that keep your pipeline full.",
+      "headline": "Calls We Handle For Contractors.",
+      "description": "From renovation inquiries to old estimate follow-ups, VoiceCloser handles the calls that keep your schedule full.",
       "types": [
-        "Whole home, addition, and major remodel inquiries",
-        "On site consultation and estimate scheduling",
-        "Scheduling, rescheduling, and access coordination",
-        "Sub contractor and vendor coordination calls you want routed",
-        "Follow ups on past clients, referrals, and open bids"
+        "Estimate and consultation requests",
+        "Kitchen, bath, deck, and renovation inquiries",
+        "Follow-ups on quotes that went cold",
+        "Scheduling and rescheduling",
+        "Warranty and punch-list questions"
       ]
     },
     "cta": {
-      "headline": "Want To See How Many High Value Projects You Are Losing To Voicemail?"
+      "headline": "Want To See How Many Jobs You\u2019re Losing To Voicemail?"
     },
     "faq1": {
-      "question": "Can it tell homeowners what a project will cost over the phone?",
-      "answer": "No. VoiceCloser does not quote pricing. It asks your qualifying questions, explains your process, and books or routes serious projects so you or your estimator can walk the site and price it correctly."
+      "question": "Can it handle different types of projects?",
+      "answer": "Yes. VoiceCloser learns your services, your service area, and what questions to ask for each type of job. Whether it\u2019s a kitchen remodel or a deck repair, the agent asks the right questions and books the right appointment."
     }
   },
   {

@@ -15,6 +15,7 @@ const AGENT_MAP = {
   limitless_storage:             'AGENT_LIMITLESS_STORAGE',
 
   // Existing industries
+  voicecloser_contractor:        'AGENT_VOICECLOSER_CONTRACTOR',
   voicecloser_hvac:              'AGENT_VOICECLOSER_HVAC',
   voicecloser_gym:               'AGENT_VOICECLOSER_GYM',
   voicecloser_roofing:           'AGENT_VOICECLOSER_ROOFING',
