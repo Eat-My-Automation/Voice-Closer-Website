@@ -925,6 +925,28 @@ p {
 }
 
 /* ============================================
+   VIDEO SECTION
+   ============================================ */
+
+.video-section {
+  padding: var(--section-pad);
+  background: var(--bg-primary);
+}
+
+.video-wrapper {
+  max-width: 800px;
+  margin: 2rem auto 0;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+}
+
+.video-wrapper video {
+  width: 100%;
+  display: block;
+}
+
+/* ============================================
    HOW IT WORKS -STEPS
    ============================================ */
 

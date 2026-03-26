@@ -161,6 +161,22 @@ const { industry } = Astro.props;
     </div> -->
   </section>
 
+  <!-- ===== 3b. VIDEO SECTION (conditional) ===== -->
+  {industry.videoSrc && (
+    <section class="video-section">
+      <div class="container text-center">
+        <h2 class="section-title">Hear It In Action</h2>
+        <span class="gold-line"></span>
+        <div class="video-wrapper">
+          <video controls preload="metadata" playsinline>
+            <source src={industry.videoSrc} type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
+    </section>
+  )}
+
   <!-- ===== 4. HOW IT WORKS ===== -->
   <section class="steps-section" id="how-it-works">
     <div class="container text-center">
