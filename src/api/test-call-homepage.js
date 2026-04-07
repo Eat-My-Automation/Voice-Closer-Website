@@ -159,19 +159,16 @@ export default async function testCallHomepage(req, res) {
     console.log(`[${ts}] SUCCESS — call_id: ${data.call_id}`);
 
     // Log consent to Supabase (fire-and-forget)
+    // consent_call is for the phone call only (not SMS) — not logged to sms_consent.
+    // Only consent_marketing represents SMS opt-in.
     const source = agentKey.replace('voicecloser_', '').replace(/_/g, '-');
     const ip = req.headers['x-forwarded-for']?.split(',')[0]?.trim() || req.ip;
     const ua = req.headers['user-agent'];
 
-    const consentRows = [];
-    if (consent_call) {
-      consentRows.push({ phone: toNumber, name, consent_type: 'transactional', consented: true, source, ip_address: ip, user_agent: ua });
-    }
     if (consent_marketing) {
-      consentRows.push({ phone: toNumber, name, consent_type: 'marketing', consented: true, source, ip_address: ip, user_agent: ua });
-    }
-    if (consentRows.length > 0) {
-      supabase.from('sms_consent').insert(consentRows)
+      supabase.from('sms_consent').insert([
+        { phone: toNumber, name, consent_type: 'marketing', consented: true, source, ip_address: ip, user_agent: ua },
+      ])
         .then(({ error }) => { if (error) console.error(`[${ts}] Consent log error:`, error.message); })
         .catch(err => console.error(`[${ts}] Consent log failed:`, err.message));
     }
