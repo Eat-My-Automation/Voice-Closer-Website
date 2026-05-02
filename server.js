@@ -21,12 +21,12 @@ app.post('/api/opt-out', optOut);
 // Serve static Astro build
 app.use(express.static(path.join(__dirname, 'dist')));
 
-// Fallback — serve index.html only for routes without file extensions
-app.get('/{*splat}', (req, res) => {
-  if (path.extname(req.path)) {
-    return res.status(404).end();
-  }
-  res.sendFile(path.join(__dirname, 'dist', 'index.html'));
+// Catch-all 404 — return proper 404 status, fall back to Astro's 404 page if generated
+app.use((req, res) => {
+  const notFoundPage = path.join(__dirname, 'dist', '404.html');
+  res.status(404).sendFile(notFoundPage, (err) => {
+    if (err) res.status(404).end();
+  });
 });
 
 app.listen(PORT, () => {
