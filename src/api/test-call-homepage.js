@@ -96,6 +96,14 @@ export default async function testCallHomepage(req, res) {
 
     // Default to voicecloser_demo if no agent specified (website demo button)
     const agentKey = agent || 'voicecloser_demo';
+
+    // voicecloser_homepage routes through VoiceCloser-app for GHL upsert +
+    // calendar slot pre-load + Retell trigger (live booking on the call).
+    // All other agents still fire Retell directly (experience-only demos).
+    if (agentKey === 'voicecloser_homepage') {
+      return await fireVoiceCloserHomepage({ req, res, ts, name, phone, consent_call, consent_marketing });
+    }
+
     const envVar = AGENT_MAP[agentKey];
 
     if (!envVar) {
@@ -192,4 +200,60 @@ function normalizePhone(raw) {
   }
 
   return null;
+}
+
+// VoiceCloser homepage flow: proxy to VoiceCloser-app's outbound endpoint,
+// which handles the full pipeline (GHL upsert → slot fetch → Retell trigger).
+// SMS consent is logged inside the app endpoint (single source of truth).
+async function fireVoiceCloserHomepage({ req, res, ts, name, phone, consent_call, consent_marketing }) {
+  const outboundUrl = process.env.VOICECLOSER_OUTBOUND_URL;
+  const outboundSecret = process.env.VOICECLOSER_OUTBOUND_SECRET;
+
+  if (!outboundUrl || !outboundSecret) {
+    console.error(`[${ts}] CONFIG ERROR: VOICECLOSER_OUTBOUND_URL or VOICECLOSER_OUTBOUND_SECRET not set`);
+    return res.status(500).json({ error: 'Outbound endpoint not configured.' });
+  }
+
+  const toNumber = normalizePhone(phone);
+  if (!toNumber) {
+    console.log(`[${ts}] REJECTED: invalid phone "${phone}"`);
+    return res.status(400).json({ error: 'Invalid phone number. Please use a US or Canada number.' });
+  }
+
+  const firstName = (name || '').trim() || 'there';
+  const ip = req.headers['x-forwarded-for']?.split(',')[0]?.trim() || req.ip;
+  const ua = req.headers['user-agent'];
+
+  console.log(`[${ts}] Forwarding to VoiceCloser app outbound endpoint — to: ${toNumber}, name: ${firstName}`);
+
+  try {
+    const upstream = await fetch(`${outboundUrl}?secret=${encodeURIComponent(outboundSecret)}`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        ...(ip ? { 'x-forwarded-for': ip } : {}),
+        ...(ua ? { 'user-agent': ua } : {}),
+      },
+      body: JSON.stringify({
+        first_name: firstName,
+        phone: toNumber,
+        consent_call: !!consent_call,
+        consent_marketing: !!consent_marketing,
+      }),
+    });
+
+    const upstreamBody = await upstream.text();
+
+    if (!upstream.ok) {
+      console.error(`[${ts}] OUTBOUND ENDPOINT ERROR ${upstream.status}: ${upstreamBody}`);
+      return res.status(502).json({ error: 'Failed to initiate call. Please try again.' });
+    }
+
+    const data = JSON.parse(upstreamBody);
+    console.log(`[${ts}] SUCCESS — call_id: ${data.call_id}, contact_id: ${data.contact_id}, is_new_contact: ${data.is_new_contact}`);
+    return res.json({ success: true, callId: data.call_id });
+  } catch (err) {
+    console.error(`[${ts}] OUTBOUND FETCH FAILED:`, err.message, err.stack);
+    return res.status(502).json({ error: 'Failed to initiate call. Please try again.' });
+  }
 }
