@@ -1,10 +1,12 @@
 BEGIN:VCARD
 VERSION:2.1
-N:Ross;Rodney;;;
-FN:Rodney Ross - VoiceCloser
-TEL;WORK;PREF:2677133669
-EMAIL;PREF;WORK:rxross@voicecloser.io
+N:(VoiceCloser);Rodney;Ross;;
+FN:Rodney Ross (VoiceCloser)
+TEL;WORK;PREF:2677701284
+EMAIL;HOME:rxross@voicecloser.io
 ORG:VoiceCloser
-TITLE:Founder, VoiceCloser
+TITLE:Founder
+URL:@rxrosshq
+URL:@voicecloserhq
 URL:https://voicecloser.io
 END:VCARD
