@@ -34,23 +34,34 @@ const { industry } = Astro.props;
               <span>Don't take our word for it - hear it live</span>
             </div>
           </div>
-          <form action="#" method="POST" class="demo-form">
-            <div class="demo-cta-row">
-              <input type="tel" name="phone" placeholder="Enter your mobile number" required />
-              <button type="submit" class="btn btn-gold">Get A Free Test Call</button>
+          <form action="#" method="POST" class="demo-form" novalidate>
+            <div class="demo-input-wrap demo-input-required">
+              <input type="tel" name="phone" placeholder="Enter your mobile number" autocomplete="tel" />
             </div>
-            <input type="text" name="name" class="demo-name-field" placeholder="Your first name" autocomplete="given-name" />
-            <div class="demo-consent-fields">
-              <label class="demo-checkbox-label">
-                <input type="checkbox" name="consent_call" required />
-                <span>I agree to receive a phone call from an AI voice agent from RECO QA LLC (VoiceCloser). <span class="req">*</span></span>
-              </label>
-              <label class="demo-checkbox-label">
-                <input type="checkbox" name="consent_marketing" />
-                <span>Optional: Also send me SMS follow-ups, tips, and offers from RECO QA LLC (VoiceCloser). Msg frequency varies. Msg &amp; data rates may apply. Reply STOP to stop, HELP for help.</span>
-              </label>
-              <p class="demo-consent-links"><a href="/privacy" target="_blank">Privacy Policy</a> &middot; <a href="/terms" target="_blank">Terms of Service</a></p>
+            <p class="demo-error" data-error-for="phone"></p>
+
+            <div class="demo-revealed">
+              <div class="demo-input-wrap demo-input-required">
+                <input type="text" name="name" class="demo-name-field" placeholder="Your first name" autocomplete="given-name" />
+              </div>
+              <p class="demo-error" data-error-for="name"></p>
+
+              <div class="demo-consent-fields">
+                <label class="demo-checkbox-label">
+                  <input type="checkbox" name="consent_call" />
+                  <span>I agree to receive a phone call from an AI voice agent from RECO QA LLC (VoiceCloser). <span class="req">*</span></span>
+                </label>
+                <p class="demo-error" data-error-for="consent_call"></p>
+
+                <label class="demo-checkbox-label">
+                  <input type="checkbox" name="consent_marketing" />
+                  <span>Optional: Also send me SMS follow-ups, tips, and offers from RECO QA LLC (VoiceCloser). Msg frequency varies. Msg &amp; data rates may apply. Reply STOP to stop, HELP for help.</span>
+                </label>
+                <p class="demo-consent-links"><a href="/privacy" target="_blank">Privacy Policy</a> &middot; <a href="/terms" target="_blank">Terms of Service</a></p>
+              </div>
             </div>
+
+            <button type="submit" class="btn btn-gold demo-submit">Get A Free Test Call</button>
           </form>
           <p class="demo-cta-helper">
             US &amp; Canada only.
@@ -237,23 +248,34 @@ const { industry } = Astro.props;
           <span>Don't take our word for it - hear it live</span>
         </div>
       </div>
-      <form action="#" method="POST" class="demo-form">
-        <div class="demo-cta-row">
-          <input type="tel" name="phone" placeholder="Enter your mobile number" required />
-          <button type="submit" class="btn btn-gold">Get A Free Test Call</button>
+      <form action="#" method="POST" class="demo-form" novalidate>
+        <div class="demo-input-wrap demo-input-required">
+          <input type="tel" name="phone" placeholder="Enter your mobile number" autocomplete="tel" />
         </div>
-        <input type="text" name="name" class="demo-name-field" placeholder="Your first name" autocomplete="given-name" />
-        <div class="demo-consent-fields">
-          <label class="demo-checkbox-label">
-            <input type="checkbox" name="consent_call" required />
-            <span>I agree to receive a phone call from an AI voice agent and related follow-up messages from RECO QA LLC (VoiceCloser). Msg &amp; data rates may apply. Reply STOP to stop, HELP for help. <span class="req">*</span></span>
-          </label>
-          <label class="demo-checkbox-label">
-            <input type="checkbox" name="consent_marketing" />
-            <span>Also send me follow-up tips and offers from VoiceCloser via text. Msg frequency varies. Msg &amp; data rates may apply. Reply STOP to stop, HELP for help.</span>
-          </label>
-          <p class="demo-consent-links"><a href="/privacy" target="_blank">Privacy Policy</a> &middot; <a href="/terms" target="_blank">Terms of Service</a></p>
+        <p class="demo-error" data-error-for="phone"></p>
+
+        <div class="demo-revealed">
+          <div class="demo-input-wrap demo-input-required">
+            <input type="text" name="name" class="demo-name-field" placeholder="Your first name" autocomplete="given-name" />
+          </div>
+          <p class="demo-error" data-error-for="name"></p>
+
+          <div class="demo-consent-fields">
+            <label class="demo-checkbox-label">
+              <input type="checkbox" name="consent_call" />
+              <span>I agree to receive a phone call from an AI voice agent and related follow-up messages from RECO QA LLC (VoiceCloser). Msg &amp; data rates may apply. Reply STOP to stop, HELP for help. <span class="req">*</span></span>
+            </label>
+            <p class="demo-error" data-error-for="consent_call"></p>
+
+            <label class="demo-checkbox-label">
+              <input type="checkbox" name="consent_marketing" />
+              <span>Also send me follow-up tips and offers from VoiceCloser via text. Msg frequency varies. Msg &amp; data rates may apply. Reply STOP to stop, HELP for help.</span>
+            </label>
+            <p class="demo-consent-links"><a href="/privacy" target="_blank">Privacy Policy</a> &middot; <a href="/terms" target="_blank">Terms of Service</a></p>
+          </div>
         </div>
+
+        <button type="submit" class="btn btn-gold demo-submit">Get A Free Test Call</button>
       </form>
       <p class="demo-cta-helper">
         US &amp; Canada only.
@@ -465,28 +487,52 @@ const { industry } = Astro.props;
     document.querySelectorAll('.demo-form').forEach(form => {
       const phoneInput = form.querySelector('input[name="phone"]');
       const nameField = form.querySelector('.demo-name-field');
-      const consentFields = form.querySelector('.demo-consent-fields');
+      const revealed = form.querySelector('.demo-revealed');
       const consentCallBox = form.querySelector('input[name="consent_call"]');
       const btn = form.querySelector('button[type="submit"]');
 
-      // Auto-format phone as user types
+      // Inline error helpers — no native browser popups
+      function getErrorEl(name) {
+        return form.querySelector(`.demo-error[data-error-for="${name}"]`);
+      }
+      function getInputWrap(input) {
+        return input.closest('.demo-input-wrap') || input.closest('.demo-checkbox-label') || input;
+      }
+      function setError(input, message) {
+        getInputWrap(input).classList.add('is-invalid');
+        const errorEl = getErrorEl(input.name);
+        if (errorEl) {
+          errorEl.textContent = message;
+          errorEl.classList.add('visible');
+        }
+      }
+      function clearError(input) {
+        getInputWrap(input).classList.remove('is-invalid');
+        const errorEl = getErrorEl(input.name);
+        if (errorEl) {
+          errorEl.textContent = '';
+          errorEl.classList.remove('visible');
+        }
+      }
+
+      // Auto-format phone + reveal once they start typing
       phoneInput.addEventListener('input', () => {
         const cursor = phoneInput.selectionStart;
         const oldLen = phoneInput.value.length;
         phoneInput.value = formatPhone(phoneInput.value);
         const newLen = phoneInput.value.length;
-        // Keep cursor in a reasonable spot
         phoneInput.setSelectionRange(cursor + (newLen - oldLen), cursor + (newLen - oldLen));
 
-        // Reveal name field once they start typing
         if (stripPhone(phoneInput.value).length > 0) {
-          nameField.classList.add('visible');
-          if (consentFields) consentFields.classList.add('visible');
+          if (revealed) revealed.classList.add('visible');
         } else {
-          nameField.classList.remove('visible');
-          if (consentFields) consentFields.classList.remove('visible');
+          if (revealed) revealed.classList.remove('visible');
         }
+        clearError(phoneInput);
       });
+
+      if (nameField) nameField.addEventListener('input', () => clearError(nameField));
+      if (consentCallBox) consentCallBox.addEventListener('change', () => clearError(consentCallBox));
 
       // Reset form to initial state
       function resetForm(originalText) {
@@ -500,16 +546,34 @@ const { industry } = Astro.props;
 
       form.addEventListener('submit', async (e) => {
         e.preventDefault();
+
+        // Manual validation — no reportValidity() / native popups.
         const phone = stripPhone(phoneInput.value);
         const name = (form.querySelector('input[name="name"]').value || '').trim();
+        const consent_call = consentCallBox ? consentCallBox.checked : false;
 
-        if (!phone || phone.length < 10) return;
+        clearError(phoneInput);
+        if (nameField) clearError(nameField);
+        if (consentCallBox) clearError(consentCallBox);
 
-        if (consentCallBox && !consentCallBox.checked) {
-          consentCallBox.reportValidity();
+        let firstInvalid = null;
+        if (!phone || phone.length < 10) {
+          setError(phoneInput, 'Enter a valid US or Canada mobile number.');
+          firstInvalid = firstInvalid || phoneInput;
+        }
+        if (!name) {
+          setError(nameField, 'Add your first name so the agent knows who to greet.');
+          firstInvalid = firstInvalid || nameField;
+        }
+        if (!consent_call) {
+          setError(consentCallBox, 'Tap to confirm you’re okay receiving the call.');
+          firstInvalid = firstInvalid || consentCallBox;
+        }
+        if (firstInvalid) {
+          if (typeof firstInvalid.focus === 'function') firstInvalid.focus({ preventScroll: true });
           return;
         }
-        const consent_call = consentCallBox ? consentCallBox.checked : false;
+
         const consent_marketing = form.querySelector('input[name="consent_marketing"]')?.checked || false;
 
         const originalText = btn.textContent;
