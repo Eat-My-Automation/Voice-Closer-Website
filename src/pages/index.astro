@@ -468,6 +468,25 @@ const DEMO_VIDEO_UID = import.meta.env.PUBLIC_DEMO_VIDEO_UID;
     </div>
   </section>
 
+  <!-- ===== EXIT-INTENT MODAL (desktop: mouse-out to top; mobile: scroll into FAQ) ===== -->
+  <dialog id="exitModal" class="exit-modal" aria-labelledby="exitModalTitle">
+    <button type="button" class="exit-modal-close" id="exitModalClose" aria-label="Close">&times;</button>
+    <h2 id="exitModalTitle" class="exit-modal-title">Wait — hear VoiceCloser in action.</h2>
+    <div class="exit-modal-video-wrap">
+      <iframe
+        id="exit-modal-stream"
+        data-src={`https://iframe.cloudflarestream.com/${DEMO_VIDEO_UID}?autoplay=true&muted=true&controls=true&letterboxColor=%230a0f1e`}
+        title="VoiceCloser demo call"
+        allow="accelerometer; autoplay; gyroscope; encrypted-media; picture-in-picture;"
+        allowfullscreen
+      ></iframe>
+      <button type="button" class="exit-modal-unmute" id="exitModalUnmute" aria-label="Unmute video">
+        <span class="exit-modal-unmute-icon" aria-hidden="true">&#128266;</span>
+        <span>Tap for sound</span>
+      </button>
+    </div>
+  </dialog>
+
 <script is:inline src="https://embed.cloudflarestream.com/embed/sdk.latest.js"></script>
 
 <script is:inline>
@@ -483,6 +502,7 @@ const DEMO_VIDEO_UID = import.meta.env.PUBLIC_DEMO_VIDEO_UID;
       player.addEventListener('loadedmetadata', () => { duration = player.duration || 0; });
       player.addEventListener('play', () => {
         if (window.posthog) posthog.capture('demo_video_played', { placement: label });
+        try { sessionStorage.setItem('demoVideoPlayed', '1'); } catch (_) {}
       });
       player.addEventListener('pause', () => {
         if (window.posthog) posthog.capture('demo_video_paused', { placement: label, at: Math.round(player.currentTime || 0) });
@@ -662,6 +682,7 @@ const DEMO_VIDEO_UID = import.meta.env.PUBLIC_DEMO_VIDEO_UID;
             btn.textContent = 'Call incoming! Pick up your phone.';
             btn.style.background = '#34d399';
             btn.style.borderColor = '#34d399';
+            try { sessionStorage.setItem('demoFormSubmitted', '1'); } catch (_) {}
             // Reset after 15 seconds
             setTimeout(() => resetForm(originalText), 15000);
           } else {
@@ -678,6 +699,138 @@ const DEMO_VIDEO_UID = import.meta.env.PUBLIC_DEMO_VIDEO_UID;
         }
       });
     });
+  })();
+</script>
+
+<script is:inline>
+  // Exit-intent modal — desktop: mouseout-top; mobile: scroll into FAQ.
+  // Once per session, suppressed if user already played the demo, submitted
+  // the form, or is currently typing in a field.
+  (function() {
+    const modal = document.getElementById('exitModal');
+    if (!modal || typeof modal.showModal !== 'function') return;
+
+    const iframe = document.getElementById('exit-modal-stream');
+    const closeBtn = document.getElementById('exitModalClose');
+    const unmuteBtn = document.getElementById('exitModalUnmute');
+    let player = null;
+
+    function inSuppressedState() {
+      try {
+        if (sessionStorage.getItem('exitModalShown')) return true;
+        if (sessionStorage.getItem('demoVideoPlayed')) return true;
+        if (sessionStorage.getItem('demoFormSubmitted')) return true;
+      } catch (_) {}
+      const tag = (document.activeElement && document.activeElement.tagName) || '';
+      if (tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT') return true;
+      if (document.activeElement && document.activeElement.isContentEditable) return true;
+      return false;
+    }
+
+    function pauseInlineVideos() {
+      if (typeof Stream !== 'function') return;
+      ['hero-stream', 'section-stream'].forEach(id => {
+        const el = document.getElementById(id);
+        if (el) {
+          try { Stream(el).pause(); } catch (_) {}
+        }
+      });
+    }
+
+    function openModal() {
+      if (inSuppressedState()) return;
+      try { sessionStorage.setItem('exitModalShown', '1'); } catch (_) {}
+
+      // Lazy-load the iframe src so the video doesn't burn bandwidth on
+      // visitors who never trigger the modal.
+      if (iframe && !iframe.src && iframe.dataset.src) {
+        iframe.src = iframe.dataset.src;
+      }
+
+      pauseInlineVideos();
+      modal.showModal();
+      document.body.style.overflow = 'hidden';
+
+      if (window.posthog) posthog.capture('exit_modal_shown');
+    }
+
+    function closeModal() {
+      if (player) {
+        try { player.pause(); } catch (_) {}
+      } else if (iframe) {
+        // Fallback: clear src to fully stop playback if SDK never loaded.
+        const stash = iframe.src;
+        iframe.src = '';
+        iframe.dataset.src = stash;
+      }
+      modal.close();
+      document.body.style.overflow = '';
+    }
+
+    closeBtn.addEventListener('click', closeModal);
+
+    // Click on backdrop closes (clicks on the dialog element itself, not its children)
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) closeModal();
+    });
+
+    // Native dialog ESC key fires 'close' event automatically
+    modal.addEventListener('close', () => {
+      document.body.style.overflow = '';
+      if (player) {
+        try { player.pause(); } catch (_) {}
+      }
+    });
+
+    // Unmute button: switch player off mute via Stream SDK.
+    unmuteBtn.addEventListener('click', () => {
+      if (typeof Stream === 'function' && iframe) {
+        if (!player) player = Stream(iframe);
+        try {
+          player.muted = false;
+          player.volume = 1;
+          player.play();
+        } catch (_) {}
+      }
+      unmuteBtn.classList.add('hidden');
+      if (window.posthog) posthog.capture('exit_modal_unmuted');
+    });
+
+    // Bind the Stream player once SDK is ready (so we have a handle for pause)
+    function bindPlayer() {
+      if (typeof Stream === 'function' && iframe && !player && iframe.src) {
+        try { player = Stream(iframe); } catch (_) {}
+      }
+    }
+
+    // ===== Triggers =====
+    const isMobile = window.matchMedia('(max-width: 768px)').matches;
+
+    if (!isMobile) {
+      // Desktop: mouse leaves through top of viewport
+      document.addEventListener('mouseout', (e) => {
+        if (e.relatedTarget) return;          // moved into another element
+        if (e.clientY > 0) return;            // not exiting through the top
+        openModal();
+      });
+    } else {
+      // Mobile: fired when FAQ section becomes substantially visible
+      const faq = document.getElementById('faq');
+      if (faq && 'IntersectionObserver' in window) {
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.intersectionRatio >= 0.6) {
+              openModal();
+              observer.disconnect();
+            }
+          });
+        }, { threshold: [0.6] });
+        observer.observe(faq);
+      }
+    }
+
+    // Bind the player handle once the SDK has had a chance to load
+    window.addEventListener('load', bindPlayer);
   })();
 </script>
 
