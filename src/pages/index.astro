@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+const DEMO_VIDEO_UID = import.meta.env.PUBLIC_DEMO_VIDEO_UID;
 ---
 <Layout
   title="AI Voice Agents That Book Sales Calls For You"
@@ -66,13 +67,15 @@ import Layout from '../layouts/Layout.astro';
 
       <div class="hero-visual">
         <div class="hero-video">
-          <stream
+          <iframe
             id="hero-stream"
-            src={import.meta.env.PUBLIC_DEMO_VIDEO_UID}
-            controls
-            preload="metadata"
+            src={`https://iframe.cloudflarestream.com/${DEMO_VIDEO_UID}?letterboxColor=%230a0f1e`}
             class="hero-video-player"
-          ></stream>
+            loading="lazy"
+            title="VoiceCloser demo call"
+            allow="accelerometer; gyroscope; encrypted-media; picture-in-picture;"
+            allowfullscreen
+          ></iframe>
           <p class="hero-video-caption">Real call: med spa lead booked by VoiceCloser.</p>
         </div>
       </div>
@@ -176,13 +179,15 @@ import Layout from '../layouts/Layout.astro';
 
     <div class="demo-video-wrap container">
       <div class="hero-video">
-        <stream
+        <iframe
           id="section-stream"
-          src={import.meta.env.PUBLIC_DEMO_VIDEO_UID}
-          controls
-          preload="metadata"
+          src={`https://iframe.cloudflarestream.com/${DEMO_VIDEO_UID}?letterboxColor=%230a0f1e`}
           class="hero-video-player"
-        ></stream>
+          loading="lazy"
+          title="VoiceCloser demo call"
+          allow="accelerometer; gyroscope; encrypted-media; picture-in-picture;"
+          allowfullscreen
+        ></iframe>
         <p class="hero-video-caption">Real call: med spa lead booked by VoiceCloser.</p>
       </div>
     </div>
@@ -464,8 +469,6 @@ import Layout from '../layouts/Layout.astro';
     </div>
   </section>
 
-</Layout>
-
 <script is:inline src="https://embed.cloudflarestream.com/embed/sdk.latest.js"></script>
 
 <script is:inline>
@@ -678,3 +681,5 @@ import Layout from '../layouts/Layout.astro';
     });
   })();
 </script>
+
+</Layout>
