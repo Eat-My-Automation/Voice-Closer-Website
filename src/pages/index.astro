@@ -469,9 +469,10 @@ const DEMO_VIDEO_UID = import.meta.env.PUBLIC_DEMO_VIDEO_UID;
   </section>
 
   <!-- ===== EXIT-INTENT MODAL (desktop: mouse-out to top; mobile: scroll into FAQ) ===== -->
+  <div class="exit-modal-backdrop" id="exitModalBackdrop" aria-hidden="true"></div>
   <dialog id="exitModal" class="exit-modal" aria-labelledby="exitModalTitle">
     <button type="button" class="exit-modal-close" id="exitModalClose" aria-label="Close">&times;</button>
-    <h2 id="exitModalTitle" class="exit-modal-title">Wait — hear VoiceCloser in action.</h2>
+    <h2 id="exitModalTitle" class="exit-modal-title">Hear VoiceCloser in action</h2>
     <div class="exit-modal-video-wrap">
       <iframe
         id="exit-modal-stream"
@@ -703,17 +704,24 @@ const DEMO_VIDEO_UID = import.meta.env.PUBLIC_DEMO_VIDEO_UID;
 </script>
 
 <script is:inline>
-  // Exit-intent modal — desktop: mouseout-top; mobile: scroll into FAQ.
-  // Once per session, suppressed if user already played the demo, submitted
-  // the form, or is currently typing in a field.
+  // Exit-intent modal — desktop: mouseout-top (after 15s + at least one scroll);
+  // mobile: scroll into FAQ. Once per session. Suppressed if user already
+  // played the demo, submitted the form, or is currently typing.
   (function() {
     const modal = document.getElementById('exitModal');
-    if (!modal || typeof modal.showModal !== 'function') return;
+    if (!modal || typeof modal.show !== 'function') return;
 
+    const backdrop = document.getElementById('exitModalBackdrop');
     const iframe = document.getElementById('exit-modal-stream');
     const closeBtn = document.getElementById('exitModalClose');
     const unmuteBtn = document.getElementById('exitModalUnmute');
     let player = null;
+
+    // Desktop trigger gates: don't fire until both are true.
+    let timeGateReady = false;
+    let userScrolled = false;
+    setTimeout(() => { timeGateReady = true; }, 15000);
+    window.addEventListener('scroll', () => { userScrolled = true; }, { once: true, passive: true });
 
     function inSuppressedState() {
       try {
@@ -725,6 +733,10 @@ const DEMO_VIDEO_UID = import.meta.env.PUBLIC_DEMO_VIDEO_UID;
       if (tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT') return true;
       if (document.activeElement && document.activeElement.isContentEditable) return true;
       return false;
+    }
+
+    function meetsDesktopGates() {
+      return timeGateReady && userScrolled;
     }
 
     function pauseInlineVideos() {
@@ -748,8 +760,10 @@ const DEMO_VIDEO_UID = import.meta.env.PUBLIC_DEMO_VIDEO_UID;
       }
 
       pauseInlineVideos();
-      modal.showModal();
-      document.body.style.overflow = 'hidden';
+      // Non-modal show() keeps the page interactive (scroll passthrough).
+      // The dim backdrop is a separate div with pointer-events: none.
+      modal.show();
+      if (backdrop) backdrop.classList.add('visible');
 
       if (window.posthog) posthog.capture('exit_modal_shown');
     }
@@ -763,22 +777,24 @@ const DEMO_VIDEO_UID = import.meta.env.PUBLIC_DEMO_VIDEO_UID;
         iframe.src = '';
         iframe.dataset.src = stash;
       }
+      if (backdrop) backdrop.classList.remove('visible');
       modal.close();
-      document.body.style.overflow = '';
     }
 
     closeBtn.addEventListener('click', closeModal);
 
-    // Click on backdrop closes (clicks on the dialog element itself, not its children)
-    modal.addEventListener('click', (e) => {
-      if (e.target === modal) closeModal();
-    });
-
-    // Native dialog ESC key fires 'close' event automatically
     modal.addEventListener('close', () => {
-      document.body.style.overflow = '';
+      if (backdrop) backdrop.classList.remove('visible');
       if (player) {
         try { player.pause(); } catch (_) {}
+      }
+    });
+
+    // ESC key — non-modal dialog doesn't auto-close on ESC, wire manually.
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && modal.open) {
+        e.preventDefault();
+        closeModal();
       }
     });
 
@@ -807,14 +823,19 @@ const DEMO_VIDEO_UID = import.meta.env.PUBLIC_DEMO_VIDEO_UID;
     const isMobile = window.matchMedia('(max-width: 768px)').matches;
 
     if (!isMobile) {
-      // Desktop: mouse leaves through top of viewport
+      // Desktop: mouse leaves through top of viewport, but only after the
+      // user has been on the page 15s AND scrolled at least once. This
+      // prevents the misfire where a fresh visitor moves their mouse to
+      // the URL bar before they've even read the hero.
       document.addEventListener('mouseout', (e) => {
         if (e.relatedTarget) return;          // moved into another element
         if (e.clientY > 0) return;            // not exiting through the top
+        if (!meetsDesktopGates()) return;     // not engaged enough yet
         openModal();
       });
     } else {
-      // Mobile: fired when FAQ section becomes substantially visible
+      // Mobile: fired when FAQ section becomes substantially visible.
+      // No time gate needed — scrolling to FAQ is itself a strong engagement signal.
       const faq = document.getElementById('faq');
       if (faq && 'IntersectionObserver' in window) {
         const observer = new IntersectionObserver((entries) => {

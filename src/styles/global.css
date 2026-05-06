@@ -1858,7 +1858,31 @@ p {
    EXIT-INTENT MODAL
    ============================================ */
 
+/* Separate dim backdrop. pointer-events: none lets clicks + scroll pass
+   through to the page underneath, so the modal is non-blocking. */
+.exit-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(5, 8, 18, 0.55);
+  pointer-events: none;
+  opacity: 0;
+  z-index: 1000;
+  display: none;
+  transition: opacity 0.25s ease;
+}
+
+.exit-modal-backdrop.visible {
+  display: block;
+  opacity: 1;
+}
+
 .exit-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  z-index: 1001;
   border: 1px solid var(--border);
   border-radius: 14px;
   background: var(--bg-card);
@@ -1870,18 +1894,13 @@ p {
   overflow: hidden;
 }
 
-.exit-modal::backdrop {
-  background: rgba(5, 8, 18, 0.78);
-  backdrop-filter: blur(4px);
-}
-
 .exit-modal[open] {
   animation: exit-modal-in 0.25s ease;
 }
 
 @keyframes exit-modal-in {
-  from { opacity: 0; transform: translateY(8px) scale(0.98); }
-  to   { opacity: 1; transform: translateY(0) scale(1); }
+  from { opacity: 0; transform: translate(-50%, -50%) scale(0.96); }
+  to   { opacity: 1; transform: translate(-50%, -50%) scale(1); }
 }
 
 .exit-modal-close {
@@ -1914,6 +1933,8 @@ p {
   font-size: clamp(1.25rem, 3vw, 1.65rem);
   font-weight: 700;
   text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
   margin: 0;
   padding: 1.5rem 3rem 1rem;
   line-height: 1.3;
