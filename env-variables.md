@@ -74,7 +74,7 @@ railway variables --set "KEY=value"
 ## Homepage demo video (Cloudflare Stream)
 
 ```
-"PUBLIC_DEMO_VIDEO_UID": "59865613d096e3e64555ef771163a1b1"
+"PUBLIC_DEMO_VIDEO_UID": "130a94cd85cc6dae71789d9301840bc6"
 ```
 
 - Must be prefixed `PUBLIC_` so Astro exposes it to the client (browser).
