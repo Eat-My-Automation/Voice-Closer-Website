@@ -65,36 +65,15 @@ import Layout from '../layouts/Layout.astro';
       </div>
 
       <div class="hero-visual">
-        <div class="phone-mockup">
-          <div class="phone-mockup-header">
-            <div class="caller-name">Incoming Call</div>
-            <div class="caller-status">VoiceCloser Answering...</div>
-          </div>
-          <div class="chat-bubble agent">
-            Hi, thanks for calling! This is Sarah with ABC Services. How can I help you?
-          </div>
-          <div class="chat-bubble caller">
-            Hi, I'm looking to get my bathroom remodeled.
-          </div>
-          <div class="chat-bubble agent">
-            We'd love to help! Is it your master bath or a secondary bathroom?
-          </div>
-          <div class="chat-bubble caller">
-            It's the master. It's pretty outdated.
-          </div>
-          <div class="chat-bubble agent">
-            Got it. Could you snap a few photos and text them to us? I'll set up a time for our estimator to come take a look. Does Wednesday afternoon work?
-          </div>
-        </div>
-
-        <div class="hero-badge badge-top-right">
-          <span class="badge-dot green"></span> 24/7 Coverage
-        </div>
-        <div class="hero-badge badge-mid-left">
-          <span class="badge-dot gold"></span> Missed Calls: 0
-        </div>
-        <div class="hero-badge badge-bottom-right">
-          <span class="badge-dot blue"></span> Reactivations This Week: 37
+        <div class="hero-video">
+          <stream
+            id="hero-stream"
+            src={import.meta.env.PUBLIC_DEMO_VIDEO_UID}
+            controls
+            preload="metadata"
+            class="hero-video-player"
+          ></stream>
+          <p class="hero-video-caption">Real call: med spa lead booked by VoiceCloser.</p>
         </div>
       </div>
     </div>
@@ -181,7 +160,31 @@ import Layout from '../layouts/Layout.astro';
     </div>
 
     <div class="container text-center mt-2">
-      <a href="#" class="btn btn-outline">Watch A 60-Second Overview</a>
+      <a href="#demo-video" class="btn btn-outline">Watch A 60-Second Overview</a>
+    </div>
+  </section>
+
+  <!-- ===== 3.5 SEE IT IN ACTION (DEMO VIDEO) ===== -->
+  <section class="demo-video-section" id="demo-video">
+    <div class="container text-center">
+      <h2 class="section-title">See It In Action.</h2>
+      <span class="gold-line"></span>
+      <p class="demo-video-sub">
+        A real lead calls. VoiceCloser answers, qualifies, and books the appointment - in under a minute.
+      </p>
+    </div>
+
+    <div class="demo-video-wrap container">
+      <div class="hero-video">
+        <stream
+          id="section-stream"
+          src={import.meta.env.PUBLIC_DEMO_VIDEO_UID}
+          controls
+          preload="metadata"
+          class="hero-video-player"
+        ></stream>
+        <p class="hero-video-caption">Real call: med spa lead booked by VoiceCloser.</p>
+      </div>
     </div>
   </section>
 
@@ -462,6 +465,50 @@ import Layout from '../layouts/Layout.astro';
   </section>
 
 </Layout>
+
+<script is:inline src="https://embed.cloudflarestream.com/embed/sdk.latest.js"></script>
+
+<script is:inline>
+  // Cloudflare Stream → PostHog event tracking
+  (function() {
+    function wireStream(elId, label) {
+      const el = document.getElementById(elId);
+      if (!el || typeof Stream !== 'function') return;
+      const player = Stream(el);
+      const milestonesHit = new Set();
+      let duration = 0;
+
+      player.addEventListener('loadedmetadata', () => { duration = player.duration || 0; });
+      player.addEventListener('play', () => {
+        if (window.posthog) posthog.capture('demo_video_played', { placement: label });
+      });
+      player.addEventListener('pause', () => {
+        if (window.posthog) posthog.capture('demo_video_paused', { placement: label, at: Math.round(player.currentTime || 0) });
+      });
+      player.addEventListener('ended', () => {
+        if (window.posthog) posthog.capture('demo_video_completed', { placement: label });
+      });
+      player.addEventListener('timeupdate', () => {
+        if (!duration) return;
+        const pct = (player.currentTime / duration) * 100;
+        [25, 50, 75].forEach(m => {
+          if (pct >= m && !milestonesHit.has(m)) {
+            milestonesHit.add(m);
+            if (window.posthog) posthog.capture('demo_video_progress', { placement: label, percent: m });
+          }
+        });
+      });
+    }
+
+    // Re-run after the Cloudflare SDK loads (script is async by default)
+    function init() {
+      wireStream('hero-stream', 'hero');
+      wireStream('section-stream', 'section');
+    }
+    if (typeof Stream === 'function') init();
+    else window.addEventListener('load', init);
+  })();
+</script>
 
 <script is:inline>
   // FAQ accordion

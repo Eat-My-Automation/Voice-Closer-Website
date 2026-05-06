@@ -1,6 +1,13 @@
-# Replit Environment Variables — Retell Agent IDs
+# Railway Environment Variables — Retell Agent IDs
 
-Copy/paste these into your Replit Secrets. For the 4 marked as REPLACE, update the existing secret with the new value.
+Copy/paste these into the Railway `Voice-Closer-Website` service variables (Project: `voicecloser`, Environment: `production`). For the 4 marked as REPLACE, update the existing variable with the new value.
+
+You can set these via the Railway dashboard or with the CLI:
+
+```
+railway service Voice-Closer-Website
+railway variables --set "KEY=value"
+```
 
 ## Existing (UPDATE these with new agent IDs)
 
@@ -61,5 +68,15 @@ Copy/paste these into your Replit Secrets. For the 4 marked as REPLACE, update t
 ## Notes
 
 - `AGENT_VOICECLOSER_CONTRACTOR` and `AGENT_VOICECLOSER_GENERAL_CONTRACTOR` point to the same agent ID. The existing contractor page will be replaced by the general-contractor page.
-- `AGENT_VOICECLOSER_HVAC` is NOT in this list — keep it as-is in Replit.
+- `AGENT_VOICECLOSER_HVAC` is NOT in this list — keep it as-is in Railway.
 - `AGENT_VOICECLOSER_HOMEPAGE` and `AGENT_VOICECLOSER_DEMO` are also unchanged.
+
+## Homepage demo video (Cloudflare Stream)
+
+```
+"PUBLIC_DEMO_VIDEO_UID": "59865613d096e3e64555ef771163a1b1"
+```
+
+- Must be prefixed `PUBLIC_` so Astro exposes it to the client (browser).
+- Used by the homepage hero video and the dedicated demo-video section.
+- Set in Railway → `Voice-Closer-Website` service → production environment.
