@@ -758,6 +758,11 @@ const DEMO_VIDEO_UID = import.meta.env.PUBLIC_DEMO_VIDEO_UID;
       modal.show();
       if (backdrop) backdrop.classList.add('visible');
 
+      // Bind player handle now that the iframe has src. Stream() doesn't
+      // require the iframe to be fully loaded - it just queues postMessage
+      // calls until the iframe is ready.
+      tryBindPlayer();
+
       if (window.posthog) posthog.capture('exit_modal_shown');
     }
 
@@ -791,26 +796,41 @@ const DEMO_VIDEO_UID = import.meta.env.PUBLIC_DEMO_VIDEO_UID;
       }
     });
 
-    // Unmute button: switch player off mute via Stream SDK.
+    // Bind the Stream player handle. Safe to call multiple times - it's a
+    // no-op once the player is set. Returns true if the player is bound.
+    function tryBindPlayer() {
+      if (player) return true;
+      if (typeof Stream !== 'function' || !iframe || !iframe.src) return false;
+      try { player = Stream(iframe); } catch (_) {}
+      return !!player;
+    }
+
+    // Unmute button: try the Stream SDK first, fall back to reloading the
+    // iframe with muted=false. The reload path is synchronous in response
+    // to the user click, so the gesture context is preserved and Chrome /
+    // Safari will allow autoplay-with-sound on the fresh iframe load.
     unmuteBtn.addEventListener('click', () => {
-      if (typeof Stream === 'function' && iframe) {
-        if (!player) player = Stream(iframe);
+      let method = 'reload';
+
+      // Lazy-bind in case the bind from openModal didn't take.
+      if (tryBindPlayer() && player) {
         try {
           player.muted = false;
           player.volume = 1;
           player.play();
+          method = 'sdk';
         } catch (_) {}
       }
-      unmuteBtn.classList.add('hidden');
-      if (window.posthog) posthog.capture('exit_modal_unmuted');
-    });
 
-    // Bind the Stream player once SDK is ready (so we have a handle for pause)
-    function bindPlayer() {
-      if (typeof Stream === 'function' && iframe && !player && iframe.src) {
-        try { player = Stream(iframe); } catch (_) {}
+      if (method === 'reload' && iframe && iframe.dataset.src) {
+        // Fallback: reload the iframe with sound. Browser treats the
+        // user click as the gesture for the new iframe load.
+        iframe.src = iframe.dataset.src.replace('muted=true', 'muted=false');
       }
-    }
+
+      unmuteBtn.classList.add('hidden');
+      if (window.posthog) posthog.capture('exit_modal_unmuted', { method });
+    });
 
     // ===== Triggers =====
     const isMobile = window.matchMedia('(max-width: 768px)').matches;
@@ -842,9 +862,6 @@ const DEMO_VIDEO_UID = import.meta.env.PUBLIC_DEMO_VIDEO_UID;
         observer.observe(faq);
       }
     }
-
-    // Bind the player handle once the SDK has had a chance to load
-    window.addEventListener('load', bindPlayer);
   })();
 </script>
 
