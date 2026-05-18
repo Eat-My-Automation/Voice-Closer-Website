@@ -1,6 +1,10 @@
 ---
 import Layout from '../layouts/Layout.astro';
 const DEMO_VIDEO_UID = import.meta.env.PUBLIC_DEMO_VIDEO_UID;
+const POSTER_URL = `https://videodelivery.net/${DEMO_VIDEO_UID}/thumbnails/thumbnail.jpg?time=26.4s`;
+const POSTER_PARAM = encodeURIComponent(POSTER_URL);
+const INLINE_VIDEO_SRC = `https://iframe.cloudflarestream.com/${DEMO_VIDEO_UID}?letterboxColor=%230a0f1e&poster=${POSTER_PARAM}`;
+const MODAL_VIDEO_SRC = `https://iframe.cloudflarestream.com/${DEMO_VIDEO_UID}?autoplay=true&muted=true&controls=true&letterboxColor=%230a0f1e&poster=${POSTER_PARAM}`;
 ---
 <Layout
   title="AI Voice Agents That Book Sales Calls For You"
@@ -59,9 +63,6 @@ const DEMO_VIDEO_UID = import.meta.env.PUBLIC_DEMO_VIDEO_UID;
           <p class="demo-cta-helper">
             US &amp; Canada only.
           </p>
-          <!-- <p class="demo-cta-secondary">
-            <a href="#demo">Prefer to listen instead? Hear a sample call.</a>
-          </p> -->
         </div>
       </div>
 
@@ -69,7 +70,7 @@ const DEMO_VIDEO_UID = import.meta.env.PUBLIC_DEMO_VIDEO_UID;
         <div class="hero-video">
           <iframe
             id="hero-stream"
-            src={`https://iframe.cloudflarestream.com/${DEMO_VIDEO_UID}?letterboxColor=%230a0f1e`}
+            src={INLINE_VIDEO_SRC}
             class="hero-video-player"
             loading="lazy"
             title="VoiceCloser demo call"
@@ -177,7 +178,7 @@ const DEMO_VIDEO_UID = import.meta.env.PUBLIC_DEMO_VIDEO_UID;
       <div class="hero-video">
         <iframe
           id="section-stream"
-          src={`https://iframe.cloudflarestream.com/${DEMO_VIDEO_UID}?letterboxColor=%230a0f1e`}
+          src={INLINE_VIDEO_SRC}
           class="hero-video-player"
           loading="lazy"
           title="VoiceCloser demo call"
@@ -469,7 +470,7 @@ const DEMO_VIDEO_UID = import.meta.env.PUBLIC_DEMO_VIDEO_UID;
     <div class="exit-modal-video-wrap">
       <iframe
         id="exit-modal-stream"
-        data-src={`https://iframe.cloudflarestream.com/${DEMO_VIDEO_UID}?autoplay=true&muted=true&controls=true&letterboxColor=%230a0f1e`}
+        data-src={MODAL_VIDEO_SRC}
         title="VoiceCloser demo call"
         allow="accelerometer; autoplay; gyroscope; encrypted-media; picture-in-picture;"
         allowfullscreen

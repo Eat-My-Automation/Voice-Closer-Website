@@ -582,15 +582,6 @@ p {
   line-height: 1.5;
 }
 
-.demo-cta-secondary {
-  margin-top: 0.75rem;
-  font-size: 0.875rem;
-}
-
-.demo-cta-secondary a {
-  font-weight: 500;
-}
-
 /* Hero visual */
 .hero-visual {
   position: relative;
@@ -617,26 +608,10 @@ p {
   box-shadow: 0 20px 60px var(--shadow);
 }
 
-.hero-video-caption {
-  margin-top: 0.85rem;
-  text-align: center;
-  font-size: 0.85rem;
-  color: var(--text-muted);
-  font-style: italic;
-}
-
 /* Dedicated demo video section (between Pillars and How It Works) */
 .demo-video-section {
   padding: var(--section-pad);
   background: var(--bg-secondary);
-}
-
-.demo-video-sub {
-  max-width: 600px;
-  margin: 1.25rem auto 2.5rem;
-  color: var(--text-muted);
-  font-size: clamp(0.95rem, 1.6vw, 1.05rem);
-  line-height: 1.7;
 }
 
 .demo-video-wrap {
