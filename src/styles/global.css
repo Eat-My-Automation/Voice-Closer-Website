@@ -386,8 +386,8 @@ p {
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 2rem;
-  align-items: center;
+  gap: 3rem;
+  align-items: start;
   position: relative;
   z-index: 1;
 }
@@ -608,23 +608,61 @@ p {
   flex-shrink: 0;
 }
 
-/* Hero secondary book link + founder credibility line */
-.hero-book-link {
-  display: inline-block;
-  margin-top: 0.6rem;
-  font-size: 0.85rem;
+/* Hero form column — boxed demo form */
+.hero-form-col {
+  width: 100%;
+  max-width: 460px;
+  justify-self: center;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 1.75rem;
+  box-shadow: 0 20px 60px var(--shadow);
+}
+
+.hero-form-col .demo-cta {
+  max-width: 100%;
+}
+
+/* Hero secondary links + trust badge */
+.hero-watch-link {
+  display: block;
+  margin-top: 0.75rem;
+  font-size: 0.9rem;
   font-weight: 600;
   color: var(--gold);
 }
 
-.hero-credibility {
-  margin-top: 1rem;
-  padding-top: 0.9rem;
-  border-top: 1px solid var(--border);
-  font-size: 0.8rem;
-  line-height: 1.6;
+.hero-book-link {
+  display: block;
+  margin-top: 0.4rem;
+  font-size: 0.82rem;
+  font-weight: 500;
   color: var(--text-muted);
-  max-width: 480px;
+}
+
+.hero-book-link:hover {
+  color: var(--gold);
+}
+
+.hero-trust-badge {
+  margin-top: 1rem;
+  padding-top: 0.85rem;
+  border-top: 1px solid var(--border);
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.hero-trust-badge::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--gold);
+  flex-shrink: 0;
 }
 
 /* Hero visual */

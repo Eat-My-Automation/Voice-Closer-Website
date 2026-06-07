@@ -26,7 +26,9 @@ const MODAL_VIDEO_SRC = `https://iframe.cloudflarestream.com/${DEMO_VIDEO_UID}?a
           <li><span class="check">&#10003;</span><span>Instantly follow up with new leads from web forms and paid ads</span></li>
           <li><span class="check">&#10003;</span><span>Call logs auto-summarized and turned into tasks inside your CRM</span></li>
         </ul>
+      </div>
 
+      <div class="hero-form-col">
         <div class="demo-cta">
           <div class="demo-cta-eyecatch">
             <div class="phone-pulse">
@@ -69,27 +71,9 @@ const MODAL_VIDEO_SRC = `https://iframe.cloudflarestream.com/${DEMO_VIDEO_UID}?a
           <p class="demo-cta-helper">
             US &amp; Canada only.
           </p>
+          <a href="#demo-video" class="hero-watch-link">See it handle a real call &#8594;</a>
           <a href="/book" class="hero-book-link">Prefer to talk first? Book your 15-minute fit call &#8594;</a>
-          <p class="hero-credibility">
-            After 14 years in real estate, I'll be honest - follow-up was always
-            my weakness. I've made every mistake in the book: burning out, ignoring my
-            CRM, never asking for reviews. I built VoiceCloser so the system does the
-            follow-up I never could.
-          </p>
-        </div>
-      </div>
-
-      <div class="hero-visual">
-        <div class="hero-video">
-          <iframe
-            id="hero-stream"
-            src={INLINE_VIDEO_SRC}
-            class="hero-video-player"
-            loading="lazy"
-            title="VoiceCloser demo call"
-            allow="accelerometer; gyroscope; encrypted-media; picture-in-picture;"
-            allowfullscreen
-          ></iframe>
+          <p class="hero-trust-badge">Built by a 14-year real estate operator</p>
         </div>
       </div>
     </div>
@@ -608,7 +592,6 @@ const MODAL_VIDEO_SRC = `https://iframe.cloudflarestream.com/${DEMO_VIDEO_UID}?a
 
     // Re-run after the Cloudflare SDK loads (script is async by default)
     function init() {
-      wireStream('hero-stream', 'hero');
       wireStream('section-stream', 'section');
     }
     if (typeof Stream === 'function') init();
@@ -824,7 +807,7 @@ const MODAL_VIDEO_SRC = `https://iframe.cloudflarestream.com/${DEMO_VIDEO_UID}?a
 
     function pauseInlineVideos() {
       if (typeof Stream !== 'function') return;
-      ['hero-stream', 'section-stream'].forEach(id => {
+      ['section-stream'].forEach(id => {
         const el = document.getElementById(id);
         if (el) {
           try { Stream(el).pause(); } catch (_) {}

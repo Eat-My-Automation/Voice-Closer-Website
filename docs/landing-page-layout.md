@@ -47,7 +47,7 @@ Sections appear top-to-bottom in this order. Each heading notes its CSS class an
 
 ### 1. Hero — Demo First
 `<section class="hero">` — no id (top of page)
-Two-column hero. **Left:** H1 headline ("AI Receptionist & Call Assistant That Answers Every Call"), subhead, a 3-item feature bullet list (`.hero-bullets`, gold checks), the primary **demo call form** (`#heroDemoForm`, class `.demo-form`) — phone input that progressively reveals name + TCPA consent checkboxes, submitting to `/api/test-call-homepage` (submit label "Have the AI call you in 30 seconds") — a secondary `/book` text link (`.hero-book-link`), and a first-person founder credibility line (`.hero-credibility`). **Right:** embedded Cloudflare Stream demo video (`#hero-stream`).
+Two-column hero (message left, form right). **Left (`.hero-text`):** H1 headline ("AI Receptionist & Call Assistant That Answers Every Call"), subhead, and a 3-item feature bullet list (`.hero-bullets`, gold checks). **Right (`.hero-form-col`, a boxed card):** the primary **demo call form** (`#heroDemoForm`, class `.demo-form`) — phone input that progressively reveals name + TCPA consent checkboxes, submitting to `/api/test-call-homepage` (submit label "Have the AI call you in 30 seconds") — then a "US & Canada only" helper, a **"See it handle a real call"** link (`.hero-watch-link`) that scrolls to `#demo-video`, a muted `/book` link (`.hero-book-link`), and a one-line trust badge (`.hero-trust-badge`, "Built by a 14-year real estate operator"). The hero **no longer embeds the demo video** — it lives only in the "See It In Action" section (`#demo-video`).
 
 ### 2. Problem Section
 `<section class="problem-section">` — no id
@@ -99,7 +99,7 @@ Non-modal dialog with a lazy-loaded demo video and an unmute button. **Desktop t
 
 All `is:inline` at the bottom of `index.astro`:
 
-1. **Cloudflare Stream → PostHog** — tracks play/pause/ended + 25/50/75% progress for `#hero-stream` and `#section-stream`.
+1. **Cloudflare Stream → PostHog** — tracks play/pause/ended + 25/50/75% progress for `#section-stream` (the "See It In Action" player; the hero player was removed).
 2. **FAQ accordion** + **demo call forms** — phone auto-formatting `(xxx) xxx-xxxx`, progressive field reveal, inline (non-native) validation, fetch to `/api/test-call-homepage`, success/error button states. (Note: per project rule, no native `alert`/`confirm` — uses inline `.demo-error` elements.)
 3. **Exit-intent modal** — trigger gating, lazy iframe load, unmute (SDK + iframe-reload fallback), session suppression.
 
@@ -132,3 +132,9 @@ Nav and footer both link to `#how-it-works`, `#who-its-for`, `#pricing`, `#faq`,
 - Added a first-person founder credibility line in the hero (`.hero-credibility`).
 - Renamed the nav/footer CTA from "Book A Strategy Call" → "Book A Fit Call." (The GoHighLevel booking widget's internal title is managed in GHL, not this repo, and should be aligned there separately.)
 - New CSS in `src/styles/global.css`: `.hero-bullets`, `.hero-book-link`, `.hero-credibility`, the `PRICING` block, and `.cta-reassure`.
+
+**2026-06-07 — Hero declutter (video out, form into a card).**
+- Removed the demo video from the hero; restructured to two columns: message left (`.hero-text`), boxed demo form right (`.hero-form-col`). Grid is now top-aligned with a wider gap.
+- Replaced the founder credibility paragraph (`.hero-credibility`, removed) with a one-line trust badge (`.hero-trust-badge`, "Built by a 14-year real estate operator").
+- Added a `.hero-watch-link` ("See it handle a real call") that scrolls to `#demo-video`; demoted the `/book` link to muted/tertiary.
+- Removed the `#hero-stream` references in the PostHog tracking and exit-modal pause logic (the video now lives only in `#demo-video`).
