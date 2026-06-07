@@ -624,19 +624,23 @@ p {
   max-width: 100%;
 }
 
-/* Hero secondary links + trust badge */
+/* Hero secondary links row (left column) */
+.hero-links-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 1.5rem;
+  margin-top: 1.5rem;
+}
+
 .hero-watch-link {
-  display: block;
-  margin-top: 0.75rem;
   font-size: 0.9rem;
   font-weight: 600;
   color: var(--gold);
 }
 
 .hero-book-link {
-  display: block;
-  margin-top: 0.4rem;
-  font-size: 0.82rem;
+  font-size: 0.85rem;
   font-weight: 500;
   color: var(--text-muted);
 }
@@ -645,10 +649,9 @@ p {
   color: var(--gold);
 }
 
+/* Founder trust badge (left column, under the links row) */
 .hero-trust-badge {
-  margin-top: 1rem;
-  padding-top: 0.85rem;
-  border-top: 1px solid var(--border);
+  margin-top: 0.9rem;
   font-size: 0.78rem;
   color: var(--text-muted);
   display: flex;
@@ -820,6 +823,22 @@ p {
      submit button is already full-width by .demo-form .demo-submit. */
 
   .demo-cta-eyecatch {
+    justify-content: center;
+  }
+
+  /* Center the left-column extras so they match the centered headline/sub */
+  .hero-bullets {
+    width: fit-content;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-links-row {
+    justify-content: center;
+  }
+
+  .hero-trust-badge {
     justify-content: center;
   }
 

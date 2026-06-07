@@ -47,7 +47,9 @@ Sections appear top-to-bottom in this order. Each heading notes its CSS class an
 
 ### 1. Hero — Demo First
 `<section class="hero">` — no id (top of page)
-Two-column hero (message left, form right). **Left (`.hero-text`):** H1 headline ("AI Receptionist & Call Assistant That Answers Every Call"), subhead, and a 3-item feature bullet list (`.hero-bullets`, gold checks). **Right (`.hero-form-col`, a boxed card):** the primary **demo call form** (`#heroDemoForm`, class `.demo-form`) — phone input that progressively reveals name + TCPA consent checkboxes, submitting to `/api/test-call-homepage` (submit label "Have the AI call you in 30 seconds") — then a "US & Canada only" helper, a **"See it handle a real call"** link (`.hero-watch-link`) that scrolls to `#demo-video`, a muted `/book` link (`.hero-book-link`), and a one-line trust badge (`.hero-trust-badge`, "Built by a 14-year real estate operator"). The hero **no longer embeds the demo video** — it lives only in the "See It In Action" section (`#demo-video`).
+Two-column hero (message left, form right). **Left (`.hero-text`):** H1 headline ("AI Receptionist & Call Assistant That Answers Every Call"), subhead, a 3-item feature bullet list (`.hero-bullets`, gold checks), then a secondary links row (`.hero-links-row`) — **"See it handle a real call"** (`.hero-watch-link`, scrolls to `#demo-video`) and a muted **"Book your 15-minute fit call"** (`.hero-book-link`, → `/book`) — and a one-line trust badge (`.hero-trust-badge`, "Built by a 14-year real estate operator"). **Right (`.hero-form-col`, a boxed card):** a single-purpose action panel — eyecatch (pulsing phone), the **demo call form** (`#heroDemoForm`, `.demo-form`, phone input that progressively reveals name + TCPA consent), the submit button ("Have the AI call you in 30 seconds"), and a "US & Canada only" helper. Nothing else lives in the card (one job: phone in, call out). The hero **does not embed the demo video** — it lives only in the "See It In Action" section (`#demo-video`).
+
+> ⚠️ **Shared CSS warning:** `.hero`, `.hero-inner`, `.hero-text`, `.hero-sub`, `.hero-visual`, `.phone-mockup`, `.chat-bubble`, `.hero-badge`, and `.hero-video` are **also used by `[slug].astro`** (the per-industry landing pages, which render a phone-mockup on the right instead of a form). Do **not** delete them as "unused," and remember that editing shared hero CSS changes those pages too. The index-only classes (safe to change without affecting slug pages) are `.hero-bullets`, `.hero-form-col`, `.hero-links-row`, `.hero-watch-link`, `.hero-book-link`, `.hero-trust-badge`.
 
 ### 2. Problem Section
 `<section class="problem-section">` — no id
@@ -138,3 +140,8 @@ Nav and footer both link to `#how-it-works`, `#who-its-for`, `#pricing`, `#faq`,
 - Replaced the founder credibility paragraph (`.hero-credibility`, removed) with a one-line trust badge (`.hero-trust-badge`, "Built by a 14-year real estate operator").
 - Added a `.hero-watch-link` ("See it handle a real call") that scrolls to `#demo-video`; demoted the `/book` link to muted/tertiary.
 - Removed the `#hero-stream` references in the PostHog tracking and exit-modal pause logic (the video now lives only in `#demo-video`).
+
+**2026-06-07 — Hero card simplified to one action (Hick's Law).**
+- Moved the secondary links and trust badge OUT of the form card into the left column: new `.hero-links-row` (watch + book links) plus `.hero-trust-badge` now sit under the bullets. The right card (`.hero-form-col`) is form-only.
+- Dropped the badge's in-card top-border divider; centered the bullets block, links row, and badge on mobile (≤768px).
+- Confirmed `.hero-visual` / `.phone-mockup` / `.chat-bubble` / `.hero-badge` / `.hero-video` are shared with `[slug].astro` and left them intact (NOT dead code).
