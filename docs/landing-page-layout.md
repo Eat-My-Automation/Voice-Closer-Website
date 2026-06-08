@@ -35,7 +35,7 @@
 Defined in `src/layouts/Layout.astro`, wraps all pages via `<slot />`.
 
 - **`<head>`** — SEO meta, Open Graph + Twitter cards (default OG image is the demo video thumbnail), Google Fonts (Inter + Playfair Display), Google Analytics (`G-H4EYMY1M8F`), PostHog (`xlt.voicecloser.io`), Affonso affiliate pixel.
-- **Navbar** (`.navbar`) — logo, mobile hamburger toggle, links: **How It Works** (`#how-it-works`), **Who It's For** (`#who-its-for`), **Pricing** (`#pricing`), **FAQ** (`#faq`), **Book A Fit Call** (`/book`), plus a light/dark theme toggle.
+- **Navbar** (`.navbar`) — logo, mobile hamburger toggle, links (left→right): **How It Works** (`#how-it-works`), **See It In Action** (`#demo-video`), **Pricing** (`#pricing`), **FAQ** (`#faq`), **Book A Fit Call** (`/book`), plus a light/dark theme toggle. Order mirrors the page's understand → believe → decide → object arc. "Who It's For" was intentionally dropped from the nav (it's a qualifier section, not a destination people navigate to).
 - **Footer** (`.footer`) — brand blurb, **Navigate** column (same anchors as nav), **Legal** column (`/privacy`, `/terms`, `/opt-out`, `/delete`), **Get Started** CTA (`/book`), copyright line (`RECO QA LLC d/b/a VoiceCloser`).
 - **Theme + mobile-menu scripts** at the bottom of the layout.
 
@@ -120,7 +120,7 @@ All `is:inline` at the bottom of `index.astro`:
 | `#book` | Final CTA — Book a fit call |
 | `/book` | Booking page (`src/pages/book.astro`) |
 
-Nav and footer both link to `#how-it-works`, `#who-its-for`, `#pricing`, `#faq`, and `/book`.
+Nav and footer both link to `#how-it-works`, `#demo-video`, `#pricing`, `#faq`, and `/book`.
 
 ---
 
@@ -157,3 +157,6 @@ Nav and footer both link to `#how-it-works`, `#who-its-for`, `#pricing`, `#faq`,
 - Removed three redundant/navigational buttons: the Problem "See How VoiceCloser Fixes This" (→ flows into Pillars), the Pillars "Watch A 60-Second Overview" (duplicate of the hero watch link; video is the next section), and the How It Works "Book A 15-Minute Strategy Call" (the Final CTA band is now the single book CTA — also removed stale "Strategy Call" wording).
 - Net: the page is one section + three buttons shorter. Actions now concentrate in the Hero (test call) and the Final CTA (book); proof/trust/qualify sections (Video, Who It's For, Founder, FAQ) are intentionally button-free.
 - Note: the `.demo-band` CSS and the `[slug].astro` demo band were left intact (the industry pages still use them).
+
+**2026-06-07 — Nav refocus.**
+- Swapped the nav/footer "Who It's For" link for **"See It In Action"** (`#demo-video`) — trades the weakest, low-pull nav item for the live-demo hook. Order is now How It Works · See It In Action · Pricing · FAQ · [Book a Fit Call] (understand → believe → decide → object → act). Founder/Why deliberately kept out of the nav.
