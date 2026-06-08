@@ -71,6 +71,17 @@ const {
 
     <!-- Affonso Affiliate Tracking -->
     <script async defer src="https://cdn.affonso.io/js/pixel.min.js" data-affonso="cmonf2vul000phv7oobhl1kv2" data-cookie_duration="30"></script>
+
+    {/*
+      RB2B website visitor de-anonymization (https://www.rb2b.com)
+      Identifies LinkedIn-profiled visitors who land on the site and surfaces
+      them in the RB2B dashboard for follow-up. Account key: "LNKLDHEGDJOJ".
+      The tag below is RB2B's standard install snippet — leave it as-is.
+      This note is an Astro expression comment: it is stripped at build time and
+      never sent to the browser, so it stays private. Keep it in this form — a
+      plain HTML comment would instead show up in public "View Source".
+    */}
+    <script is:inline>!function(key) {if (window.reb2b) return;window.reb2b = {loaded: true};var s = document.createElement("script");s.async = true;s.src = "https://ddwl4m2hdecbv.cloudfront.net/b/" + key + "/" + key + ".js.gz";document.getElementsByTagName("script")[0].parentNode.insertBefore(s, document.getElementsByTagName("script")[0]);}("LNKLDHEGDJOJ");</script>
   </head>
   <body>
     <!-- NAVBAR -->
