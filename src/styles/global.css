@@ -624,7 +624,7 @@ p {
   max-width: 100%;
 }
 
-/* Hero secondary links row (left column) */
+/* Hero secondary link row (left column) — single "watch" link */
 .hero-links-row {
   display: flex;
   flex-wrap: wrap;
@@ -637,35 +637,6 @@ p {
   font-size: 0.9rem;
   font-weight: 600;
   color: var(--gold);
-}
-
-.hero-book-link {
-  font-size: 0.85rem;
-  font-weight: 500;
-  color: var(--text-muted);
-}
-
-.hero-book-link:hover {
-  color: var(--gold);
-}
-
-/* Founder trust badge (left column, under the links row) */
-.hero-trust-badge {
-  margin-top: 0.9rem;
-  font-size: 0.78rem;
-  color: var(--text-muted);
-  display: flex;
-  align-items: center;
-  gap: 0.45rem;
-}
-
-.hero-trust-badge::before {
-  content: '';
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: var(--gold);
-  flex-shrink: 0;
 }
 
 /* Hero visual */
@@ -835,10 +806,6 @@ p {
   }
 
   .hero-links-row {
-    justify-content: center;
-  }
-
-  .hero-trust-badge {
     justify-content: center;
   }
 
@@ -1281,6 +1248,51 @@ p {
   .audience-inner {
     grid-template-columns: 1fr;
   }
+}
+
+/* ============================================
+   FOUNDER STORY
+   ============================================ */
+
+.founder-section {
+  padding: var(--section-pad);
+  background: var(--bg-card);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.founder-inner {
+  max-width: 680px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.founder-eyebrow {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 0.75rem;
+}
+
+.founder-section h2 {
+  margin-bottom: 1.5rem;
+}
+
+.founder-body {
+  text-align: left;
+}
+
+.founder-body p {
+  font-size: 1.05rem;
+  line-height: 1.85;
+  color: var(--text-secondary);
+  margin-bottom: 1rem;
+}
+
+.founder-body p:last-child {
+  margin-bottom: 0;
 }
 
 /* ============================================

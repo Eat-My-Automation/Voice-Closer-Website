@@ -19,6 +19,7 @@
   - [4. How It Works — 3 Steps](#4-how-it-works--3-steps)
   - [5. Try It Yourself (Demo Band)](#5-try-it-yourself-demo-band)
   - [6. Who It's For](#6-who-its-for)
+  - [6.4 Why I Built VoiceCloser (founder)](#64-why-i-built-voicecloser-founder)
   - [6.5 Pricing](#65-pricing)
   - [7. Social Proof (hidden)](#7-social-proof-hidden)
   - [8. CTA — Book A Strategy Call](#8-cta--book-a-strategy-call)
@@ -47,9 +48,9 @@ Sections appear top-to-bottom in this order. Each heading notes its CSS class an
 
 ### 1. Hero — Demo First
 `<section class="hero">` — no id (top of page)
-Two-column hero (message left, form right). **Left (`.hero-text`):** H1 headline ("AI Receptionist & Call Assistant That Answers Every Call"), subhead, a 3-item feature bullet list (`.hero-bullets`, gold checks), then a secondary links row (`.hero-links-row`) — **"See it handle a real call"** (`.hero-watch-link`, scrolls to `#demo-video`) and a muted **"Book your 15-minute fit call"** (`.hero-book-link`, → `/book`) — and a one-line trust badge (`.hero-trust-badge`, "Built by a 14-year real estate operator"). **Right (`.hero-form-col`, a boxed card):** a single-purpose action panel — eyecatch (pulsing phone), the **demo call form** (`#heroDemoForm`, `.demo-form`, phone input that progressively reveals name + TCPA consent), the submit button ("Call me right now"), and a "US & Canada only" helper. Nothing else lives in the card (one job: phone in, call out). The hero **does not embed the demo video** — it lives only in the "See It In Action" section (`#demo-video`).
+Two-column hero (message left, form right). **Left (`.hero-text`):** H1 headline ("AI Receptionist & Call Assistant That Answers Every Call"), subhead, a 3-item feature bullet list (`.hero-bullets`, gold checks), then a single secondary link (`.hero-links-row` > `.hero-watch-link`): **"See it handle a real call"** (scrolls to `#demo-video`). No book-a-call link or trust badge in the hero anymore — book-a-call is carried by the nav + final CTA band, and credibility moved to the Founder Story section (§6.4). **Right (`.hero-form-col`, a boxed card):** a single-purpose action panel — eyecatch (pulsing phone), the **demo call form** (`#heroDemoForm`, `.demo-form`, phone input that progressively reveals name + TCPA consent), the submit button ("Call me right now"), and a "US & Canada only" helper. Nothing else lives in the card (one job: phone in, call out). The hero **does not embed the demo video** — it lives only in the "See It In Action" section (`#demo-video`).
 
-> ⚠️ **Shared CSS warning:** `.hero`, `.hero-inner`, `.hero-text`, `.hero-sub`, `.hero-visual`, `.phone-mockup`, `.chat-bubble`, `.hero-badge`, and `.hero-video` are **also used by `[slug].astro`** (the per-industry landing pages, which render a phone-mockup on the right instead of a form). Do **not** delete them as "unused," and remember that editing shared hero CSS changes those pages too. The index-only classes (safe to change without affecting slug pages) are `.hero-bullets`, `.hero-form-col`, `.hero-links-row`, `.hero-watch-link`, `.hero-book-link`, `.hero-trust-badge`.
+> ⚠️ **Shared CSS warning:** `.hero`, `.hero-inner`, `.hero-text`, `.hero-sub`, `.hero-visual`, `.phone-mockup`, `.chat-bubble`, `.hero-badge`, and `.hero-video` are **also used by `[slug].astro`** (the per-industry landing pages, which render a phone-mockup on the right instead of a form). Do **not** delete them as "unused," and remember that editing shared hero CSS changes those pages too. The index-only classes (safe to change without affecting slug pages) are `.hero-bullets`, `.hero-form-col`, `.hero-links-row`, `.hero-watch-link`.
 
 ### 2. Problem Section
 `<section class="problem-section">` — no id
@@ -74,6 +75,10 @@ Full-width band with H2 and a **second demo call form** (`#demoBandForm`) — id
 ### 6. Who It's For
 `<section class="audience-section" id="who-its-for">`
 Two-column. **Left:** "Built For Call-Heavy Businesses" copy. **Right:** audience pill list (agencies, home services, real estate, clinics, any high-call-volume / big-lead-list business).
+
+### 6.4 Why I Built VoiceCloser (founder)
+`<section class="founder-section" id="why">` (background `--bg-card`, bordered top + bottom)
+A short first-person founder note between Who It's For and Pricing: eyebrow ("From the founder"), H2 "Why I built VoiceCloser", and a 2-paragraph story (`.founder-body`, left-aligned in a centered 680px column) — 14 years in real estate, follow-up was the weakness, built the product to fix it. This is where credibility lives now (moved out of the hero). Deliberately **not** in the nav, to keep funnel surfaces minimal.
 
 ### 6.5 Pricing
 `<section class="pricing-section" id="pricing">` (background `--bg-secondary`)
@@ -145,3 +150,9 @@ Nav and footer both link to `#how-it-works`, `#who-its-for`, `#pricing`, `#faq`,
 - Moved the secondary links and trust badge OUT of the form card into the left column: new `.hero-links-row` (watch + book links) plus `.hero-trust-badge` now sit under the bullets. The right card (`.hero-form-col`) is form-only.
 - Dropped the badge's in-card top-border divider; centered the bullets block, links row, and badge on mobile (≤768px).
 - Confirmed `.hero-visual` / `.phone-mockup` / `.chat-bubble` / `.hero-badge` / `.hero-video` are shared with `[slug].astro` and left them intact (NOT dead code).
+
+**2026-06-07 — Hero to pure function; founder story to its own section.**
+- Removed the "Book your 15-minute fit call" link and the trust badge from the hero (book-a-call is already covered by the nav + final CTA band). The hero left column now ends with a single "See it handle a real call" link.
+- Added a dedicated Founder Story section (`.founder-section`, `#why`, §6.4) between Who It's For and Pricing — the "Why I built VoiceCloser" note (14 years, follow-up was the weakness).
+- Removed the now-unused `.hero-book-link` and `.hero-trust-badge` CSS.
+- Also aligned the `[slug].astro` demo buttons to "Call me right now" and enlarged the shared eyecatch label (`.demo-cta-eyecatch-text`, 0.75→0.95rem) for legibility.
