@@ -17,7 +17,6 @@
   - [3. Three Pillars](#3-three-pillars)
   - [3.5 See It In Action (Demo Video)](#35-see-it-in-action-demo-video)
   - [4. How It Works — 3 Steps](#4-how-it-works--3-steps)
-  - [5. Try It Yourself (Demo Band)](#5-try-it-yourself-demo-band)
   - [6. Who It's For](#6-who-its-for)
   - [6.4 Why I Built VoiceCloser (founder)](#64-why-i-built-voicecloser-founder)
   - [6.5 Pricing](#65-pricing)
@@ -54,11 +53,11 @@ Two-column hero (message left, form right). **Left (`.hero-text`):** H1 headline
 
 ### 2. Problem Section
 `<section class="problem-section">` — no id
-Two-column. **Left:** "Every Missed Call..." copy + a 3-item pain-point list, plus an outline CTA linking to `#how-it-works`. **Right:** a before/after **comparison card** (Current Reality vs. With VoiceCloser).
+Two-column. **Left:** "Every Missed Call..." copy + a 3-item pain-point list. **Right:** a before/after **comparison card** (Current Reality vs. With VoiceCloser). No button — flows straight into the Pillars (the "fix").
 
 ### 3. Three Pillars
 `<section class="pillars-section">` — no id
-Centered title + gold accent line, then a 3-card grid (`.pillars-grid`): **Answer Every Call Live**, **Qualify & Route Serious Leads**, **Summarize Every Call Into CRM Tasks**. Outline CTA below links to `#demo-video`.
+Centered title + gold accent line, then a 3-card grid (`.pillars-grid`): **Answer Every Call Live**, **Qualify & Route Serious Leads**, **Summarize Every Call Into CRM Tasks**. No button — flows straight into the video below.
 
 ### 3.5 See It In Action (Demo Video)
 `<section class="demo-video-section" id="demo-video">`
@@ -66,11 +65,8 @@ Centered title + a second embedded Cloudflare Stream player (`#section-stream`) 
 
 ### 4. How It Works — 3 Steps
 `<section class="steps-section" id="how-it-works">`
-Centered title, then a numbered 3-step grid (`.steps-grid`): **Quick Setup Call**, **We Train Your Voice Agent**, **Forward Your Phones & Plug In Your Leads**. Below it a horizontal **flow diagram** (`.steps-flow`): Caller / Lead List → VoiceCloser → Calendar / Inbox / CRM. Gold CTA to `/book`.
+Centered title, then a numbered 3-step grid (`.steps-grid`): **Quick Setup Call**, **We Train Your Voice Agent**, **Forward Your Phones & Plug In Your Leads**. Below it a horizontal **flow diagram** (`.steps-flow`): Caller / Lead List → VoiceCloser → Calendar / Inbox / CRM. No button — the single book CTA lives in the Final CTA band.
 
-### 5. Try It Yourself (Demo Band)
-`<section class="demo-band" id="demo">`
-Full-width band with H2 and a **second demo call form** (`#demoBandForm`) — identical behavior to the hero form (phone → name + consent → `/api/test-call-homepage`).
 
 ### 6. Who It's For
 `<section class="audience-section" id="who-its-for">`
@@ -90,7 +86,7 @@ Testimonial card + metrics card. Hidden until real testimonials exist; restore b
 
 ### 8. CTA — Book A Strategy Call
 `<section class="cta-band" id="book">`
-Full-width closing CTA band. H2, subhead, gold "Book Your 15-Minute Strategy Call" button (`/book`), and a secondary link back to `#demo`.
+Full-width closing CTA band — the page's single book CTA. H2, subhead, a `.cta-reassure` trust row, gold "Book your 15-minute fit call" button (`/book`), and a secondary "have the AI call you first" link to the hero form (`#heroDemoForm`).
 
 ### 9. FAQ
 `<section class="faq-section" id="faq">`
@@ -121,8 +117,7 @@ All `is:inline` at the bottom of `index.astro`:
 | `#pricing` | Pricing |
 | `#faq` | FAQ |
 | `#demo-video` | See It In Action |
-| `#demo` | Try It Yourself (Demo Band) |
-| `#book` | CTA — Book A Strategy Call |
+| `#book` | Final CTA — Book a fit call |
 | `/book` | Booking page (`src/pages/book.astro`) |
 
 Nav and footer both link to `#how-it-works`, `#who-its-for`, `#pricing`, `#faq`, and `/book`.
@@ -156,3 +151,9 @@ Nav and footer both link to `#how-it-works`, `#who-its-for`, `#pricing`, `#faq`,
 - Added a dedicated Founder Story section (`.founder-section`, `#why`, §6.4) between Who It's For and Pricing — the "Why I built VoiceCloser" note (14 years, follow-up was the weakness).
 - Removed the now-unused `.hero-book-link` and `.hero-trust-badge` CSS.
 - Also aligned the `[slug].astro` demo buttons to "Call me right now" and enlarged the shared eyecatch label (`.demo-cta-eyecatch-text`, 0.75→0.95rem) for legibility.
+
+**2026-06-07 — De-dup pass (one purpose + one action per section).**
+- **Removed the "Try It Yourself" demo band (§5)** — it was a second copy of the hero's test-call form. The hero form + exit-intent popup cover it. Repointed the Final CTA's "have the AI call you first" link from `#demo` → `#heroDemoForm`.
+- Removed three redundant/navigational buttons: the Problem "See How VoiceCloser Fixes This" (→ flows into Pillars), the Pillars "Watch A 60-Second Overview" (duplicate of the hero watch link; video is the next section), and the How It Works "Book A 15-Minute Strategy Call" (the Final CTA band is now the single book CTA — also removed stale "Strategy Call" wording).
+- Net: the page is one section + three buttons shorter. Actions now concentrate in the Hero (test call) and the Final CTA (book); proof/trust/qualify sections (Video, Who It's For, Founder, FAQ) are intentionally button-free.
+- Note: the `.demo-band` CSS and the `[slug].astro` demo band were left intact (the industry pages still use them).
