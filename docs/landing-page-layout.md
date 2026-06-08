@@ -78,7 +78,7 @@ Two-column. **Left:** "Built For Call-Heavy Businesses" copy. **Right:** audienc
 
 ### 6.4 Why I Built VoiceCloser (founder)
 `<section class="founder-section" id="why">` (background `--bg-card`, bordered top + bottom)
-A short first-person founder note between Who It's For and Pricing: eyebrow ("From the founder"), H2 "Why I built VoiceCloser", and a 2-paragraph story (`.founder-body`, left-aligned in a centered 680px column) — 14 years in real estate, follow-up was the weakness, built the product to fix it. This is where credibility lives now (moved out of the hero). Deliberately **not** in the nav, to keep funnel surfaces minimal.
+A first-person founder note between Who It's For and Pricing: eyebrow ("From the founder"), H2 "Why I built VoiceCloser", and the story (`.founder-body`, left-aligned in a centered 680px column). Covers 14 years in real estate, follow-up as the weakness, and how VoiceCloser fixes it — framed as the two halves: (1) the AI handles inbound calls, and (2) on calls a human takes, it preps the CRM and **executes** the follow-up (creates opportunities, schedules tasks/appointments, sends calendar invites in GoHighLevel). Bolded emphasis on "terrible" and the "sub-par sales + great follow-up beats great sales + sub-par follow-up" line (`.founder-body strong`). No CTA link here by design — book-a-call stays in the nav.
 
 ### 6.5 Pricing
 `<section class="pricing-section" id="pricing">` (background `--bg-secondary`)

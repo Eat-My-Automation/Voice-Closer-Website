@@ -1295,6 +1295,11 @@ p {
   margin-bottom: 0;
 }
 
+.founder-body strong {
+  color: var(--text-primary);
+  font-weight: 700;
+}
+
 /* ============================================
    PRICING
    ============================================ */
